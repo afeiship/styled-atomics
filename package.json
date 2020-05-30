@@ -9,7 +9,8 @@
   },
   "scripts": {
     "clean": "rimraf dist",
-    "build": "npm run clean && rollup --config rollup.config.js"
+    "build": "npm run clean && rollup --config rollup.config.js",
+    "dev": "parcel public/index.html"
   },
   "license": "MIT",
   "publishConfig": {
@@ -18,8 +19,13 @@
   "devDependencies": {
     "@rollup/plugin-multi-entry": "^3.0.1",
     "@rollup/plugin-node-resolve": "^8.0.0",
+    "parcel-bundler": "^1.12.4",
     "rimraf": "^3.0.2",
     "rollup": "^2.11.2",
     "rollup-plugin-multi-input": "^1.1.1"
+  },
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   }
 }
