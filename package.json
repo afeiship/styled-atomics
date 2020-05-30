@@ -1,0 +1,20 @@
+{
+  "name": "@feizheng/styled-atomkits",
+  "version": "1.0.0",
+  "description": "Atom css based on styled-components.",
+  "homepage": "https://github.com/afeiship",
+  "author": {
+    "name": "afeiship",
+    "email": "1290657123@qq.com"
+  },
+  "scripts": {
+    "build": "rollup --config rollup.config.js"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "dependencies": {
+    "rollup": "^2.11.2"
+  }
+}
