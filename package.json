@@ -10,7 +10,7 @@
   "scripts": {
     "clean": "rimraf dist",
     "build": "npm run clean && rollup --config rollup.config.js",
-    "dev": "parcel public/index.html"
+    "dev": "parcel public/index.html --out-dir ./example/"
   },
   "license": "MIT",
   "publishConfig": {
@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "styled-components": "^5.1.1"
   }
 }
