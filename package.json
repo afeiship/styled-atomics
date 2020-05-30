@@ -16,8 +16,10 @@
     "registry": "https://registry.npmjs.org/"
   },
   "devDependencies": {
-    "glob": "^7.1.6",
+    "@rollup/plugin-multi-entry": "^3.0.1",
+    "@rollup/plugin-node-resolve": "^8.0.0",
     "rimraf": "^3.0.2",
-    "rollup": "^2.11.2"
+    "rollup": "^2.11.2",
+    "rollup-plugin-multi-input": "^1.1.1"
   }
 }
