@@ -8,13 +8,16 @@
     "email": "1290657123@qq.com"
   },
   "scripts": {
-    "build": "rollup --config rollup.config.js"
+    "clean": "rimraf dist",
+    "build": "npm run clean && rollup --config rollup.config.js"
   },
   "license": "MIT",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
-  "dependencies": {
+  "devDependencies": {
+    "glob": "^7.1.6",
+    "rimraf": "^3.0.2",
     "rollup": "^2.11.2"
   }
 }
