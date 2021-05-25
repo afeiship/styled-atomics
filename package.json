@@ -1,32 +1,17 @@
 {
-  "name": "@feizheng/styled-atomics",
-  "version": "1.0.0",
-  "description": "Atom css based on styled-components.",
-  "homepage": "https://github.com/afeiship",
-  "author": {
-    "name": "afeiship",
-    "email": "1290657123@qq.com"
-  },
-  "scripts": {
-    "clean": "rimraf dist",
-    "build": "npm run clean && rollup --config rollup.config.js",
-    "dev": "parcel public/index.html --out-dir ./example/"
-  },
-  "license": "MIT",
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
+  "name": "@jswork/styled-atomics",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
   },
   "devDependencies": {
-    "@rollup/plugin-multi-entry": "^3.0.1",
-    "@rollup/plugin-node-resolve": "^8.0.0",
-    "parcel-bundler": "^1.12.4",
-    "rimraf": "^3.0.2",
-    "rollup": "^2.11.2",
-    "rollup-plugin-multi-input": "^1.1.1"
+    "lerna": "^3.22.1"
   },
-  "dependencies": {
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "styled-components": "^5.1.1"
+  "scripts": {
+    "start": "cd ./packages/sites && yarn start",
+    "build": "lerna run build --since master",
+    "publish": "npm run build && lerna publish"
   }
 }
