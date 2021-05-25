@@ -125,8 +125,6 @@ export default class StyledBox extends Component<Props> {
       }
     });
 
-    console.log('computedBoxProps:', computedBoxProps);
-
     const Container = styled(nodeName)(computedBoxProps);
 
     return (
