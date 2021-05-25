@@ -1,8 +1,8 @@
-import noop from '@jswork/noop';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import nx from '@jswork/next';
 import nxCompactObject from '@jswork/next-compact-object';
 
 interface Props {
@@ -55,6 +55,7 @@ export default class StyledBox extends Component<Props> {
      * The extended className for component.
      */
     className: PropTypes.string,
+    unit: PropTypes.string,
     nodeName: PropTypes.any
   };
 

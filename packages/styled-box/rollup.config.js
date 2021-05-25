@@ -47,7 +47,7 @@ export default [
       }),
 
       resolve(),
-      replace({ __VERSION__: pkg.version }),
+      replace({ __VERSION__: pkg.version, preventAssignment: true }),
       terser({ output: { comments: false } }),
       banner(nx.rollupBanner()),
       typescript({
