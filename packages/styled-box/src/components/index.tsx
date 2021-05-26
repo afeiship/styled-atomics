@@ -97,7 +97,7 @@ export default class StyledBox extends Component<Props> {
     const debugProps = debug ? { border: `1px solid ${debug}` } : null;
     const whProps = wh ? { width: wh, height: wh } : null;
     const w1Props = w1 ? { width: (1 * 100) / w1 + '%' } : null;
-    const wpProps = wp ? { width: (wp * 100) / 10 + '%' } : null;
+    const wpProps = wp ? { width: wp * 10 + '%' } : null;
     const roundProps = round ? { borderRadius: '10000px' } : null;
     const circleProps = circle ? { borderRadius: '50%' } : null;
 
