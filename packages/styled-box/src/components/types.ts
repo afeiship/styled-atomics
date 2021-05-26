@@ -1,5 +1,6 @@
 type DebugColor = 'red' | 'green' | 'blue' | 'orange';
 type FlexValue = 'la' | 'lar' | 'ar' | 'lr' | 'ta' | 'tab' | 'ab' | 'tb' | 'center';
+type FlexWrap = 'wrap' | 'nowrap';
 type FlexAlignment =
   | 'stretch'
   | 'center'
@@ -12,8 +13,9 @@ type FlexAlignment =
   | 'inherit';
 
 interface Flexbox {
-  value: FlexValue;
-  align: FlexAlignment;
+  value?: FlexValue;
+  align?: FlexAlignment;
+  wrap?: FlexWrap;
 }
 
 export interface Props {
