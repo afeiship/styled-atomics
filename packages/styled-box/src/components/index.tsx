@@ -76,6 +76,9 @@ export default class StyledBox extends Component<Props> {
       round,
       circle,
 
+      // layout
+      flexbox,
+
       // basic
       debug,
       unit,

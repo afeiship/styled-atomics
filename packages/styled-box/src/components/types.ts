@@ -1,4 +1,20 @@
 type DebugColor = 'red' | 'green' | 'blue' | 'orange';
+type FlexValue = 'la' | 'lar' | 'ar' | 'lr' | 'ta' | 'tab' | 'ab' | 'tb' | 'center';
+type FlexAlignment =
+  | 'stretch'
+  | 'center'
+  | 'start'
+  | 'end'
+  | 'between'
+  | 'around'
+  | 'baseline'
+  | 'initial'
+  | 'inherit';
+
+interface Flexbox {
+  value: FlexValue;
+  align: FlexAlignment;
+}
 
 export interface Props {
   t?: number;
@@ -34,9 +50,10 @@ export interface Props {
   mx?: number;
   my?: number;
   auto?: boolean;
-  radius: number | string;
-  round: boolean;
-  circle: boolean;
+  radius?: number | string;
+  round?: boolean;
+  circle?: boolean;
+  flexbox?: Flexbox;
   className?: string;
   debug: DebugColor;
   unit?: string;
