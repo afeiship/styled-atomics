@@ -6,11 +6,17 @@ import nx from '@jswork/next';
 import nxCompactObject from '@jswork/next-compact-object';
 
 interface Props {
+  t?: number;
+  r?: number;
+  b?: number;
+  l?: number;
+  rel?: boolean;
+  abs?: boolean;
+  fixed?: boolean;
   c?: string;
   bg?: string;
   m?: number;
   p?: number;
-  r?: number;
   f?: number;
   o?: number;
   lh?: number | string;
@@ -26,6 +32,7 @@ interface Props {
   ml?: number;
   mx?: number;
   my?: number;
+  radius: number | string;
   className?: string;
   unit?: string;
   nodeName?: any;
@@ -66,11 +73,17 @@ export default class StyledBox extends Component<Props> {
 
   render() {
     const {
+      t,
+      r,
+      b,
+      l,
+      rel,
+      abs,
+      fixed,
       c,
       bg,
       m,
       p,
-      r,
       f,
       o,
       lh,
@@ -86,24 +99,32 @@ export default class StyledBox extends Component<Props> {
       ml,
       mx,
       my,
+      radius,
       unit,
       className,
       nodeName,
       ...props
     } = this.props;
+
     const pxProps = px ? { paddingLeft: px, paddingRight: px } : {};
     const pyProps = py ? { paddingTop: py, paddingBottom: py } : {};
     const mxProps = mx ? { marginLeft: mx, marginRight: mx } : {};
     const myProps = my ? { marginTop: my, marginBottom: my } : {};
 
+    let position: string | boolean = 'static';
+    position = fixed ?? 'fixed';
+    position = abs ?? 'absolute';
+    position = rel ?? 'relative';
+
     const computedBoxProps = nxCompactObject({
+      position,
       color: c,
       background: bg,
       padding: p,
       margin: m,
       opacity: o,
       fontSize: f,
-      borderRadius: r,
+      borderRadius: radius,
       lineHeight: lh,
       paddingTop: pt,
       paddingRight: pr,
