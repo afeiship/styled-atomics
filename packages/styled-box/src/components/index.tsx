@@ -4,12 +4,14 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import nx from '@jswork/next';
 import nxCompactObject from '@jswork/next-compact-object';
+import positionValue from '@jswork/position-value';
 
 interface Props {
   t?: number;
   r?: number;
   b?: number;
   l?: number;
+  trbl0: boolean;
   rel?: boolean;
   abs?: boolean;
   fixed?: boolean;
@@ -32,6 +34,7 @@ interface Props {
   ml?: number;
   mx?: number;
   my?: number;
+  auto?: boolean;
   radius: number | string;
   className?: string;
   unit?: string;
@@ -77,6 +80,7 @@ export default class StyledBox extends Component<Props> {
       r,
       b,
       l,
+      trbl0,
       rel,
       abs,
       fixed,
@@ -99,6 +103,7 @@ export default class StyledBox extends Component<Props> {
       ml,
       mx,
       my,
+      auto,
       radius,
       unit,
       className,
@@ -110,11 +115,9 @@ export default class StyledBox extends Component<Props> {
     const pyProps = py ? { paddingTop: py, paddingBottom: py } : {};
     const mxProps = mx ? { marginLeft: mx, marginRight: mx } : {};
     const myProps = my ? { marginTop: my, marginBottom: my } : {};
-
-    let position: string | boolean = 'static';
-    position = fixed ?? 'fixed';
-    position = abs ?? 'absolute';
-    position = rel ?? 'relative';
+    const mAutoProps = auto ? { marginLeft: 'auto', marginRight: 'auto' } : {};
+    const position = positionValue({ fixed, abs, rel });
+    const trbl0Props = trbl0 ? { top: 0, right: 0, bottom: 0, left: 0 } : {};
 
     const computedBoxProps = nxCompactObject({
       position,
@@ -137,7 +140,9 @@ export default class StyledBox extends Component<Props> {
       ...pxProps,
       ...pyProps,
       ...mxProps,
-      ...myProps
+      ...myProps,
+      ...mAutoProps,
+      ...trbl0Props
     });
 
     nx.forIn(computedBoxProps, (key, value) => {
