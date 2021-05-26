@@ -1,0 +1,19 @@
+export default [
+  'margin',
+  'padding',
+  'fontSize',
+  'marginTop',
+  'marginRight',
+  'marginBottom',
+  'marginLeft',
+  'paddingTop',
+  'paddingRight',
+  'paddingBottom',
+  'paddingLeft',
+  'top',
+  'right',
+  'bottom',
+  'left',
+  'width',
+  'height'
+];
