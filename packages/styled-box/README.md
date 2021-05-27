@@ -14,9 +14,9 @@ npm install -S @jswork/styled-box
 ## properties
 | Name      | Type   | Required | Default | Description                           |
 | --------- | ------ | -------- | ------- | ------------------------------------- |
-| className | string | true     | -       | The extended className for component. |
-| value     | object | true     | -       | Default value.                        |
-| onChange  | func   | true     | -       | The change handler.                   |
+| className | string | false    | -       | The extended className for component. |
+| value     | object | false    | null    | Default value.                        |
+| onChange  | func   | false    | noop    | The change handler.                   |
 
 
 ## usage
@@ -32,7 +32,23 @@ npm install -S @jswork/styled-box
   ```
 2. import js
   ```js
-__GENERATE_DAPP__
+  import React from 'react';
+  import StyledBox from '../@jswork/boilerplate-react-component';
+  import styled from 'styled-components';
+
+  const Container = styled.div`
+    width: 80%;
+    margin: 30px auto 0;
+  `;
+
+  export default (props: any) => {
+    return (
+      <Container>
+        <StyledBox />
+      </Container>
+    );
+  };
+
   ```
 
 ## license

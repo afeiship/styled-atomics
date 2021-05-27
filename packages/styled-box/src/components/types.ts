@@ -23,7 +23,7 @@ export interface Props {
   r?: number;
   b?: number;
   l?: number;
-  trbl0: boolean;
+  trbl0?: boolean;
   rel?: boolean;
   abs?: boolean;
   fixed?: boolean;
@@ -57,7 +57,7 @@ export interface Props {
   circle?: boolean;
   flexbox?: Flexbox;
   className?: string;
-  debug: DebugColor;
+  debug?: DebugColor;
   unit?: string;
   nodeName?: any;
 }

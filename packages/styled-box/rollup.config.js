@@ -47,7 +47,7 @@ export default [
       }),
 
       resolve(),
-      replace({ __VERSION__: pkg.version, preventAssignment: true }),
+      replace({ __VERSION__: pkg.version }),
       terser({ output: { comments: false } }),
       banner(nx.rollupBanner()),
       typescript({
@@ -61,6 +61,16 @@ export default [
           'node_modules/react/react.js': ['Children', 'Component', 'PropTypes', 'createElement'],
           'node_modules/react-dom/index.js': ['render']
         }
+      })
+    ]
+  },
+  {
+    input: 'src/components/style.scss',
+    output: null,
+    plugins: [
+      scss({ output: 'dist/style.css' }),
+      copy({
+        targets: [{ src: 'src/components/style.scss', dest: 'dist' }]
       })
     ]
   }
