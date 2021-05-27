@@ -12,10 +12,10 @@ type FlexAlignment =
   | 'initial'
   | 'inherit';
 
-interface Flexbox {
+export interface Flexbox {
   value?: FlexValue;
   align?: FlexAlignment;
-  wrap?: FlexWrap;
+  wrap?: boolean;
 }
 
 export interface Props {

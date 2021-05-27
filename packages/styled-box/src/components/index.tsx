@@ -7,6 +7,7 @@ import nxCompactObject from '@jswork/next-compact-object';
 import positionValue from '@jswork/position-value';
 import pixels from './pixels';
 import { Props } from './types';
+import layoutFlexbox from './mixins/layout-flexbox';
 
 const CLASS_NAME = 'styled-box';
 
@@ -101,6 +102,10 @@ export default class StyledBox extends Component<Props> {
     const roundProps = round ? { borderRadius: '10000px' } : null;
     const circleProps = circle ? { borderRadius: '50%' } : null;
 
+
+    // string css:
+    const flexProps = flexbox ? layoutFlexbox(flexbox).join('') : '';
+
     const computedBoxProps = nxCompactObject({
       position,
       width: w,
@@ -148,9 +153,10 @@ export default class StyledBox extends Component<Props> {
     });
 
     const Container = styled(nodeName)(computedBoxProps);
+    const CssContainer = styled(Container)`${flexProps}`;
 
     return (
-      <Container
+      <CssContainer
         data-component={CLASS_NAME}
         className={classNames(CLASS_NAME, className)}
         {...props}
