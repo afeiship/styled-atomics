@@ -6,6 +6,8 @@ export default (options) => {
 
   const values = css`
     ${radius && 'border-radius:' + radius + unit + ';'}
+    ${circle && 'border-radius: 50%;'}
+    ${round && 'border-radius: 10000px;'}
   ` as Array<string>;
 
   options.data = [].concat(data, values);
