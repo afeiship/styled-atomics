@@ -2,13 +2,9 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import styled, { css } from 'styled-components';
-import nx from '@jswork/next';
-import nxCompactObject from '@jswork/next-compact-object';
 import nxCompose from '@jswork/next-compose';
 import positionValue from '@jswork/position-value';
-import pixels from './pixels';
 import { Props } from './types';
-import layoutFlexbox from './mixins/layout-flexbox';
 import modules from './composite';
 
 const CLASS_NAME = 'styled-box';
