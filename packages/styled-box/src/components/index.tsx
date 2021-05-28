@@ -6,9 +6,6 @@ import { Props, PluginEntity } from './types';
 import atomics from './composite';
 
 const CLASS_NAME = 'styled-box';
-const filterStyles = (styles: string[]) => {
-  return styles.map((str) => str.trim()).filter(Boolean);
-};
 
 export default class StyledBox extends Component<Props> {
   static displayName = CLASS_NAME;
@@ -56,7 +53,7 @@ export default class StyledBox extends Component<Props> {
     const fn = nxCompose.apply(null, atomics.concat(plugins as Array<any>));
     const defaultEntity: PluginEntity = { props: this.props, data: [] };
     const options = fn(defaultEntity);
-    const styles = filterStyles(options.data);
+    const styles = options.data;
     const Styled = engine!.styled(nodeName)`
       ${styles.join('')}
     `;
