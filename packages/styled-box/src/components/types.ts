@@ -12,6 +12,10 @@ export interface EngineProps {
   css: any;
 }
 
+export interface Plugin {
+  (entity: PluginEntity): PluginEntity;
+}
+
 export interface PluginEntity {
   props: Props;
   data: any[];
@@ -59,7 +63,7 @@ export interface Props {
   plugins?: any[];
   plugin?: any;
   option?: any;
-  engine: EngineProps;
+  engine?: EngineProps;
   className?: string;
   debug?: string | boolean;
   unit?: string;

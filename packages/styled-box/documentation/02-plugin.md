@@ -1,5 +1,8 @@
-import { Plugin } from '../types';
+# plugin
 
+
+## 开发一个插件
+```ts
 const Default: Plugin = (inEntity) => {
   const { props, data } = inEntity;
   const { plugin, engine } = props;
@@ -17,3 +20,4 @@ const Default: Plugin = (inEntity) => {
 };
 
 export default Default;
+```
