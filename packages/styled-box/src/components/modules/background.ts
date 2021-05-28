@@ -6,8 +6,8 @@ export default (options) => {
 
   const values = css`
     ${bg && 'background:' + bg + ';'}
-  ` as Array<string>;
+  `;
 
-  options.data = [].concat(data, values);
+  options.data = data.concat(values);
   return options;
 };

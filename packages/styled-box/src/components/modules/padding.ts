@@ -14,6 +14,6 @@ export default (options) => {
     ${py && 'padding-top:' + py + unit + '; padding-bottop:' + py + unit + ';'}
   `;
 
-  options.data = [].concat(data, values);
+  options.data = data.concat(values);
   return options;
 };

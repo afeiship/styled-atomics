@@ -13,7 +13,7 @@ export default (options) => {
       /* center */
       ${value === 'center' && 'align-items: center; justify-content: center;'}
 
-        /* la\lar\ar\lr */
+      /* la\lar\ar\lr */
       ${(value === 'la' || value === 'lar' || value === 'ar' || value === 'lr') && 'width: 100%; flex-direction: row;'}
 
       /* ta|tab|ab|tb */
@@ -27,11 +27,10 @@ export default (options) => {
 
       /* lr|tb */
       ${(value === 'lr' || value === 'tb') && 'justify-content: space-between;'}
-    ` as Array<string>;
+    `;
 
-      options.data = [].concat(data, values);
+    options.data = data.concat(values);
   }
-
 
   return options;
 };

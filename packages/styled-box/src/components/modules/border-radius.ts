@@ -8,8 +8,8 @@ export default (options) => {
     ${radius && 'border-radius:' + radius + unit + ';'}
     ${circle && 'border-radius: 50%;'}
     ${round && 'border-radius: 10000px;'}
-  ` as Array<string>;
+  `;
 
-  options.data = [].concat(data, values);
+  options.data = data.concat(values);
   return options;
 };

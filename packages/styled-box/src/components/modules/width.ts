@@ -10,6 +10,6 @@ export default (options) => {
     ${w1 && 'width:' + w1 / 10 + '%;'}
   ` as Array<string>;
 
-  options.data = [].concat(data, values);
+  options.data = data.concat(values);
   return options;
 };

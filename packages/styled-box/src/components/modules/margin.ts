@@ -13,8 +13,8 @@ export default (options) => {
     ${mx && 'margin-left:' + mx + unit + '; margin-right:' + mx + unit + ';'}
     ${my && 'margin-top:' + my + unit + '; margin-bottom:' + my + unit + ';'}
     ${auto && 'margin-left: auto; margin-right: auto;'}
-  ` as Array<string>;
+  `;
 
-  options.data = [].concat(data, values);
+  options.data = data.concat(values);
   return options;
 };
