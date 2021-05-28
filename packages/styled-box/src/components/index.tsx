@@ -3,9 +3,12 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import nxCompose from '@jswork/next-compose';
 import { Props, PluginEntity } from './types';
-import modules from './composite';
+import atomics from './composite';
 
 const CLASS_NAME = 'styled-box';
+const filterStyles = (styles: string[]) => {
+  return styles.map((str) => str.trim()).filter(Boolean);
+};
 
 export default class StyledBox extends Component<Props> {
   static displayName = CLASS_NAME;
@@ -50,11 +53,12 @@ export default class StyledBox extends Component<Props> {
 
   render() {
     const { className, nodeName, engine, plugins, ...props } = this.props;
-    const fn = nxCompose.apply(null, modules.concat(plugins as Array<any>));
+    const fn = nxCompose.apply(null, atomics.concat(plugins as Array<any>));
     const defaultEntity: PluginEntity = { props: this.props, data: [] };
     const options = fn(defaultEntity);
+    const styles = filterStyles(options.data);
     const Styled = engine!.styled(nodeName)`
-      ${options.data.join('')}
+      ${styles.join('')}
     `;
 
     return <Styled className={classNames(CLASS_NAME, className)} {...props} />;
