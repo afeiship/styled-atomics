@@ -1,6 +1,4 @@
-type DebugColor = 'red' | 'green' | 'blue' | 'orange';
 type FlexValue = 'la' | 'lar' | 'ar' | 'lr' | 'ta' | 'tab' | 'ab' | 'tb' | 'center';
-type FlexWrap = 'wrap' | 'nowrap';
 type FlexAlignment =
   | 'stretch'
   | 'center'
@@ -58,7 +56,7 @@ export interface Props {
   flexbox?: Flexbox;
   wsui?: any;
   className?: string;
-  debug?: DebugColor;
+  debug?: string;
   unit?: string;
   nodeName?: any;
 }
