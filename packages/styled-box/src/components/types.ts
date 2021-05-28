@@ -12,6 +12,11 @@ export interface EngineProps {
   css: any;
 }
 
+export interface PluginEntity {
+  props: Props;
+  data: any[];
+}
+
 export interface Props {
   t?: number;
   r?: number;
