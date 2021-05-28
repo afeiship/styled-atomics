@@ -13,6 +13,8 @@ import wh from './elements/wh';
 
 // modules
 import transformCenter from './modules/transform-center';
+import absoluteCenter from './modules/absolute-center';
+import emJustifyList from './modules/em-justify-list';
 
 
 export default [
@@ -29,5 +31,7 @@ export default [
   height,
   wh,
 
-  transformCenter
-]
+  transformCenter,
+  absoluteCenter,
+  emJustifyList
+];

@@ -10,7 +10,7 @@ const Container = styled.div`
 export default (props: any) => {
   return (
     <Container>
-      <View c="#000" wp={6} auto>
+      <View c="#000" wp={8} auto>
         <View radius={8} c="#fff" bg="#4cd964" p={10} mb={10} f={14} lh={1.6}>
           道可道，非常道；名可名，非常名。 无名，天地之始，有名，万物之母。 故常无欲，以观其妙，常有欲，以观其徼。
           此两者，同出而异名，同谓之玄，玄之又玄，众妙之门。
@@ -22,20 +22,57 @@ export default (props: any) => {
         </View>
 
         <View mt={10} flexbox={{ value: 'la' }}>
-          <View p={10} bg="#f80" debug="red" className="is-left"> Left </View>
-          <View p={10} bg="#eee" debug="blue" className="is-right"> Auto </View>
+          <View p={10} bg="#f80" debug="red" className="is-left">
+            Left
+          </View>
+          <View p={10} bg="#eee" debug="blue" className="is-right">
+            Auto
+          </View>
         </View>
 
-        <View mt={10} flexbox={{ value: 'lr', align: 'center'}} debug="red" h={120}>
-          <View p={10} bg="#f80" debug="red" className="is-left"> Left </View>
-          <View p={10} bg="#060" debug="red" className="is-left"> Middle </View>
-          <View p={10} bg="#eee" debug="blue" className="is-right"> Auto </View>
+        <View mt={10} flexbox={{ value: 'lr', align: 'center' }} debug="red" h={120}>
+          <View p={10} bg="#f80" debug="red" className="is-left">
+            Left
+          </View>
+          <View p={10} bg="#060" debug="red" className="is-left">
+            Middle
+          </View>
+          <View p={10} bg="#eee" debug="blue" className="is-right">
+            Auto
+          </View>
         </View>
 
-        <h2>Modules</h2>
+        <h2>Module: transform-center</h2>
         <View debug="red" wh={200} rel>
           <View bg="#f60" wh={100} circle wsui="transform-center:xy">
             {/* 道 */}
+          </View>
+        </View>
+
+        <h2>Module: em-justify-list</h2>
+        <View w={900} auto debug="red">
+          <View wsui="em-justify-list:5">
+            <View bg="#eee" h={100} className="is-item">
+              item1
+            </View>
+            <View bg="#f30" h={100} className="is-item">
+              item2
+            </View>
+            <View bg="#ddd" h={100} className="is-item">
+              item3
+            </View>
+            <View bg="#030" h={100} className="is-item">
+              item2
+            </View>
+            <View bg="#ddd" h={100} className="is-item">
+              item3
+            </View>
+            <View bg="#ccc" h={100} className="is-item">
+              item3
+            </View>
+            <View bg="#999" h={100} className="is-item">
+              item3
+            </View>
           </View>
         </View>
       </View>
