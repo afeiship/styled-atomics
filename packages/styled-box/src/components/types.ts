@@ -51,6 +51,7 @@ export interface Props {
   round?: boolean;
   circle?: boolean;
   flexbox?: Flexbox;
+  plugins?: any[];
   plugin?: any;
   option?: any;
   engine: EngineProps;

@@ -31,8 +31,8 @@ export default class StyledBox extends Component<Props> {
   };
 
   render() {
-    const { className, nodeName, engine, ...props } = this.props;
-    const fn = nxCompose.apply(null, modules);
+    const { className, nodeName, engine, plugins, ...props } = this.props;
+    const fn = nxCompose.apply(null, modules.concat(plugins as Array<any>));
     const options = fn({ props: this.props, data: [] });
     const Styled = engine.styled(nodeName)`
       ${options.data.join('')}

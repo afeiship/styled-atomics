@@ -2,8 +2,22 @@ import React from 'react';
 import View from '../../src/main';
 import styled, { css } from 'styled-components';
 
+const pluing1 = (options) => {
+  const { props, data } = options;
+  const { plugin } = props;
+  if (plugin && plugin.includes('pp')) {
+    const value = plugin.split(':')[1] || '#f60';
+    const values = css`
+      ${'border:1px solid ' + value + '; padding: 10px; background:#eee;'}
+    `;
+
+    options.data = data.concat(values);
+  }
+  return options;
+};
+
 // global config engine:
-Object.assign(View.defaultProps, { engine: { styled, css } });
+Object.assign(View.defaultProps, { engine: { styled, css }, plugins: [pluing1] });
 
 const Container = styled.div`
   width: 80%;
@@ -77,6 +91,12 @@ export default (props: any) => {
               item3
             </View>
           </View>
+        </View>
+
+        <h1>Customize plugin:</h1>
+        <View plugin="pp:#999">
+          道可道，非常道；名可名，非常名。 无名，天地之始，有名，万物之母。 故常无欲，以观其妙，常有欲，以观其徼。
+          此两者，同出而异名，同谓之玄，玄之又玄，众妙之门。
         </View>
       </View>
     </Container>
