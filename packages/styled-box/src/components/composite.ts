@@ -12,9 +12,9 @@ import height from './elements/height';
 import wh from './elements/wh';
 
 // modules
-import transformCenter from './modules/transform-center';
-import absoluteCenter from './modules/absolute-center';
-import emJustifyList from './modules/em-justify-list';
+import transformCenter from './plugins/transform-center';
+import absoluteCenter from './plugins/absolute-center';
+import emJustifyList from './plugins/em-justify-list';
 
 
 export default [

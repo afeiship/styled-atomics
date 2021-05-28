@@ -22,11 +22,12 @@ export interface Props {
   b?: number;
   l?: number;
   trbl0?: boolean;
-  rel?: boolean;
+  relative?: boolean;
   abs?: boolean;
   fixed?: boolean;
   w?: number;
   h?: number;
+  hp?: number;
   wh?: number;
   w1?: number;
   wp?: number;
@@ -54,7 +55,8 @@ export interface Props {
   round?: boolean;
   circle?: boolean;
   flexbox?: Flexbox;
-  wsui?: any;
+  plugin?: any;
+  option?: any;
   className?: string;
   debug?: string | boolean;
   unit?: string;

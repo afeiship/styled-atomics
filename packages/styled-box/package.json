@@ -74,8 +74,9 @@
     "@jswork/next-compact-object": "^1.0.1",
     "@jswork/next-compose": "^1.0.0",
     "@jswork/noop": "^1.0.0",
-    "@jswork/position-value": "^1.0.1",
-    "classnames": "^2.2.6"
+    "@jswork/position-value": "^1.0.4",
+    "classnames": "^2.2.6",
+    "filter-react-props": "^0.0.4"
   },
   "publishConfig": {
     "access": "public",

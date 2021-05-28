@@ -16,25 +16,27 @@ export default class StyledBox extends Component<Props> {
      * The extended className for component.
      */
     className: PropTypes.string,
-    debug: PropTypes.string,
     unit: PropTypes.string,
-    nodeName: PropTypes.any
+    nodeName: PropTypes.any,
+    plugins: PropTypes.array,
+    plugin: PropTypes.string,
+    options: PropTypes.any
   };
 
   static defaultProps = {
     unit: 'px',
-    nodeName: 'div'
+    nodeName: 'div',
+    plugins: []
   };
 
   render() {
     const { className, nodeName, ...props } = this.props;
     const fn = nxCompose.apply(null, modules);
     const options = fn({ props: this.props, data: [] });
-
-    const Container = styled(nodeName)`
+    const Styled = styled(nodeName)`
       ${options.data.join('')}
     `;
 
-    return <Container className={classNames(CLASS_NAME, className)} {...props} />;
+    return <Styled className={classNames(CLASS_NAME, className)} {...props} />;
   }
 }

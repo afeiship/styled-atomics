@@ -2,11 +2,11 @@ import { css } from 'styled-components';
 
 export default (options) => {
   const { props, data } = options;
-  const { wsui } = props;
+  const { plugin } = props;
 
-  if (wsui) {
-    if (wsui.includes('em-justify-list')) {
-      const value = parseInt(wsui.split(':')[1]) || 1;
+  if (plugin) {
+    if (plugin.includes('em-justify-list')) {
+      const value = parseInt(plugin.split(':')[1]) || 1;
       const percentage = `${100/value}%`
       const values = css`
         margin: -0.5em;

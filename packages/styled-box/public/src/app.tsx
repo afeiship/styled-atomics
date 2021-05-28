@@ -43,15 +43,15 @@ export default (props: any) => {
         </View>
 
         <h2>Module: transform-center</h2>
-        <View debug="red" wh={200} rel>
-          <View bg="#f60" wh={100} circle wsui="transform-center:xy">
+        <View debug="red" wh={200} relative>
+          <View bg="#f60" wh={100} circle plugin="transform-center:xy">
             {/* 道 */}
           </View>
         </View>
 
         <h2>Module: em-justify-list</h2>
         <View w={900} auto debug>
-          <View wsui="em-justify-list:5">
+          <View plugin="em-justify-list:5">
             <View bg="#eee" h={100} className="is-item">
               item1
             </View>
