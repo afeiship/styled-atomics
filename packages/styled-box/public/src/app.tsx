@@ -50,7 +50,7 @@ export default (props: any) => {
         </View>
 
         <h2>Module: em-justify-list</h2>
-        <View w={900} auto debug="red">
+        <View w={900} auto debug>
           <View wsui="em-justify-list:5">
             <View bg="#eee" h={100} className="is-item">
               item1

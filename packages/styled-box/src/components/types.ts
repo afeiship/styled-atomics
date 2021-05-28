@@ -56,7 +56,7 @@ export interface Props {
   flexbox?: Flexbox;
   wsui?: any;
   className?: string;
-  debug?: string;
+  debug?: string | boolean;
   unit?: string;
   nodeName?: any;
 }
