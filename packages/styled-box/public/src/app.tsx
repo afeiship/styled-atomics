@@ -26,7 +26,7 @@ export default (props: any) => {
           <View p={10} bg="#eee" debug="blue" className="is-right"> Auto </View>
         </View>
 
-        <View mt={10} flexbox={{ value: 'lr' }}>
+        <View mt={10} flexbox={{ value: 'lr', align: 'center'}} debug="red" h={120}>
           <View p={10} bg="#f80" debug="red" className="is-left"> Left </View>
           <View p={10} bg="#060" debug="red" className="is-left"> Middle </View>
           <View p={10} bg="#eee" debug="blue" className="is-right"> Auto </View>

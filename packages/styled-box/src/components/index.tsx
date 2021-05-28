@@ -28,7 +28,7 @@ export default class StyledBox extends Component<Props> {
   };
 
   render() {
-    const { className, nodeName } = this.props;
+    const { className, nodeName, ...props } = this.props;
     const fn = nxCompose.apply(null, modules);
     const options = fn({ props: this.props, data: [] });
 
@@ -36,6 +36,6 @@ export default class StyledBox extends Component<Props> {
       ${options.data.join('')}
     `;
 
-    return <Container data-component={CLASS_NAME} className={classNames(CLASS_NAME, className)} />;
+    return <Container className={classNames(CLASS_NAME, className)} {...props} />;
   }
 }

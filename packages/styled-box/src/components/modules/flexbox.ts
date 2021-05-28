@@ -5,11 +5,14 @@ export default (options) => {
   const { flexbox } = props;
 
   if (flexbox) {
-    const { wrap, value } = flexbox;
+    const { wrap, value, align } = flexbox;
     const values = css`
       display: flex;
       box-sizing: border-box;
       flex-wrap: ${wrap ? 'wrap' : 'nowrap'};
+      /* align */
+      ${align && 'align-items:' + align + ';'}
+
       /* center */
       ${value === 'center' && 'align-items: center; justify-content: center;'}
 
