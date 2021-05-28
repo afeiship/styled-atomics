@@ -55,6 +55,10 @@ export interface Props {
   ml?: number;
   mx?: number;
   my?: number;
+  x?: boolean;
+  y?: boolean;
+  strip?: boolean;
+  space?: number;
   auto?: boolean;
   radius?: number | string;
   round?: boolean;

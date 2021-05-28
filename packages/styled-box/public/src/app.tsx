@@ -59,6 +59,15 @@ export default (props: any) => {
           </View>
         </View>
 
+        <h2>elements: space</h2>
+        <View space={20} debug="green" p={10} y strip>
+          <View debug className="is-item">item1</View>
+          <View debug className="is-item">item2</View>
+          <View debug className="is-item">item3</View>
+          <View debug className="is-item">item4</View>
+          <View debug className="is-item">item5</View>
+        </View>
+
         <h2>Module: transform-center</h2>
         <View debug="red" wh={200} relative>
           <View bg="#f60" wh={100} circle plugin="transform-center:xy">
