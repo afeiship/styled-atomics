@@ -1,6 +1,9 @@
 import React from 'react';
 import View from '../../src/main';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+
+// global config engine:
+Object.assign(View.defaultProps, { engine: { styled, css } });
 
 const Container = styled.div`
   width: 80%;

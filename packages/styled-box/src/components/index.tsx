@@ -1,7 +1,6 @@
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import styled from 'styled-components';
 import nxCompose from '@jswork/next-compose';
 import { Props } from './types';
 import modules from './composite';
@@ -16,6 +15,7 @@ export default class StyledBox extends Component<Props> {
      * The extended className for component.
      */
     className: PropTypes.string,
+    engine: PropTypes.any,
     unit: PropTypes.string,
     nodeName: PropTypes.any,
     plugins: PropTypes.array,
@@ -24,16 +24,17 @@ export default class StyledBox extends Component<Props> {
   };
 
   static defaultProps = {
+    engine: null,
     unit: 'px',
     nodeName: 'div',
     plugins: []
   };
 
   render() {
-    const { className, nodeName, ...props } = this.props;
+    const { className, nodeName, engine, ...props } = this.props;
     const fn = nxCompose.apply(null, modules);
     const options = fn({ props: this.props, data: [] });
-    const Styled = styled(nodeName)`
+    const Styled = engine.styled(nodeName)`
       ${options.data.join('')}
     `;
 

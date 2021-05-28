@@ -1,19 +1,15 @@
 type FlexValue = 'la' | 'lar' | 'ar' | 'lr' | 'ta' | 'tab' | 'ab' | 'tb' | 'center';
-type FlexAlignment =
-  | 'stretch'
-  | 'center'
-  | 'start'
-  | 'end'
-  | 'between'
-  | 'around'
-  | 'baseline'
-  | 'initial'
-  | 'inherit';
+type FlexAlignment = 'stretch' | 'center' | 'start' | 'end' | 'between' | 'around' | 'baseline' | 'initial' | 'inherit';
 
 export interface Flexbox {
   value?: FlexValue;
   align?: FlexAlignment;
   wrap?: boolean;
+}
+
+export interface EngineProps {
+  styled: any;
+  css: any;
 }
 
 export interface Props {
@@ -57,6 +53,7 @@ export interface Props {
   flexbox?: Flexbox;
   plugin?: any;
   option?: any;
+  engine: EngineProps;
   className?: string;
   debug?: string | boolean;
   unit?: string;
