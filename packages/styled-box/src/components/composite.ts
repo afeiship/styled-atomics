@@ -1,17 +1,24 @@
-import margin from './modules/margin';
-import padding from './modules/padding';
-import flexbox from './modules/flexbox';
-import fontSize from './modules/font-size';
-import background from './modules/background';
-import color from './modules/color';
-import debug from './modules/debug';
-import borderRadius from './modules/border-radius';
-import width from './modules/width';
-import height from './modules/height';
+import margin from './elements/margin';
+import padding from './elements/padding';
+import position from './elements/position';
+import flexbox from './elements/flexbox';
+import fontSize from './elements/font-size';
+import background from './elements/background';
+import color from './elements/color';
+import debug from './elements/debug';
+import borderRadius from './elements/border-radius';
+import width from './elements/width';
+import height from './elements/height';
+import wh from './elements/wh';
+
+// modules
+import transformCenter from './modules/transform-center';
+
 
 export default [
   margin,
   padding,
+  position,
   flexbox,
   fontSize,
   color,
@@ -19,5 +26,8 @@ export default [
   background,
   borderRadius,
   width,
-  height
+  height,
+  wh,
+
+  transformCenter
 ]

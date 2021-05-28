@@ -31,6 +31,13 @@ export default (props: any) => {
           <View p={10} bg="#060" debug="red" className="is-left"> Middle </View>
           <View p={10} bg="#eee" debug="blue" className="is-right"> Auto </View>
         </View>
+
+        <h2>Modules</h2>
+        <View debug="red" wh={200} rel>
+          <View bg="#f60" wh={100} circle wsui="transform-center:xy">
+            {/* 道 */}
+          </View>
+        </View>
       </View>
     </Container>
   );

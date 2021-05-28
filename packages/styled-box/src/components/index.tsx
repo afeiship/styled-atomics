@@ -1,9 +1,8 @@
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import nxCompose from '@jswork/next-compose';
-import positionValue from '@jswork/position-value';
 import { Props } from './types';
 import modules from './composite';
 

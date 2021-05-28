@@ -56,6 +56,7 @@ export interface Props {
   round?: boolean;
   circle?: boolean;
   flexbox?: Flexbox;
+  wsui?: any;
   className?: string;
   debug?: DebugColor;
   unit?: string;
