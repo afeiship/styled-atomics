@@ -11,6 +11,8 @@ import width from './elements/width';
 import height from './elements/height';
 import wh from './elements/wh';
 import space from './elements/space';
+import blank from './elements/blank';
+import lc from './elements/line-clamp';
 
 // modules
 import transformCenter from './plugins/transform-center';
@@ -32,6 +34,8 @@ export default [
   height,
   wh,
   space,
+  blank,
+  lc,
 
   transformCenter,
   absoluteCenter,

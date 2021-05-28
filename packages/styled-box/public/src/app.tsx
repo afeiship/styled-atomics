@@ -61,17 +61,57 @@ export default (props: any) => {
 
         <h2>elements: space</h2>
         <View space={20} debug="green" p={10} y strip>
-          <View debug className="is-item">item1</View>
-          <View debug className="is-item">item2</View>
-          <View debug className="is-item">item3</View>
-          <View debug className="is-item">item4</View>
-          <View debug className="is-item">item5</View>
+          <View debug className="is-item">
+            item1
+          </View>
+          <View debug className="is-item">
+            item2
+          </View>
+          <View debug className="is-item">
+            item3
+          </View>
+          <View debug className="is-item">
+            item4
+          </View>
+          <View debug className="is-item">
+            item5
+          </View>
+        </View>
+
+        <h2>elements: blank</h2>
+        <View debug className="is-item">
+          item1
+        </View>
+        <View blank={10} bg="#eee" debug />
+        <View debug className="is-item">
+          item3
+        </View>
+        <View blank={20} bg="#eee" debug />
+        <View debug className="is-item">
+          item4
+        </View>
+        <View blank={100} bg="#eee" debug />
+        <View debug className="is-item">
+          item5
+        </View>
+
+        <h2>elements: lc(1/2/3)</h2>
+        <View debug lc={1} mb={10} className="is-item">
+          道可道，非常道；名可名，非常名。 无名，天地之始，有名，万物之母。 故常无欲，以观其妙，常有欲，以观其徼。
+          此两者，同出而异名，同谓之玄，玄之又玄，众妙之门。
+        </View>
+        <View debug lc={2} mb={10} wp={2} className="is-item">
+          道可道，非常道；名可名，非常名。 无名，天地之始，有名，万物之母。 故常无欲，以观其妙，常有欲，以观其徼。
+          此两者，同出而异名，同谓之玄，玄之又玄，众妙之门。
+        </View>
+        <View debug lc={3} wp={3} className="is-item">
+          清晨醒来，打开窗帘，一抹慵懒的阳光照进来，暖暖的，柔柔的，时光瞬间变得温婉静美，打开音乐，沏一杯花茶，躺在床上，暖阳淼淼，茶香淡淡，音乐袅袅，闭上眼睛，嘴角轻轻上扬，算是对着光阴的镜子，和自己撒个娇。
         </View>
 
         <h2>Module: transform-center</h2>
-        <View debug="red" wh={200} relative>
-          <View bg="#f60" wh={100} circle plugin="transform-center:xy">
-            {/* 道 */}
+        <View debug="red" wh={200} rel>
+          <View bg="#f60" c="#fff" wh={100} circle plugin="transform-center:xy">
+            道
           </View>
         </View>
 

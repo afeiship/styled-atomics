@@ -27,7 +27,7 @@ export interface Props {
   b?: number;
   l?: number;
   trbl0?: boolean;
-  relative?: boolean;
+  rel?: boolean;
   abs?: boolean;
   fixed?: boolean;
   w?: number;
@@ -59,6 +59,8 @@ export interface Props {
   y?: boolean;
   strip?: boolean;
   space?: number;
+  blank?: number;
+  lc?: number;
   auto?: boolean;
   radius?: number | string;
   round?: boolean;

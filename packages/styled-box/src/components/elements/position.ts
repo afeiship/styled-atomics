@@ -3,8 +3,8 @@ import positionValue from '@jswork/position-value';
 
 export default (options) => {
   const { props, data } = options;
-  const { relative, abs, fixed, sticky, t, r, b, l, trbl0, unit } = props;
-  const position = positionValue({ relative, abs, fixed, sticky });
+  const { rel, abs, fixed, sticky, t, r, b, l, trbl0, unit } = props;
+  const position = positionValue({ rel, abs, fixed, sticky });
 
   const values = css`
     ${position && 'position:' + position + ';'}

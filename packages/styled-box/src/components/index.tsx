@@ -49,7 +49,7 @@ export default class StyledBox extends Component<Props> {
   };
 
   render() {
-    const { className, nodeName, engine, plugins, ...props } = this.props;
+    const { className, nodeName, engine, plugins, rel, x, y, ...props } = this.props;
     const fn = nxCompose.apply(null, atomics.concat(plugins as Array<any>));
     const defaultEntity: PluginEntity = { props: this.props, data: [] };
     const options = fn(defaultEntity);
