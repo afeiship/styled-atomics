@@ -8,7 +8,7 @@ const pluing1 = (options) => {
   if (plugin && plugin.includes('pp')) {
     const value = plugin.split(':')[1] || '#f60';
     const values = css`
-      ${'border:1px solid ' + value + '; padding: 10px; background:#eee;'}
+      ${'border:2px solid ' + value + '; padding: 10px; background:#eee;'}
     `;
 
     options.data = data.concat(values);
