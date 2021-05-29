@@ -2,7 +2,7 @@ import { css } from 'styled-components';
 
 export default (options) => {
   const { props, data } = options;
-  const { p, pt, pr, pb, pl, px, py, p_, pt_, pr_, pb_, pl_, pt__, pr__, pb__, pl__, sub, unit } = props;
+  const { p, pt, pr, pb, pl, px, py, p_, pt_, pr_, pb_, pl_, strip, sub, unit } = props;
 
   const values = css`
     ${p && 'padding:' + p + unit + ';'}
@@ -18,10 +18,10 @@ export default (options) => {
     ${pb_ && '> ' + sub + ' { padding-bottom: ' + pb_ + unit + '}'}
     ${pl_ && '> ' + sub + ' { padding-left: ' + pl_ + unit + '}'}
 
-    ${pt__ && ' > ' + sub + ':first-child{ padding-top:0; }'}
-    ${pr__ && ' > ' + sub + ':last-child{ padding-right:0; }'}
-    ${pb__ && ' > ' + sub + ':last-child{ padding-bottom:0; }'}
-    ${pl__ && ' > ' + sub + ':first-child{ padding-left:0; }'}
+    ${pt_ && strip && ' > ' + sub + ':first-child{ padding-top:0; }'}
+    ${pr_ && strip && ' > ' + sub + ':last-child{ padding-right:0; }'}
+    ${pb_ && strip && ' > ' + sub + ':last-child{ padding-bottom:0; }'}
+    ${pl_ && strip && ' > ' + sub + ':first-child{ padding-left:0; }'}
 
     ${px && 'padding-left:' + px + unit + '; padding-right:' + px + unit + ';'}
     ${py && 'padding-top:' + py + unit + '; padding-bottom:' + py + unit + ';'}

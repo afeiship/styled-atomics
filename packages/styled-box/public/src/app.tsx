@@ -80,7 +80,7 @@ export default (props: any) => {
 
         <View blank={20} />
 
-        <View mb_={18} p_={5} mb__ debug="#ccc" bdw={5} bds="dashed">
+        <View mb_={18} p_={5} strip debug="#ccc" bdw={5} bds="dashed">
           <View debug className="is-item">
             item1
           </View>

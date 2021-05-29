@@ -28,6 +28,8 @@ export interface Props {
   l?: number;
   fl?: boolean;
   fr?: boolean;
+  fl_?: boolean;
+  fr_?: boolean;
   bdw?: number;
   bds?: string;
   bdc?: string;
@@ -43,7 +45,9 @@ export interface Props {
   w1?: number;
   wp?: number;
   c?: string;
+  c_?: string;
   bg?: string;
+  bg_?: string;
   m?: number;
   m_?: number;
   p?: number;
@@ -59,10 +63,6 @@ export interface Props {
   pr_?: number;
   pb_?: number;
   pl_?: number;
-  pt__?: boolean;
-  pr__?: boolean;
-  pb__?: boolean;
-  pl__?: boolean;
   px?: number;
   py?: number;
   mt?: number;
@@ -73,10 +73,6 @@ export interface Props {
   mr_?: number;
   mb_?: number;
   ml_?: number;
-  mt__?: boolean;
-  mr__?: boolean;
-  mb__?: boolean;
-  ml__?: boolean;
   mx?: number;
   my?: number;
   x?: boolean;
