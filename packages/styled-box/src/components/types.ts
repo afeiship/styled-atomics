@@ -22,6 +22,14 @@ export interface PluginEntity {
 }
 
 export interface Props {
+  vat: boolean;
+  vab: boolean;
+  vam: boolean;
+  vabs: boolean;
+  vat_: boolean;
+  vab_: boolean;
+  vam_: boolean;
+  vabs_: boolean;
   t?: number;
   r?: number;
   b?: number;

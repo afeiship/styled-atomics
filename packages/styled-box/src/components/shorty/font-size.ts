@@ -2,12 +2,12 @@ import { css } from 'styled-components';
 
 export default (options) => {
   const { props, data } = options;
-  const { wh, unit } = props;
+  const { f0 } = props;
 
   const values = css`
-    ${wh && 'width:' + wh + unit + '; height: ' + wh + unit + ';'}
+    ${f0 && 'font-size: 0;'}
   `;
-  options.data = data.concat(values);
 
+  options.data = data.concat(values);
   return options;
 };

@@ -5,7 +5,6 @@ import flexbox from './elements/flexbox';
 import fontSize from './elements/font-size';
 import background from './elements/background';
 import color from './elements/color';
-import debug from './elements/debug';
 import borderRadius from './elements/border-radius';
 import width from './elements/width';
 import height from './elements/height';
@@ -14,8 +13,10 @@ import space from './elements/space';
 import blank from './elements/blank';
 import lc from './elements/line-clamp';
 import float from './elements/float';
-import clearfix from './elements/clearfix';
 import border from './elements/border';
+
+// shory
+import shorty from './shorty';
 
 // modules
 import transformCenter from './plugins/transform-center';
@@ -30,7 +31,6 @@ export default [
   flexbox,
   fontSize,
   color,
-  debug,
   background,
   borderRadius,
   width,
@@ -40,8 +40,10 @@ export default [
   blank,
   lc,
   float,
-  clearfix,
   border,
+
+  // shorty
+  ...shorty,
 
   transformCenter,
   absoluteCenter,

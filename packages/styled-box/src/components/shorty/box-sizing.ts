@@ -2,12 +2,13 @@ import { css } from 'styled-components';
 
 export default (options) => {
   const { props, data } = options;
-  const { wh, unit } = props;
+  const { bsb, bsc } = props;
 
   const values = css`
-    ${wh && 'width:' + wh + unit + '; height: ' + wh + unit + ';'}
+    ${bsb && 'box-sizing: border-box;'}
+    ${bsc && 'box-sizing: content-box;'}
   `;
-  options.data = data.concat(values);
 
+  options.data = data.concat(values);
   return options;
 };
