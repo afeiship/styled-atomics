@@ -2,13 +2,12 @@ import { css } from 'styled-components';
 
 export default (options) => {
   const { props, data } = options;
-  const { wh, wh100, unit } = props;
+  const { fl, fr } = props;
 
   const values = css`
-    ${wh && 'width:' + wh + unit + '; height: ' + wh + unit + ';'}
-    ${wh100 && 'width: 100%; height: 100%;'}
+    ${fl && 'float: left;'}
+    ${fr && 'float: right;'}
   `;
   options.data = data.concat(values);
-
   return options;
 };

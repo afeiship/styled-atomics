@@ -59,6 +59,45 @@ export default (props: any) => {
           </View>
         </View>
 
+        <h2>elements: margin/padding</h2>
+        <View mb_={10}>
+          <View debug className="is-item">
+            item1
+          </View>
+          <View debug className="is-item">
+            item2
+          </View>
+          <View debug className="is-item">
+            item3
+          </View>
+          <View debug className="is-item">
+            item4
+          </View>
+          <View debug className="is-item">
+            item5
+          </View>
+        </View>
+
+        <View blank={20} />
+
+        <View mb_={18} p_={5} mb__ debug="#ccc" bdw={5} bds="dashed">
+          <View debug className="is-item">
+            item1
+          </View>
+          <View debug className="is-item">
+            item2
+          </View>
+          <View debug className="is-item">
+            item3
+          </View>
+          <View debug className="is-item">
+            item4
+          </View>
+          <View debug className="is-item">
+            item5
+          </View>
+        </View>
+
         <h2>elements: space</h2>
         <View space={20} debug="green" p={10} y strip>
           <View debug className="is-item">

@@ -13,6 +13,9 @@ import wh from './elements/wh';
 import space from './elements/space';
 import blank from './elements/blank';
 import lc from './elements/line-clamp';
+import float from './elements/float';
+import clearfix from './elements/clearfix';
+import border from './elements/border';
 
 // modules
 import transformCenter from './plugins/transform-center';
@@ -36,6 +39,9 @@ export default [
   space,
   blank,
   lc,
+  float,
+  clearfix,
+  border,
 
   transformCenter,
   absoluteCenter,

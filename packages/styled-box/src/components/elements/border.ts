@@ -2,13 +2,13 @@ import { css } from 'styled-components';
 
 export default (options) => {
   const { props, data } = options;
-  const { wh, wh100, unit } = props;
+  const { bdw, bds, bdc, unit } = props;
 
   const values = css`
-    ${wh && 'width:' + wh + unit + '; height: ' + wh + unit + ';'}
-    ${wh100 && 'width: 100%; height: 100%;'}
+    ${bdw && 'border-width: ' + bdw + unit + ';'}
+    ${bds && 'border-style: ' + bds + ';'}
+    ${bdc && 'border-color: ' + bdc + ';'}
   `;
   options.data = data.concat(values);
-
   return options;
 };

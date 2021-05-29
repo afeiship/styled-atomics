@@ -45,6 +45,7 @@ export default class StyledBox extends Component<Props> {
 
   static defaultProps = {
     engine: null,
+    sub: '*',
     unit: 'px',
     nodeName: 'div',
     plugins: []
