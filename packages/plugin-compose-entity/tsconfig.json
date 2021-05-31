@@ -1,9 +1,7 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "module": "esnext",
     "strict": true,
-    "moduleResolution": "node",
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "outDir": "dist",
@@ -11,10 +9,6 @@
     "pretty": true,
     "esModuleInterop": true,
     "skipDefaultLibCheck": true,
-    "experimentalDecorators": true,
-    "allowSyntheticDefaultImports": true,
-    "noImplicitAny": false,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true
+    "noImplicitAny": false
   }
 }

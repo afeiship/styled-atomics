@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es6",
-    "module": "esnext",
+    "target": "es5",
     "strict": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
@@ -10,10 +9,6 @@
     "pretty": true,
     "esModuleInterop": true,
     "skipDefaultLibCheck": true,
-    "experimentalDecorators": true,
-    "allowSyntheticDefaultImports": true,
-    "noImplicitAny": false,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true
+    "noImplicitAny": false
   }
 }

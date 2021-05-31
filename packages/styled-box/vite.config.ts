@@ -11,5 +11,8 @@ export default defineConfig({
     outDir: '../docs',
     emptyOutDir: true
   },
+  optimizeDeps: {
+    include: ['@jswork/plugin-compose-entity', '@jswork/plugin-normalize']
+  },
   plugins: [reactRefresh()]
 });
