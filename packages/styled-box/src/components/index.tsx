@@ -6,7 +6,7 @@ import filterReactProps from '@jswork/filter-react-props';
 import { Props, PluginEntity } from './types';
 import atomics from './composite';
 import plugins from './plugins';
-import BasicPlugin from './plugin';
+import { PluginManager } from './plugin';
 
 const CLASS_NAME = 'styled-box';
 const FILTERED_PROPS = ['rel', 'x', 'y'];
@@ -45,6 +45,19 @@ export default class StyledBox extends Component<Props> {
     options: PropTypes.any
   };
 
+  static mergePlugin(inPlugins) {
+    const props = this.defaultProps;
+    const plugins = props.plugins;
+    const names = plugins.map((plugin) => plugin.prototype.name);
+    inPlugins.forEach((plugin) => {
+      const name = plugin.prototype.name;
+      if (!names.includes(name)) {
+        plugins.push(plugin);
+      }
+    });
+    this.defaultProps.plugins = plugins;
+  }
+
   static defaultProps = {
     engine: null,
     sub: '*',
@@ -55,7 +68,7 @@ export default class StyledBox extends Component<Props> {
 
   render() {
     const { className, nodeName, engine, plugins, ...props } = this.props;
-    const fn = nxCompose.apply(null, atomics.concat(BasicPlugin.getStyles));
+    const fn = nxCompose.apply(null, atomics.concat(PluginManager.getEntity));
     const defaultEntity: PluginEntity = { props: this.props, data: [] };
     const options = fn(defaultEntity);
     const styles = options.data;
