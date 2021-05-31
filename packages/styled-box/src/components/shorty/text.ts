@@ -1,10 +1,8 @@
-import { css } from 'styled-components';
-
 export default (options) => {
   const { props, data } = options;
   const { tdn, tdu, tdlh, tl, tc, tr, tj, tlr_, nowrap, ell, b, n, usn } = props;
 
-  const values = css`
+  const values = props.engine.css`
     ${tdn && 'text-decoration: none;'}
     ${tdu && 'text-decoration: underline;'}
     ${tdlh && 'text-decoration: line-through;'}
