@@ -11,11 +11,11 @@ export default (options) => {
     ${mb && 'margin-bottom:' + mb + unit + ';'}
     ${ml && 'margin-left:' + ml + unit + ';'}
 
-    ${m_ && '> ' + sub + ' { margin: ' + m_ + unit + '}'}
-    ${mt_ && '> ' + sub + ' { margin-top: ' + mt_ + unit + '}'}
-    ${mr_ && '> ' + sub + ' { margin-right: ' + mr_ + unit + '}'}
-    ${mb_ && '> ' + sub + ' { margin-bottom: ' + mb_ + unit + '}'}
-    ${ml_ && '> ' + sub + ' { margin-left: ' + ml_ + unit + '}'}
+    ${m_ && '> ' + sub + ' { margin: ' + m_ + unit + '; }'}
+    ${mt_ && '> ' + sub + ' { margin-top: ' + mt_ + unit + '; }'}
+    ${mr_ && '> ' + sub + ' { margin-right: ' + mr_ + unit + '; }'}
+    ${mb_ && '> ' + sub + ' { margin-bottom: ' + mb_ + unit + '; }'}
+    ${ml_ && '> ' + sub + ' { margin-left: ' + ml_ + unit + '; }'}
 
     ${mx && 'margin-left:' + mx + unit + '; margin-right:' + mx + unit + ';'}
     ${my && 'margin-top:' + my + unit + '; margin-bottom:' + my + unit + ';'}
