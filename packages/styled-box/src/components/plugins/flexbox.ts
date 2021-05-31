@@ -9,12 +9,15 @@ export default class extends AbstractPlugin {
     if (!this.current) return;
     const { name, row, column, wrap, value, align, justify } = this.current;
     if (name === this.name) {
-      this.values = this.styledCss`
+      const css = this.styledCss;
+      this.values = css`
         display: flex;
         box-sizing: border-box;
         flex-wrap: ${wrap ? 'wrap' : 'nowrap'};
+
         ${row && 'flex-direction: row; '}
         ${column && 'flex-direction: column; '}
+
         /* align */
         ${align && 'align-items:' + align + ';'}
         /* justify */
@@ -37,7 +40,7 @@ export default class extends AbstractPlugin {
 
         /* lr|tb */
         ${['lr', 'tb'].includes(value) && 'justify-content: space-between;'}
-    `;
+      `;
     }
   }
 }
