@@ -1,18 +1,18 @@
-import { css } from 'styled-components';
+import BasePlugin from '../plugin';
 
-export default (options) => {
-  const { props, data } = options;
-  const { plugin } = props;
-
-  if (plugin) {
-    const values = css`
-      ${plugin.includes('transform-center') && 'position: absolute;'}
-      ${plugin === 'transform-center:x' && 'left: 50%; transform: translateX(-50%);'}
-      ${plugin === 'transform-center:y' && 'top: 50%; transform: translateY(-50%);'}
-      ${plugin === 'transform-center:xy' && 'left: 50%; top: 50%; transform: translate(-50%, -50%);'}
-    `;
-    options.data = data.concat(values);
+export default class extends BasePlugin {
+  get name(): string {
+    return 'transform-center';
   }
 
-  return options;
-};
+  public pipe() {
+    if (!this.current) return;
+    const { name, value } = this.current;
+    this.values = this.engine!.css`
+      ${name === this.name && 'position: absolute;'}
+      ${value === 'x' && 'left: 50%; transform: translateX(-50%);'}
+      ${value === 'y' && 'top: 50%; transform: translateY(-50%);'}
+      ${value === 'xy' && 'left: 50%; top: 50%; transform: translate(-50%, -50%);'}
+    `;
+  }
+}

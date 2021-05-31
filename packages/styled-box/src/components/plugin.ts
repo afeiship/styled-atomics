@@ -1,30 +1,41 @@
-import { InlinePlugin, EngineProps } from './types';
+import { InlinePlugin, PluginEntity, EngineProps } from './types';
 
 /**
  * plugin="transform-center:xy"
  * plugin={{ name:'transform-center', value: 'xy' }}
  * plugin={[{ name:'transform-center', value: 'xy' }, { name:'em-justify-list', value: 5 }]}
  */
-
-export default class {
-  private entity;
+export default class BasePlugin {
   private plugins: InlinePlugin[];
-  private current: InlinePlugin;
-  private values: string[] = [];
-  private data: any[];
-  private engine: EngineProps;
+  protected current: InlinePlugin | null = null;
+  protected values: string[] = [];
+  protected data: any[];
+  protected engine: EngineProps;
+  protected entity: PluginEntity;
 
-  get name() {
+  public static getStyles(inEntity): PluginEntity {
+    const plugin = inEntity.props.plugin;
+    if (!plugin) return inEntity;
+    const TargetClass = inEntity.props.plugins.find((item) => item.prototype.name === plugin.name);
+    if (!TargetClass) return inEntity;
+    const instance = new TargetClass(inEntity);
+    return instance.get();
+  }
+
+  public get name() {
     return 'basic-plugin';
   }
 
-  constructor(inEntity) {
+  constructor(inEntity: PluginEntity) {
     const { props, data } = inEntity;
     const { plugin, engine } = props;
+    this.entity = inEntity;
     this.data = data;
-    this.plugins = this.normalize(plugin);
-    this.current = this.plugins.find((plugin) => plugin.name === this.name) || this.plugins[0];
     this.engine = engine;
+    if (plugin) {
+      this.plugins = this.normalize(plugin);
+      this.current = this.plugins.find((plugin) => plugin.name === this.name) || null;
+    }
   }
 
   public pipe() {
@@ -38,7 +49,8 @@ export default class {
   public get() {
     this.pipe();
     this.merge();
-    return this.data;
+    this.entity.data = this.data;
+    return this.entity;
   }
 
   private normalize(inPlugin: string | InlinePlugin): InlinePlugin[] {

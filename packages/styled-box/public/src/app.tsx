@@ -2,22 +2,22 @@ import React from 'react';
 import View from '../../src/main';
 import styled, { css } from 'styled-components';
 
-const pluing1 = (options) => {
-  const { props, data } = options;
-  const { plugin } = props;
-  if (plugin && plugin.includes('pp')) {
-    const value = plugin.split(':')[1] || '#f60';
-    const values = css`
-      ${'border:2px solid ' + value + '; padding: 10px; background:#eee;'}
-    `;
+// const pluing1 = (options) => {
+//   const { props, data } = options;
+//   const { plugin } = props;
+//   if (plugin && plugin.includes('pp')) {
+//     const value = plugin.split(':')[1] || '#f60';
+//     const values = css`
+//       ${'border:2px solid ' + value + '; padding: 10px; background:#eee;'}
+//     `;
 
-    options.data = data.concat(values);
-  }
-  return options;
-};
+//     options.data = data.concat(values);
+//   }
+//   return options;
+// };
 
 // global config engine:
-Object.assign(View.defaultProps, { engine: { styled, css }, plugins: [pluing1] });
+Object.assign(View.defaultProps, { engine: { styled, css } });
 
 const Container = styled.div`
   width: 80%;

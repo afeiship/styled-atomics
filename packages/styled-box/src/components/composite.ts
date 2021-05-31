@@ -5,6 +5,6 @@ import generators from './generators';
 import shorty from './shorty';
 
 // modules
-import plugins from './plugins';
+// import plugins from './plugins';
 
-export default [...generators, ...plugins, ...shorty];
+export default [...generators, ...shorty];
