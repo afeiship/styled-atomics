@@ -1,21 +1,5 @@
 import { InlinePlugin, PluginEntity, EngineProps } from './types';
-import nx from '@jswork/next';
-import nxCompose from '@jswork/next-compose';
 import normalize from '@jswork/plugin-normalize';
-
-export class PluginManager {
-  public static getEntity(inEntity): PluginEntity {
-    const { plugin, plugins } = inEntity.props;
-    if (!plugin) return inEntity;
-    const inlinePlugins: InlinePlugin[] = normalize(plugin);
-    const fns = inlinePlugins.map((inlinePlugin) => {
-      const PluginClass = plugins.find((item) => item.prototype.name === inlinePlugin.name);
-      return PluginClass ? (inEntity) => PluginClass.getEntity(inEntity) : nx.stubValue;
-    });
-    const fn = nxCompose.apply(null, fns);
-    return fn(inEntity);
-  }
-}
 
 export class AbstractPlugin {
   get name() {
