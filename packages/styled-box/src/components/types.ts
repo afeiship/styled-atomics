@@ -163,6 +163,10 @@ type ShortyProps = {
   pr0?: boolean;
   pb0?: boolean;
   pl0?: boolean;
+  rel?: boolean;
+  abs?: boolean;
+  fixed?: boolean;
+  sticky?: boolean;
   t0?: boolean;
   r0?: boolean;
   b0?: boolean;

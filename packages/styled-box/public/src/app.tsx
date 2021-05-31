@@ -55,7 +55,7 @@ export default (props: any) => {
           <View p={10} bg="#060" debug className="is-left">
             Middle
           </View>
-          <View p={10} bg="#eee" debug="blue" className="is-right">
+          <View p={10} bg="#eee" debug className="is-right">
             Auto
           </View>
         </View>
@@ -100,7 +100,7 @@ export default (props: any) => {
         </View>
 
         <h2>elements: space</h2>
-        <View space={20} debug="green" p={10} y strip>
+        <View space={20} debug p={10} y strip>
           <View debug className="is-item">
             item1
           </View>
@@ -166,7 +166,7 @@ export default (props: any) => {
         </View>
 
         <h2>Module: transform-center use stringInlinePlugin</h2>
-        <View debug="red" wh={200} rel>
+        <View debug wh={200} rel>
           <View bg="#f60" c="#fff" f="38" wh={100} circle plugin="transform-center:xy" tc>
             道
           </View>
