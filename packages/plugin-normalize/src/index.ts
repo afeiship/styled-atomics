@@ -6,8 +6,40 @@ interface InlinePluiginName {
 }
 
 type InlinePlugin = Record<string, any> & InlinePluiginName;
-type InlinePluginParams = (string & InlinePlugin) | InlinePlugin[];
+type InlinePluginParams = string | InlinePlugin | any[];
 
-export default (inPlugin: InlinePluginParams): InlinePlugin[] => {
-  return [];
-};
+function normalize(inPlugin: InlinePluginParams): InlinePlugin[] {
+  const results: InlinePlugin[] = [];
+  if (typeof inPlugin === 'string') {
+    if (inPlugin.includes(CHAR_SEMICOLON)) {
+      const parts = inPlugin.split(CHAR_SEMICOLON);
+      return parts.reduce((res, part: string) => {
+        res = res.concat(normalize(part));
+        return res;
+      }, results);
+    }
+
+    if (inPlugin.includes(CHAR_COLON)) {
+      const [name, value] = inPlugin.split(CHAR_COLON);
+      return [{ name: name.trim(), value: value.trim() }];
+    }
+
+    const name = inPlugin.trim();
+    return name ? [{ name }] : results;
+  } else {
+    if (Array.isArray(inPlugin)) {
+      return inPlugin.reduce((res, part) => {
+        res = res.concat(normalize(part));
+        return res;
+      }, results);
+    } else {
+      if (typeof inPlugin === 'object') {
+        return [inPlugin];
+      }
+    }
+  }
+
+  return results;
+}
+
+export default normalize;
