@@ -156,7 +156,7 @@ export default (props: any) => {
 
         <h2>Module: transform-center use stringInlinePlugin</h2>
         <View debug="red" wh={200} rel>
-          <View bg="#f60" c="#fff" f="38" wh={100} lh="2" circle plugin="transform-center:xy" tc>
+          <View bg="#f60" c="#fff" f="38" wh={100} circle plugin="transform-center:xy" tc>
             道
           </View>
         </View>
@@ -193,11 +193,11 @@ export default (props: any) => {
           道可道，非常道；名可名，非常名。
         </View>
 
-        <h1>Customize plugin:</h1>
+        {/* <h1>Customize plugin:</h1>
         <View plugin="pp:#999">
           道可道，非常道；名可名，非常名。 无名，天地之始，有名，万物之母。 故常无欲，以观其妙，常有欲，以观其徼。
           此两者，同出而异名，同谓之玄，玄之又玄，众妙之门。
-        </View>
+        </View> */}
       </View>
     </Container>
   );

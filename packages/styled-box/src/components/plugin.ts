@@ -14,10 +14,13 @@ export default class BasePlugin {
   protected entity: PluginEntity;
 
   public static getStyles(inEntity): PluginEntity {
-    const plugin = inEntity.props.plugin;
+    const { plugin, plugins } = inEntity.props;
     if (!plugin) return inEntity;
-    const TargetClass = inEntity.props.plugins.find((item) => item.prototype.name === plugin.name);
-    if (!TargetClass) return inEntity;
+    const TargetClass =
+      plugins.find((item) => {
+        const target = BasePlugin.normalize(plugin);
+        return target[0].name === item.prototype.name;
+      }) || BasePlugin;
     const instance = new TargetClass(inEntity);
     return instance.get();
   }
@@ -33,7 +36,7 @@ export default class BasePlugin {
     this.data = data;
     this.engine = engine;
     if (plugin) {
-      this.plugins = this.normalize(plugin);
+      this.plugins = BasePlugin.normalize(plugin);
       this.current = this.plugins.find((plugin) => plugin.name === this.name) || null;
     }
   }
@@ -53,7 +56,7 @@ export default class BasePlugin {
     return this.entity;
   }
 
-  private normalize(inPlugin: string | InlinePlugin): InlinePlugin[] {
+  public static normalize(inPlugin: string | InlinePlugin): InlinePlugin[] {
     if (typeof inPlugin === 'string') {
       if (inPlugin.includes(':')) {
         const parts = inPlugin.split(':');
