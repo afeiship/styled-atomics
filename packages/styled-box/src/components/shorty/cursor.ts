@@ -1,10 +1,8 @@
-import { css } from 'styled-components';
-
 export default (options) => {
   const { props, data } = options;
   const { cd, cm, cp, pn } = props;
 
-  const values = css`
+  const values = props.engine.css`
     ${cd && 'cursor: default;'}
     ${cp && 'cursor: pointer;'}
     ${cm && 'cursor: move;'}

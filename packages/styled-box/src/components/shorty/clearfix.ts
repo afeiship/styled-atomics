@@ -1,11 +1,9 @@
-import { css } from 'styled-components';
-
 export default (options) => {
   const { props, data } = options;
   const { clearfix } = props;
 
   if (clearfix) {
-    const values = css`
+    const values = props.engine.css`
       &:before,
       &:after {
         content: ' '; /* 1 */

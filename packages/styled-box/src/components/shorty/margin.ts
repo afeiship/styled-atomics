@@ -1,10 +1,8 @@
-import { css } from 'styled-components';
-
 export default (options) => {
   const { props, data } = options;
   const { auto, maa, m0a, m0, mt0, mr0, mb0, ml0, mt_, mr_, mb_, ml_, sub, strip } = props;
 
-  const values = css`
+  const values = props.engine.css`
     ${auto && 'margin-left: auto; margin-right: auto;'}
     ${maa && 'margin: auto;'}
     ${m0a && 'margin: 0 auto;'}

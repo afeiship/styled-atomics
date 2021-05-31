@@ -1,10 +1,8 @@
-import { css } from 'styled-components';
-
 export default (options) => {
   const { props, data } = options;
   const { c, c_, sub } = props;
 
-  const values = css`
+  const values = props.engine.css`
     ${c && 'color:' + c + ';'}
     ${c_ && '> ' + sub + ' { color: ' + c_ + '}'}
   `;

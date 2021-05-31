@@ -1,11 +1,10 @@
-import { css } from 'styled-components';
 import { PluginEntity } from '../types';
 
 export default (inEntity: PluginEntity) => {
   const { props, data } = inEntity;
   const { bg, bg_, sub } = props;
 
-  const values = css`
+  const values = props.engine.css`
     ${bg && 'background:' + bg + ';'}
     ${bg_ && '> ' + sub + ' { background: ' + bg_ + '; }'}
   `;

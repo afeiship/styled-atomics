@@ -1,10 +1,8 @@
-import { css } from 'styled-components';
-
 export default (options) => {
   const { props, data } = options;
   const { lh, hlh } = props;
 
-  const values = css`
+  const values = props.engine.css`
     ${lh && 'line-height:' + lh + ';'}
     ${hlh && 'line-height:' + hlh + ';' + 'height:' + hlh + ';'}
   `;

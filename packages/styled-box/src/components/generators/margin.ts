@@ -1,10 +1,8 @@
-import { css } from 'styled-components';
-
 export default (options) => {
   const { props, data } = options;
   const { m, mt, mr, mb, ml, mx, my, m_, mt_, mr_, mb_, ml_, sub, unit } = props;
 
-  const values = css`
+  const values = props.engine.css`
     ${m && 'margin:' + m + unit + ';'}
     ${mt && 'margin-top:' + mt + unit + ';'}
     ${mr && 'margin-right:' + mr + unit + ';'}

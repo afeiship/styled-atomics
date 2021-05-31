@@ -1,11 +1,9 @@
-import { css } from 'styled-components';
-
 export default (options) => {
   const { props, data } = options;
   const { debug, value } = props;
   const color = value || 'red';
 
-  const values = css`
+  const values = props.engine.css`
     ${debug && 'border: 2px solid ' + color + ';'}
   `;
 

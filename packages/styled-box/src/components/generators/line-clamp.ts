@@ -1,11 +1,9 @@
-import { css } from 'styled-components';
-
 export default (options) => {
   const { props, data } = options;
   const { lc } = props;
 
   if (lc) {
-    const values = css`
+    const values = props.engine.css`
       overflow: hidden;
       text-overflow: ellipsis;
       display: flex;

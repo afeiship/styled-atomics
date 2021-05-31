@@ -1,10 +1,8 @@
-import { css } from 'styled-components';
-
 export default (options) => {
   const { props, data } = options;
   const { f, f_, sub, unit } = props;
 
-  const values = css`
+  const values = props.engine.css`
     ${f && 'font-size:' + f + unit + ';'}
     ${f_ && '> ' + sub + ' { font-size: ' + f_ + unit + '}'}
   `;

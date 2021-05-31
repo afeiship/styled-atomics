@@ -1,10 +1,8 @@
-import { css } from 'styled-components';
-
 export default (options) => {
   const { props, data } = options;
   const { vat, vab, vam, vabs, vat_, vab_, vam_, vabs_, sub } = props;
 
-  const values = css`
+  const values = props.engine.css`
     ${vat && 'vertical-align: top;'}
     ${vat_ && '> ' + sub + ' { vertical-align: top; }'}
 

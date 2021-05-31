@@ -1,10 +1,8 @@
-import { css } from 'styled-components';
-
 export default (options) => {
   const { props, data } = options;
   const { p, pt, pr, pb, pl, px, py, p_, pt_, pr_, pb_, pl_, sub, unit } = props;
 
-  const values = css`
+  const values = props.engine.css`
     ${p && 'padding:' + p + unit + ';'}
     ${pt && 'padding-top:' + pt + unit + ';'}
     ${pr && 'padding-right:' + pr + unit + ';'}

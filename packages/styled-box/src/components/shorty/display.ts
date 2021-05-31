@@ -1,10 +1,8 @@
-import { css } from 'styled-components';
-
 export default (options) => {
   const { props, data } = options;
   const { db, di, dib, dtbc, dtb, dflex, dn, db_, di_, dib_, dtbc_, sub } = props;
 
-  const values = css`
+  const values = props.engine.css`
     ${db && 'display: block;'}
     ${di && 'display: inline;'}
     ${dib && 'display: inline-block;'}

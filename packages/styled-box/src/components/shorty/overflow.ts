@@ -1,10 +1,8 @@
-import { css } from 'styled-components';
-
 export default (options) => {
   const { props, data } = options;
   const { ovh, x, y, ovs, ova } = props;
 
-  const values = css`
+  const values = props.engine.css`
     ${ovh && 'overflow: hidden;'}
     ${ovs && 'overflow: scroll;'}
     ${ova && 'overflow: auto;'}

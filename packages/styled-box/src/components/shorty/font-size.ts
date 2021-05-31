@@ -1,10 +1,8 @@
-import { css } from 'styled-components';
-
 export default (options) => {
   const { props, data } = options;
   const { f0 } = props;
 
-  const values = css`
+  const values = props.engine.css`
     ${f0 && 'font-size: 0;'}
   `;
 

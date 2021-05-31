@@ -7,7 +7,7 @@ import styled, { css } from 'styled-components';
 //   const { plugin } = props;
 //   if (plugin && plugin.includes('pp')) {
 //     const value = plugin.split(':')[1] || '#f60';
-//     const values = css`
+//     const values = props.engine.css`
 //       ${'border:2px solid ' + value + '; padding: 10px; background:#eee;'}
 //     `;
 

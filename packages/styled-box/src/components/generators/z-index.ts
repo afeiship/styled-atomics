@@ -1,10 +1,8 @@
-import { css } from 'styled-components';
-
 export default (options) => {
   const { props, data } = options;
   const { z } = props;
 
-  const values = css`
+  const values = props.engine.css`
     ${z && 'z-index:' + z + ';'}
   `;
 

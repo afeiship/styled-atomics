@@ -1,10 +1,8 @@
-import { css } from 'styled-components';
-
 export default (options) => {
   const { props, data } = options;
   const { wh, unit } = props;
 
-  const values = css`
+  const values = props.engine.css`
     ${wh && 'width:' + wh + unit + '; height: ' + wh + unit + ';'}
   `;
   options.data = data.concat(values);

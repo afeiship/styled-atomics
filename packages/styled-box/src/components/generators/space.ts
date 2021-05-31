@@ -1,11 +1,9 @@
-import { css } from 'styled-components';
-
 export default (options) => {
   const { props, data } = options;
   const { space, unit, x, y, strip } = props;
 
   if (space) {
-    const values = css`
+    const values = props.engine.css`
       ${x && strip && '> * { &:last-child { margin-right:0 } }'}
       ${y && strip && '> * { &:last-child { margin-bottom:0 } }'}
       ${x && space && ' > * { margin-right: ' + space + unit + ';}'}
