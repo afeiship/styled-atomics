@@ -6,10 +6,10 @@ import filterReactProps from '@jswork/filter-react-props';
 import { Props, PluginEntity } from './types';
 import atomics from './composite';
 import plugins from './plugins';
+import BasicPlugin from './plugin';
 
 const CLASS_NAME = 'styled-box';
 const FILTERED_PROPS = ['rel', 'x', 'y'];
-
 
 export default class StyledBox extends Component<Props> {
   static displayName = CLASS_NAME;
@@ -38,11 +38,7 @@ export default class StyledBox extends Component<Props> {
     /**
      * Plugin value.
      */
-    plugin: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.object,
-      PropTypes.array
-    ]),
+    plugin: PropTypes.oneOfType([PropTypes.string, PropTypes.object, PropTypes.array]),
     /**
      * Plugin options.
      */
@@ -59,8 +55,7 @@ export default class StyledBox extends Component<Props> {
 
   render() {
     const { className, nodeName, engine, plugins, ...props } = this.props;
-    const pluginFns = plugins!.map((item) => item.getStyles);
-    const fn = nxCompose.apply(null, atomics.concat(pluginFns));
+    const fn = nxCompose.apply(null, atomics.concat(BasicPlugin.getStyles));
     const defaultEntity: PluginEntity = { props: this.props, data: [] };
     const options = fn(defaultEntity);
     const styles = options.data;

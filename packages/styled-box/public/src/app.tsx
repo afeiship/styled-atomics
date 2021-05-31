@@ -193,6 +193,23 @@ export default (props: any) => {
           道可道，非常道；名可名，非常名。
         </View>
 
+        <h1> Mouule: Multiple plugins</h1>
+        <View
+          bg="#0f0"
+          c="#fff"
+          f="38"
+          wh={100}
+          lh="2"
+          circle
+          plugin={[
+            { name: 'transform-center', value: 'xy' },
+            { name: 'shadow', value: 3 }
+          ]}
+          fixed
+          tc>
+          道
+        </View>
+
         {/* <h1>Customize plugin:</h1>
         <View plugin="pp:#999">
           道可道，非常道；名可名，非常名。 无名，天地之始，有名，万物之母。 故常无欲，以观其妙，常有欲，以观其徼。

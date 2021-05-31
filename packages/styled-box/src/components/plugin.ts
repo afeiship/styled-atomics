@@ -1,5 +1,6 @@
 import { InlinePlugin, PluginEntity, EngineProps } from './types';
-
+import nx from '@jswork/next';
+import nxCompose from '@jswork/next-compose';
 /**
  * plugin="transform-center:xy"
  * plugin={{ name:'transform-center', value: 'xy' }}
@@ -16,13 +17,33 @@ export default class BasePlugin {
   public static getStyles(inEntity): PluginEntity {
     const { plugin, plugins } = inEntity.props;
     if (!plugin) return inEntity;
-    const TargetClass =
-      plugins.find((item) => {
-        const target = BasePlugin.normalize(plugin);
-        return target[0].name === item.prototype.name;
-      }) || BasePlugin;
-    const instance = new TargetClass(inEntity);
-    return instance.get();
+    const inlinePlugins = BasePlugin.normalize(plugin);
+    const fns = inlinePlugins.map((inlinePlugin) => {
+      const Clazz = plugins.find((item) => {
+        return item.prototype.name === inlinePlugin.name;
+      });
+      if (Clazz) {
+        return (inEntity) => {
+          const instance = new Clazz(inEntity);
+          return instance.get();
+        };
+      } else {
+        return nx.stubValue;
+      }
+    });
+    const fn = nxCompose.apply(null, fns);
+    return fn(inEntity);
+  }
+
+  public static normalize(inPlugin: string | InlinePlugin): InlinePlugin[] {
+    if (typeof inPlugin === 'string') {
+      if (inPlugin.includes(':')) {
+        const parts = inPlugin.split(':');
+        return [{ name: parts[0], value: parts[1] }];
+      }
+      return [{ name: inPlugin }];
+    }
+    return Array.isArray(inPlugin) ? inPlugin : [inPlugin];
   }
 
   public get name() {
@@ -54,16 +75,5 @@ export default class BasePlugin {
     this.merge();
     this.entity.data = this.data;
     return this.entity;
-  }
-
-  public static normalize(inPlugin: string | InlinePlugin): InlinePlugin[] {
-    if (typeof inPlugin === 'string') {
-      if (inPlugin.includes(':')) {
-        const parts = inPlugin.split(':');
-        return [{ name: parts[0], value: parts[1] }];
-      }
-      return [{ name: inPlugin }];
-    }
-    return Array.isArray(inPlugin) ? inPlugin : [inPlugin];
   }
 }
