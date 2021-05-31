@@ -2,10 +2,10 @@ import { css } from 'styled-components';
 
 export default (options) => {
   const { props, data } = options;
-  const { flexbox } = props;
+  const { x, y, flexbox } = props;
 
   if (flexbox) {
-    const { wrap, value, align, x, y, justify } = flexbox;
+    const { wrap, value, align, justify } = flexbox;
     const values = css`
       display: flex;
       box-sizing: border-box;

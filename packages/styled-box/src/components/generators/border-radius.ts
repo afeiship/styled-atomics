@@ -2,12 +2,10 @@ import { css } from 'styled-components';
 
 export default (options) => {
   const { props, data } = options;
-  const { circle, round, rect } = props;
+  const { radius, unit } = props;
 
   const values = css`
-    ${circle && 'border-radius: 50%;'}
-    ${round && 'border-radius: 1000px;'}
-    ${rect && 'border-radius: none;'}
+    ${radius && 'border-radius:' + radius + unit + ';'}
   `;
 
   options.data = data.concat(values);

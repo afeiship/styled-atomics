@@ -149,7 +149,7 @@ export default (props: any) => {
 
         <h2>Module: transform-center</h2>
         <View debug="red" wh={200} rel>
-          <View bg="#f60" c="#fff" wh={100} circle plugin="transform-center:xy">
+          <View bg="#f60" c="#fff" wh={100} circle plugin="transform-center:xy" tc>
             道
           </View>
         </View>
