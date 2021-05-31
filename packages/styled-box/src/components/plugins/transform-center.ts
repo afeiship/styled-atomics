@@ -8,7 +8,7 @@ export default class extends BasePlugin {
   public pipe() {
     if (!this.current) return;
     const { name, value } = this.current;
-    this.values = this.engine!.css`
+    this.values = this.styledCss`
       ${name === this.name && 'position: absolute;'}
       ${value === 'x' && 'left: 50%; transform: translateX(-50%);'}
       ${value === 'y' && 'top: 50%; transform: translateY(-50%);'}

@@ -6,18 +6,19 @@ import nxCompose from '@jswork/next-compose';
  * plugin={{ name:'transform-center', value: 'xy' }}
  * plugin={[{ name:'transform-center', value: 'xy' }, { name:'em-justify-list', value: 5 }]}
  */
-export default class BasePlugin {
+export default class AbstractPlugin {
   private plugins: InlinePlugin[];
   protected current: InlinePlugin | null = null;
   protected values: string[] = [];
   protected data: any[];
   protected engine: EngineProps;
+  protected styledCss: any;
   protected entity: PluginEntity;
 
   public static getStyles(inEntity): PluginEntity {
     const { plugin, plugins } = inEntity.props;
     if (!plugin) return inEntity;
-    const inlinePlugins = BasePlugin.normalize(plugin);
+    const inlinePlugins = AbstractPlugin.normalize(plugin);
     const fns = inlinePlugins.map((inlinePlugin) => {
       const Clazz = plugins.find((item) => {
         return item.prototype.name === inlinePlugin.name;
@@ -56,8 +57,9 @@ export default class BasePlugin {
     this.entity = inEntity;
     this.data = data;
     this.engine = engine;
+    this.styledCss = this.engine.css;
     if (plugin) {
-      this.plugins = BasePlugin.normalize(plugin);
+      this.plugins = AbstractPlugin.normalize(plugin);
       this.current = this.plugins.find((plugin) => plugin.name === this.name) || null;
     }
   }
