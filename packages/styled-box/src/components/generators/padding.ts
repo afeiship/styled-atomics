@@ -12,11 +12,11 @@ export default (options) => {
     ${pl && 'padding-left:' + pl + unit + ';'}
 
 
-    ${p_ && '> ' + sub + ' { padding: ' + p_ + unit + '}'}
-    ${pt_ && '> ' + sub + ' { padding-top: ' + pt_ + unit + '}'}
-    ${pr_ && '> ' + sub + ' { padding-right: ' + pr_ + unit + '}'}
-    ${pb_ && '> ' + sub + ' { padding-bottom: ' + pb_ + unit + '}'}
-    ${pl_ && '> ' + sub + ' { padding-left: ' + pl_ + unit + '}'}
+    ${p_ && '> ' + sub + ' { padding: ' + p_ + unit + '; }'}
+    ${pt_ && '> ' + sub + ' { padding-top: ' + pt_ + unit + '; }'}
+    ${pr_ && '> ' + sub + ' { padding-right: ' + pr_ + unit + '; }'}
+    ${pb_ && '> ' + sub + ' { padding-bottom: ' + pb_ + unit + '; }'}
+    ${pl_ && '> ' + sub + ' { padding-left: ' + pl_ + unit + '; }'}
 
     ${px && 'padding-left:' + px + unit + '; padding-right:' + px + unit + ';'}
     ${py && 'padding-top:' + py + unit + '; padding-bottom:' + py + unit + ';'}
