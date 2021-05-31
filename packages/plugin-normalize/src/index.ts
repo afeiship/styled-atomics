@@ -8,6 +8,15 @@ interface InlinePluiginName {
 type InlinePlugin = Record<string, any> & InlinePluiginName;
 type InlinePluginParams = string | InlinePlugin | any[];
 
+
+/**
+ * plugin="transform-center:xy"
+ * plugin="transform-center:xy; shadow:5"
+ * plugin={{ name:'transform-center', value: 'xy' }}
+ * plugin={['transform-center:xy', 'shadow:5']}
+ * plugin={[{ name:'transform-center', value: 'xy' }, { name:'em-justify-list', value: 5 }]}
+ */
+
 function normalize(inPlugin: InlinePluginParams): InlinePlugin[] {
   const results: InlinePlugin[] = [];
   if (typeof inPlugin === 'string') {
