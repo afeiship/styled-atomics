@@ -7,6 +7,7 @@ import clearfix from './clearfix';
 import cursor from './cursor';
 import debug from './debug';
 import display from './display';
+import float from './float';
 import fontSize from './font-size';
 import height from './height';
 import margin from './margin';
@@ -17,6 +18,7 @@ import shape from './shape';
 import status from './status';
 import text from './text';
 import transform from './transform';
+import width from './width';
 
 export default [
   align,
@@ -28,6 +30,7 @@ export default [
   cursor,
   debug,
   display,
+  float,
   fontSize,
   height,
   margin,
@@ -37,5 +40,6 @@ export default [
   shape,
   status,
   text,
-  transform
+  transform,
+  width
 ];

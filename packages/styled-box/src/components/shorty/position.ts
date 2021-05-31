@@ -1,10 +1,37 @@
-import { css } from 'styled-components';
+import positionValue from '@jswork/position-value';
 
 export default (options) => {
   const { props, data } = options;
-  const { t0, r0, b0, l0, lr0, tb0, tr0, rb0, bl0, trbl0, lt5, t375, t125, t50, r50, b50, l50, t100, r100, b100, l100 } = props;
-
-  const values = css`
+  const {
+    rel,
+    abs,
+    fixed,
+    sticky,
+    t0,
+    r0,
+    b0,
+    l0,
+    lr0,
+    tb0,
+    tr0,
+    rb0,
+    bl0,
+    trbl0,
+    lt5,
+    t375,
+    t125,
+    t50,
+    r50,
+    b50,
+    l50,
+    t100,
+    r100,
+    b100,
+    l100
+  } = props;
+  const position = positionValue({ rel, abs, fixed, sticky });
+  const values = props.engine.css`
+    ${position && 'position:' + position + ';'}
     ${t0 && 'top: 0;'}
     ${r0 && 'right: 0;'}
     ${b0 && 'bottom: 0;'}

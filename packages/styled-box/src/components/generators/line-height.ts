@@ -2,11 +2,11 @@ import { css } from 'styled-components';
 
 export default (options) => {
   const { props, data } = options;
-  const { lh, hlh, unit } = props;
+  const { lh, hlh } = props;
 
   const values = css`
     ${lh && 'line-height:' + lh + ';'}
-    ${hlh && 'line-height:' + lh + ';' + 'height:' + hlh + unit + ';'}
+    ${hlh && 'line-height:' + hlh + ';' + 'height:' + hlh + ';'}
   `;
 
   options.data = data.concat(values);

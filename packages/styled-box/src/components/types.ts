@@ -37,8 +37,9 @@ type BasicProps = {
   plugins?: any[];
   sub?: string | string[];
   strip?: boolean;
-  x?: boolean;
-  y?: boolean;
+  value?: boolean | Numeric;
+  x?: boolean | Numeric;
+  y?: boolean | Numeric;
   h?: boolean | Numeric;
   w?: boolean | Numeric;
 };
@@ -54,15 +55,10 @@ type GeneratorsProps = {
   c?: string;
   c_?: string;
   flexbox?: Flexbox;
-  fl?: boolean;
-  fr?: boolean;
-  fl_?: boolean;
-  fr_?: boolean;
   f?: Numeric;
   f_?: Numeric;
   h?: Numeric;
   hp?: Numeric;
-  h100?: boolean;
   lc?: Numeric;
   lh?: Numeric;
   hlh?: Numeric;
@@ -93,21 +89,15 @@ type GeneratorsProps = {
   pb_?: Numeric;
   pl_?: Numeric;
 
-  rel?: boolean;
-  abs?: boolean;
-  fixed?: boolean;
-  sticky?: boolean;
   t?: Numeric;
   r?: Numeric;
   b?: Numeric;
   l?: Numeric;
-  trbl0?: boolean;
   space?: Numeric;
   wh?: Numeric;
   wp?: Numeric;
   w1?: Numeric;
-  w100?: boolean;
-  z?: boolean;
+  z?: Numeric;
 };
 
 type PluginProps = {
@@ -135,7 +125,12 @@ type ShortyProps = {
   cm?: boolean;
   cp?: boolean;
   pn?: boolean;
-  debug?: boolean | string;
+  fl?: boolean;
+  fr?: boolean;
+  fl_?: boolean;
+  fr_?: boolean;
+
+  debug?: boolean;
   db?: boolean;
   di?: boolean;
   dib?: boolean;

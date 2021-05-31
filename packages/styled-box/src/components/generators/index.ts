@@ -4,7 +4,6 @@ import borderRadius from './border-radius';
 import border from './border';
 import color from './color';
 import flexbox from './flexbox';
-import float from './float';
 import fontSize from './font-size';
 import height from './height';
 import lineClamp from './line-clamp';
@@ -25,7 +24,6 @@ export default [
   border,
   color,
   flexbox,
-  float,
   fontSize,
   height,
   lineClamp,

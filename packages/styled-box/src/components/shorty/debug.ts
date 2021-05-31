@@ -2,11 +2,11 @@ import { css } from 'styled-components';
 
 export default (options) => {
   const { props, data } = options;
-  const { debug } = props;
-  const bdc = debug === true ? 'red' : debug;
+  const { debug, value } = props;
+  const color = value || 'red';
 
   const values = css`
-    ${debug && 'border: 1px solid ' + bdc + ';'}
+    ${debug && 'border: 2px solid ' + color + ';'}
   `;
 
   options.data = data.concat(values);

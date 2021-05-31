@@ -2,11 +2,12 @@ import { css } from 'styled-components';
 
 export default (options) => {
   const { props, data } = options;
-  const { h, hp, unit } = props;
+  const { w100, min100, x, max100 } = props;
 
   const values = css`
-    ${h && 'height:' + h + unit + ';'}
-    ${hp && 'height:' + hp * 10 + '%;'}
+    ${w100 && 'height: 100%;'}
+    ${min100 && x && 'min-width: 100%;'}
+    ${max100 && x && 'max-width: 100%;'}
   `;
 
   options.data = data.concat(values);

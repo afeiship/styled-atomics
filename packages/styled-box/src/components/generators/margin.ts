@@ -2,7 +2,7 @@ import { css } from 'styled-components';
 
 export default (options) => {
   const { props, data } = options;
-  const { m, mt, mr, mb, ml, mx, my, m_, mt_, mr_, mb_, ml_,  sub, unit } = props;
+  const { m, mt, mr, mb, ml, mx, my, m_, mt_, mr_, mb_, ml_, sub, unit } = props;
 
   const values = css`
     ${m && 'margin:' + m + unit + ';'}
