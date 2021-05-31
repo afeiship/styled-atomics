@@ -80,7 +80,7 @@ export default (props: any) => {
 
         <View blank={20} />
 
-        <View mb_={18} p_={5} strip debug="#ccc" bdw={5} bds="dashed">
+        <View mb_={18} p_={5} strip bdc="#ccc" bdw={5} bds="dashed">
           <View debug className="is-item">
             item1
           </View>
@@ -147,16 +147,23 @@ export default (props: any) => {
           清晨醒来，打开窗帘，一抹慵懒的阳光照进来，暖暖的，柔柔的，时光瞬间变得温婉静美，打开音乐，沏一杯花茶，躺在床上，暖阳淼淼，茶香淡淡，音乐袅袅，闭上眼睛，嘴角轻轻上扬，算是对着光阴的镜子，和自己撒个娇。
         </View>
 
-        <h2>Module: transform-center</h2>
+        <h2>Module: transform-center use InlinePlugin</h2>
         <View debug="red" wh={200} rel>
-          <View bg="#f60" c="#fff" wh={100} circle plugin="transform-center:xy" tc>
+          <View bg="#f60" c="#fff" f="38" wh={100} lh="2" circle plugin={{ name: 'transform-center', value: 'xy' }} tc>
+            道
+          </View>
+        </View>
+
+        <h2>Module: transform-center use stringInlinePlugin</h2>
+        <View debug="red" wh={200} rel>
+          <View bg="#f60" c="#fff" f="38" wh={100} lh="2" circle plugin="transform-center:xy" tc>
             道
           </View>
         </View>
 
         <h2>Module: em-justify-list</h2>
         <View w={900} auto debug>
-          <View plugin="em-justify-list:5">
+          <View plugin={{ name: 'em-justify-list', value: 5 }}>
             <View bg="#eee" h={100} className="is-item">
               item1
             </View>
@@ -182,7 +189,9 @@ export default (props: any) => {
         </View>
 
         <h1>Module: shadow</h1>
-        <View p={10} plugin="shadow:2">道可道，非常道；名可名，非常名。</View>
+        <View p={10} plugin="shadow:2">
+          道可道，非常道；名可名，非常名。
+        </View>
 
         <h1>Customize plugin:</h1>
         <View plugin="pp:#999">

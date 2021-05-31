@@ -15,6 +15,8 @@ import padding from './padding';
 import position from './position';
 import shape from './shape';
 import status from './status';
+import text from './text';
+import transform from './transform';
 
 export default [
   align,
@@ -34,4 +36,6 @@ export default [
   position,
   shape,
   status,
+  text,
+  transform
 ];

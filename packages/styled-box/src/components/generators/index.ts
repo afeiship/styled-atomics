@@ -8,6 +8,7 @@ import float from './float';
 import fontSize from './font-size';
 import height from './height';
 import lineClamp from './line-clamp';
+import lineHeight from './line-height';
 import margin from './margin';
 import padding from './padding';
 import position from './position';
@@ -28,6 +29,7 @@ export default [
   fontSize,
   height,
   lineClamp,
+  lineHeight,
   margin,
   padding,
   position,

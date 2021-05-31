@@ -1,5 +1,5 @@
 type FlexValue = 'la' | 'lar' | 'ar' | 'lr' | 'ta' | 'tab' | 'ab' | 'tb' | 'center';
-type NumericLike = string | number;
+type Numeric = string | number;
 
 interface Flexbox {
   value?: FlexValue;
@@ -7,6 +7,12 @@ interface Flexbox {
   wrap?: boolean;
   justify?: string;
 }
+
+interface InlinePluiginName {
+  name: string;
+}
+
+export type InlinePlugin = Record<string, any> & InlinePluiginName;
 
 export interface EngineProps {
   styled: any;
@@ -29,22 +35,20 @@ type BasicProps = {
   unit?: string;
   nodeName?: any;
   plugins?: any[];
-  plugin?: string;
-  options?: any;
   sub?: string | string[];
   strip?: boolean;
   x?: boolean;
   y?: boolean;
-  h?: boolean;
-  w?: boolean;
+  h?: boolean | Numeric;
+  w?: boolean | Numeric;
 };
 
 type GeneratorsProps = {
   bg?: string;
   bg_?: string;
-  blank?: NumericLike;
-  radius?: NumericLike;
-  bdw?: NumericLike;
+  blank?: Numeric;
+  radius?: Numeric;
+  bdw?: Numeric;
   bds?: string;
   bdc?: string;
   c?: string;
@@ -54,60 +58,60 @@ type GeneratorsProps = {
   fr?: boolean;
   fl_?: boolean;
   fr_?: boolean;
-  f?: NumericLike;
-  f_?: NumericLike;
-  h?: NumericLike;
-  hp?: NumericLike;
+  f?: Numeric;
+  f_?: Numeric;
+  h?: Numeric;
+  hp?: Numeric;
   h100?: boolean;
-  lc?: NumericLike;
+  lc?: Numeric;
+  lh?: Numeric;
+  hlh?: Numeric;
 
-  m?: NumericLike;
-  mt?: NumericLike;
-  mr?: NumericLike;
-  mb?: NumericLike;
-  ml?: NumericLike;
-  mx?: NumericLike;
-  my?: NumericLike;
-  m_?: NumericLike;
-  mt_?: NumericLike;
-  mr_?: NumericLike;
-  mb_?: NumericLike;
-  ml_?: NumericLike;
+  m?: Numeric;
+  mt?: Numeric;
+  mr?: Numeric;
+  mb?: Numeric;
+  ml?: Numeric;
+  mx?: Numeric;
+  my?: Numeric;
+  m_?: Numeric;
+  mt_?: Numeric;
+  mr_?: Numeric;
+  mb_?: Numeric;
+  ml_?: Numeric;
 
-  p?: NumericLike;
-  pt?: NumericLike;
-  pr?: NumericLike;
-  pb?: NumericLike;
-  pl?: NumericLike;
-  px?: NumericLike;
-  py?: NumericLike;
-  p_?: NumericLike;
-  pt_?: NumericLike;
-  pr_?: NumericLike;
-  pb_?: NumericLike;
-  pl_?: NumericLike;
+  p?: Numeric;
+  pt?: Numeric;
+  pr?: Numeric;
+  pb?: Numeric;
+  pl?: Numeric;
+  px?: Numeric;
+  py?: Numeric;
+  p_?: Numeric;
+  pt_?: Numeric;
+  pr_?: Numeric;
+  pb_?: Numeric;
+  pl_?: Numeric;
 
   rel?: boolean;
   abs?: boolean;
   fixed?: boolean;
   sticky?: boolean;
-  t?: NumericLike;
-  r?: NumericLike;
-  b?: NumericLike;
-  l?: NumericLike;
+  t?: Numeric;
+  r?: Numeric;
+  b?: Numeric;
+  l?: Numeric;
   trbl0?: boolean;
-  space?: NumericLike;
-  wh?: NumericLike;
-  w?: NumericLike;
-  wp?: NumericLike;
-  w1?: NumericLike;
+  space?: Numeric;
+  wh?: Numeric;
+  wp?: Numeric;
+  w1?: Numeric;
   w100?: boolean;
   z?: boolean;
 };
 
 type PluginProps = {
-  plugin?: string | any[];
-  options?: any;
+  plugin?: string | InlinePlugin | InlinePlugin[];
 };
 
 type ShortyProps = {
@@ -131,7 +135,7 @@ type ShortyProps = {
   cm?: boolean;
   cp?: boolean;
   pn?: boolean;
-  deubg?: boolean | string;
+  debug?: boolean | string;
   db?: boolean;
   di?: boolean;
   dib?: boolean;
