@@ -181,6 +181,9 @@ export default (props: any) => {
           </View>
         </View>
 
+        <h1>Module: shadow</h1>
+        <View p={10} plugin="shadow:2">道可道，非常道；名可名，非常名。</View>
+
         <h1>Customize plugin:</h1>
         <View plugin="pp:#999">
           道可道，非常道；名可名，非常名。 无名，天地之始，有名，万物之母。 故常无欲，以观其妙，常有欲，以观其徼。

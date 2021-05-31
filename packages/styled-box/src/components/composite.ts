@@ -19,10 +19,7 @@ import border from './elements/border';
 import shorty from './shorty';
 
 // modules
-import transformCenter from './plugins/transform-center';
-import absoluteCenter from './plugins/absolute-center';
-import emJustifyList from './plugins/em-justify-list';
-
+import plugins from './plugins';
 
 export default [
   margin,
@@ -44,8 +41,5 @@ export default [
 
   // shorty
   ...shorty,
-
-  transformCenter,
-  absoluteCenter,
-  emJustifyList
+  ...plugins
 ];
