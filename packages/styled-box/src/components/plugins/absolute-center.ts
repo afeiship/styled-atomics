@@ -1,6 +1,6 @@
-import BasePlugin from '../plugin';
+import AbstractPlugin from '../plugin';
 
-export default class extends BasePlugin {
+export default class extends AbstractPlugin {
   get name(): string {
     return 'absolute-center';
   }
