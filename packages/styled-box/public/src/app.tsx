@@ -34,24 +34,25 @@ export default (props: any) => {
         </View>
 
         <View radius={4} c="#fff" bg="#007aff" p={10} f={14}>
-          天下皆知美之为美，斯恶已，皆知善之为善，斯不善已。 故有无相生，难易相成，长短相形，高下相倾，音声相和，前后相随。
+          天下皆知美之为美，斯恶已，皆知善之为善，斯不善已。
+          故有无相生，难易相成，长短相形，高下相倾，音声相和，前后相随。
           是以圣人处无为之事，行不言之教，万物作焉而不辞，生而不有，为而不恃，功成而弗居。 夫惟弗居，是以不去。
         </View>
 
-        <View mt={10} flexbox={{ value: 'la' }}>
-          <View p={10} bg="#f80" debug="red" className="is-left">
+        <View mt={10} plugin="flexbox:la">
+          <View p={10} bg="#f80" debug className="is-left">
             Left
           </View>
-          <View p={10} bg="#eee" debug="blue" className="is-right">
+          <View p={10} bg="#eee" debug className="is-right">
             Auto
           </View>
         </View>
 
-        <View mt={10} flexbox={{ value: 'lr', align: 'center' }} debug="red" h={120}>
-          <View p={10} bg="#f80" debug="red" className="is-left">
+        <View mt={10} plugin={{ name: 'flexbox', value: 'lr', align: 'center' }} debug h={120}>
+          <View p={10} bg="#f80" debug className="is-left">
             Left
           </View>
-          <View p={10} bg="#060" debug="red" className="is-left">
+          <View p={10} bg="#060" debug className="is-left">
             Middle
           </View>
           <View p={10} bg="#eee" debug="blue" className="is-right">
@@ -148,8 +149,18 @@ export default (props: any) => {
         </View>
 
         <h2>Module: transform-center use InlinePlugin</h2>
-        <View debug="red" wh={200} rel>
-          <View bg="#f60" c="#fff" f="38" wh={100} lh="2" circle plugin={{ name: 'transform-center', value: 'xy' }} tc>
+        <View debug wh={200} rel>
+          <View
+            bg="#f60"
+            c="#fff"
+            f="38"
+            wh={100}
+            circle
+            plugin={[
+              { name: 'transform-center', value: 'xy' },
+              { name: 'flexbox', value: 'center' }
+            ]}
+            tc>
             道
           </View>
         </View>
