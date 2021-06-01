@@ -7,7 +7,9 @@ function App() {
   return (
     <div className="App">
       Hello world
-      <StyledBox auto wp={4} p={10} bdw="4" bds="dashed">abc</StyledBox>
+      <StyledBox p={20} wp={2} auto>
+        abc
+      </StyledBox>
     </div>
   );
 }
