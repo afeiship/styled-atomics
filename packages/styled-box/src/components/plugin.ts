@@ -2,8 +2,12 @@ import { InlinePlugin, PluginEntity, EngineProps } from './types';
 import normalize from '@jswork/plugin-normalize';
 
 export class AbstractPlugin {
+  get aliases(): string[] {
+    return [];
+  }
+
   get name() {
-    return 'basic-plugin';
+    return 'abstract-plugin';
   }
 
   private plugins: InlinePlugin[];
