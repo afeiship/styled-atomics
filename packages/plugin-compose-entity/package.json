@@ -1,6 +1,6 @@
 {
   "name": "@jswork/plugin-compose-entity",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Plugin compose entity.",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
