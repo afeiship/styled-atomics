@@ -24,3 +24,4 @@ docs
 jest.config.js
 .release-it.json
 tsconfig.json
+vite.config.ts
