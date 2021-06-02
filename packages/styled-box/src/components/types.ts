@@ -25,7 +25,7 @@ export interface PluginEntity {
 
 // generators
 type BasicProps = {
-  styled: any;
+  styled?: any;
   className?: string;
   unit?: string;
   nodeName?: any;
