@@ -4,7 +4,9 @@
   },
   "hooks": {
     "after:init": [
-      "t2k"
+      "npm run test",
+      "t2k",
+      "spj"
     ],
     "after:bump": [
       "npm run build"
