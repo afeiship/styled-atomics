@@ -1,6 +1,6 @@
 {
   "name": "@jswork/styled-css",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Zero-runtime CSS string creator in JS library.",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
@@ -36,5 +36,10 @@
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org"
-  }
+  },
+  "keywords": [
+    "styled",
+    "styled-components",
+    "atomics"
+  ]
 }
