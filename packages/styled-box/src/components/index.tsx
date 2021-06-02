@@ -70,7 +70,7 @@ export default class StyledBox extends Component<Props> {
     const fn = nxCompose.apply(null, atomics.concat(pluginComposeEntity));
     const defaultEntity: PluginEntity = { props: this.props, data: [] };
     const options = fn(defaultEntity);
-    const styles = options.data;
+    const styles = options.data.filter(Boolean);
     const theProps = filterReactProps(props, FILTERED_PROPS);
     const Styled = styled(nodeName)`
       ${styles.join('')}

@@ -155,6 +155,7 @@ export default (props: any) => {
             bg="#f60"
             c="#fff"
             f="38"
+            o={5}
             wh={100}
             circle
             plugin={[

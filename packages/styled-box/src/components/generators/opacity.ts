@@ -5,7 +5,7 @@ export default (options) => {
   const { o } = props;
 
   const values = css`
-    ${o && 'opacity:' + o / 10 + ';'}
+    ${typeof o !== 'undefined' && 'opacity:' + o / 10 + ';'}
   `;
 
   options.data = data.concat(values);
