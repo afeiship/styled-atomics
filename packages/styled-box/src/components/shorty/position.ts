@@ -1,4 +1,5 @@
 import positionValue from '@jswork/position-value';
+import css from '@jswork/styled-css';
 
 export default (options) => {
   const { props, data } = options;
@@ -30,7 +31,7 @@ export default (options) => {
     l100
   } = props;
   const position = positionValue({ rel, abs, fixed, sticky });
-  const values = props.engine.css`
+  const values = css`
     ${position && 'position:' + position + ';'}
     ${t0 && 'top: 0;'}
     ${r0 && 'right: 0;'}

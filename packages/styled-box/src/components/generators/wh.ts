@@ -1,8 +1,10 @@
+import css from '@jswork/styled-css';
+
 export default (options) => {
   const { props, data } = options;
   const { wh, unit } = props;
 
-  const values = props.engine.css`
+  const values = css`
     ${wh && 'width:' + wh + unit + '; height: ' + wh + unit + ';'}
   `;
   options.data = data.concat(values);

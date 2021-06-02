@@ -1,13 +1,13 @@
 import React from 'react';
 import View from '../../src/main';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 // const pluing1 = (options) => {
 //   const { props, data } = options;
 //   const { plugin } = props;
 //   if (plugin && plugin.includes('pp')) {
 //     const value = plugin.split(':')[1] || '#f60';
-//     const values = props.engine.css`
+//     const values = css`
 //       ${'border:2px solid ' + value + '; padding: 10px; background:#eee;'}
 //     `;
 
@@ -17,7 +17,7 @@ import styled, { css } from 'styled-components';
 // };
 
 // global config engine:
-Object.assign(View.defaultProps, { engine: { styled, css } });
+Object.assign(View.defaultProps, { styled });
 
 const Container = styled.div`
   width: 80%;

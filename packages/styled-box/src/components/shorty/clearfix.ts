@@ -1,9 +1,11 @@
+import css from '@jswork/styled-css';
+
 export default (options) => {
   const { props, data } = options;
   const { clearfix } = props;
 
   if (clearfix) {
-    const values = props.engine.css`
+    const values = css`
       &:before,
       &:after {
         content: ' '; /* 1 */

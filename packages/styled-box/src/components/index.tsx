@@ -22,7 +22,7 @@ export default class StyledBox extends Component<Props> {
     /**
      * Styled engine(eg: styled-component).
      */
-    engine: PropTypes.any,
+    styled: PropTypes.any.isRequired,
     /**
      * The distance unit.
      */
@@ -59,7 +59,6 @@ export default class StyledBox extends Component<Props> {
   }
 
   static defaultProps = {
-    engine: null,
     sub: '*',
     unit: 'px',
     nodeName: 'div',
@@ -67,13 +66,13 @@ export default class StyledBox extends Component<Props> {
   };
 
   render() {
-    const { className, nodeName, engine, plugins, ...props } = this.props;
+    const { className, nodeName, styled, plugins, ...props } = this.props;
     const fn = nxCompose.apply(null, atomics.concat(pluginComposeEntity));
     const defaultEntity: PluginEntity = { props: this.props, data: [] };
     const options = fn(defaultEntity);
     const styles = options.data;
     const theProps = filterReactProps(props, FILTERED_PROPS);
-    const Styled = engine!.styled(nodeName)`
+    const Styled = styled(nodeName)`
       ${styles.join('')}
     `;
 

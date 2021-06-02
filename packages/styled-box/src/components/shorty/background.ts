@@ -1,8 +1,9 @@
+import css from '@jswork/styled-css';
 export default (options) => {
   const { props, data } = options;
   const { bgn } = props;
 
-  const values = props.engine.css`
+  const values = css`
     ${bgn && 'background: none;'}
   `;
 

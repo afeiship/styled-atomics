@@ -1,8 +1,10 @@
+import css from '@jswork/styled-css';
+
 export default (options) => {
   const { props, data } = options;
   const { w100, min100, x, max100 } = props;
 
-  const values = props.engine.css`
+  const values = css`
     ${w100 && 'height: 100%;'}
     ${min100 && x && 'min-width: 100%;'}
     ${max100 && x && 'max-width: 100%;'}

@@ -1,4 +1,5 @@
 import { AbstractPlugin } from '../plugin';
+import css from '@jswork/styled-css';
 
 export default class extends AbstractPlugin {
   get name(): string {
@@ -9,7 +10,7 @@ export default class extends AbstractPlugin {
     if (!this.current) return;
     const { value, inset } = this.current;
     const insetString = inset ? 'inset ' : '';
-    this.values = this.styledCss`
+    this.values = css`
       box-shadow: ${value == 1 && insetString + '0 1px 2px rgba(0, 0, 0, 0.2);'};
       box-shadow: ${value == 2 && insetString + '0 1px 6px rgba(0, 0, 0, 0.12);'};
       box-shadow: ${value == 3 && insetString + '0 3px 10px rgba(0, 0, 0, 0.16);'};

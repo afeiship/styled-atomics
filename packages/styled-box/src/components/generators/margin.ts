@@ -1,8 +1,10 @@
+import css from '@jswork/styled-css';
+
 export default (options) => {
   const { props, data } = options;
   const { m, mt, mr, mb, ml, mx, my, m_, mt_, mr_, mb_, ml_, sub, unit } = props;
 
-  const values = props.engine.css`
+  const values = css`
     ${m && 'margin:' + m + unit + ';'}
     ${mt && 'margin-top:' + mt + unit + ';'}
     ${mr && 'margin-right:' + mr + unit + ';'}

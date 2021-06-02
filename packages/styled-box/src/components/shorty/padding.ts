@@ -1,8 +1,10 @@
+import css from '@jswork/styled-css';
+
 export default (options) => {
   const { props, data } = options;
   const { p0, pt0, pr0, pb0, pl0, pt_, pr_, pb_, pl_, sub, strip } = props;
 
-  const values = props.engine.css`
+  const values = css`
     ${p0 && 'padding:0;'}
     ${pt0 && 'padding-top:0;'}
     ${pr0 && 'padding-right:0;'}

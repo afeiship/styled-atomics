@@ -14,11 +14,6 @@ interface InlinePluiginName {
 
 export type InlinePlugin = Record<string, any> & InlinePluiginName;
 
-export interface EngineProps {
-  styled: any;
-  css: any;
-}
-
 export interface Plugin {
   (entity: PluginEntity): PluginEntity;
 }
@@ -30,7 +25,7 @@ export interface PluginEntity {
 
 // generators
 type BasicProps = {
-  engine: EngineProps;
+  styled: any;
   className?: string;
   unit?: string;
   nodeName?: any;

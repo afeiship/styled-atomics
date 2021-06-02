@@ -1,8 +1,10 @@
+import css from '@jswork/styled-css';
+
 export default (options) => {
   const { props, data } = options;
   const { db, di, dib, dtbc, dtb, dflex, dn, db_, di_, dib_, dtbc_, sub } = props;
 
-  const values = props.engine.css`
+  const values = css`
     ${db && 'display: block;'}
     ${di && 'display: inline;'}
     ${dib && 'display: inline-block;'}

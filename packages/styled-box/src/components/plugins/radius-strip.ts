@@ -1,4 +1,5 @@
 import { AbstractPlugin } from '../plugin';
+import css from '@jswork/styled-css';
 
 export default class extends AbstractPlugin {
   get name(): string {
@@ -9,7 +10,7 @@ export default class extends AbstractPlugin {
     if (!this.current) return;
     const { name, value } = this.current;
     if (name === this.name) {
-      this.values = this.styledCss`
+      this.values = css`
       ${value.includes('t0') && 'border-top-left-radius: 0; border-top-right-radius:0;'};
       ${value.includes('r0') && 'border-top-right-radius: 0; border-bottom-right-radius:0;'};
       ${value.includes('b0') && 'border-bottom-left-radius: 0; border-bottom-right-radius:0;'};

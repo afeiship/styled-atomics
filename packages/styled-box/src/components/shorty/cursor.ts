@@ -1,8 +1,10 @@
+import css from '@jswork/styled-css';
+
 export default (options) => {
   const { props, data } = options;
   const { cd, cm, cp, pn } = props;
 
-  const values = props.engine.css`
+  const values = css`
     ${cd && 'cursor: default;'}
     ${cp && 'cursor: pointer;'}
     ${cm && 'cursor: move;'}

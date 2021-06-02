@@ -1,8 +1,10 @@
+import css from '@jswork/styled-css';
+
 export default (options) => {
   const { props, data } = options;
   const { tdn, tdu, tdlh, tl, tc, tr, tj, tlr_, nowrap, ell, b, n, usn } = props;
 
-  const values = props.engine.css`
+  const values = css`
     ${tdn && 'text-decoration: none;'}
     ${tdu && 'text-decoration: underline;'}
     ${tdlh && 'text-decoration: line-through;'}
@@ -14,7 +16,8 @@ export default (options) => {
     ${tlr_ && '> *:first-child { text-align: left; } > *:last-child { text-align: right; }'}
 
     ${nowrap && 'white-space: nowrap;'}
-    ${ell && 'white-space: nowrap; text-overflow: ellipsis; vertical-align: middle; overflow: hidden;'}
+    ${ell &&
+    'white-space: nowrap; text-overflow: ellipsis; vertical-align: middle; overflow: hidden;'}
     ${b && 'font-weight: bold;'}
     ${n && 'font-weight: normal; font-style: normal;'}
     ${usn && 'user-select: none;'}

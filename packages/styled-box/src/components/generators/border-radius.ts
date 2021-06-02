@@ -1,8 +1,10 @@
+import css from '@jswork/styled-css';
+
 export default (options) => {
   const { props, data } = options;
   const { radius, unit } = props;
 
-  const values = props.engine.css`
+  const values = css`
     ${radius && 'border-radius:' + radius + unit + ';'}
   `;
 

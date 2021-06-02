@@ -1,8 +1,10 @@
+import css from '@jswork/styled-css';
+
 export default (options) => {
   const { props, data } = options;
   const { vat, vab, vam, vabs, vat_, vab_, vam_, vabs_, sub } = props;
 
-  const values = props.engine.css`
+  const values = css`
     ${vat && 'vertical-align: top;'}
     ${vat_ && '> ' + sub + ' { vertical-align: top; }'}
 

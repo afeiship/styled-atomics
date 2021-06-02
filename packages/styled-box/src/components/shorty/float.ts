@@ -1,8 +1,10 @@
+import css from '@jswork/styled-css';
+
 export default (options) => {
   const { props, data } = options;
   const { fl, fr, fl_, fr_, sub } = props;
 
-  const values = props.engine.css`
+  const values = css`
     ${fl && 'float: left;'}
     ${fr && 'float: right;'}
     ${fl_ && '> ' + sub + ' { float: ' + fl_ + '; }'}

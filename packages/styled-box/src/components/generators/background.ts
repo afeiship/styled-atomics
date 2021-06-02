@@ -1,10 +1,11 @@
 import { PluginEntity } from '../types';
+import css from '@jswork/styled-css';
 
 export default (inEntity: PluginEntity) => {
   const { props, data } = inEntity;
   const { bg, bg_, sub } = props;
 
-  const values = props.engine.css`
+  const values = css`
     ${bg && 'background:' + bg + ';'}
     ${bg_ && '> ' + sub + ' { background: ' + bg_ + '; }'}
   `;

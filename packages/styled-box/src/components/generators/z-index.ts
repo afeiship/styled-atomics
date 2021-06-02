@@ -1,8 +1,10 @@
+import css from '@jswork/styled-css';
+
 export default (options) => {
   const { props, data } = options;
   const { z } = props;
 
-  const values = props.engine.css`
+  const values = css`
     ${z && 'z-index:' + z + ';'}
   `;
 

@@ -1,4 +1,5 @@
 import { AbstractPlugin } from '../plugin';
+import css from '@jswork/styled-css';
 
 export default class extends AbstractPlugin {
   get name(): string {
@@ -8,7 +9,7 @@ export default class extends AbstractPlugin {
   public pipe() {
     if (!this.current) return;
     const { name, value } = this.current;
-    this.values = this.styledCss`
+    this.values = css`
       ${name === this.name && 'position: absolute;'}
       ${value === 'x' && 'left: 50%; transform: translateX(-50%);'}
       ${value === 'y' && 'top: 50%; transform: translateY(-50%);'}

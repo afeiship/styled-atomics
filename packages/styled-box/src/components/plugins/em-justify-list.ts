@@ -1,4 +1,5 @@
 import { AbstractPlugin } from '../plugin';
+import css from '@jswork/styled-css';
 
 export default class extends AbstractPlugin {
   get name(): string {
@@ -10,7 +11,7 @@ export default class extends AbstractPlugin {
     const { value } = this.current;
     const { props } = this.entity;
     const percentage = `${100 / value}%`;
-    this.values = this.styledCss`
+    this.values = css`
       margin: -0.5em;
       overflow: hidden;
 

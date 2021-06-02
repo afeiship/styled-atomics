@@ -1,5 +1,6 @@
-import { InlinePlugin, PluginEntity, EngineProps } from './types';
+import { InlinePlugin, PluginEntity } from './types';
 import normalize from '@jswork/plugin-normalize';
+import css from '@jswork/styled-css';
 
 export class AbstractPlugin {
   get aliases(): string[] {
@@ -13,7 +14,6 @@ export class AbstractPlugin {
   private plugins: InlinePlugin[];
   protected current: InlinePlugin | null = null;
   protected values: string[] = [];
-  protected engine: EngineProps;
   protected styledCss: any;
   protected entity: PluginEntity;
 
@@ -24,16 +24,14 @@ export class AbstractPlugin {
 
   constructor(inEntity: PluginEntity) {
     const { props } = inEntity;
-    const { plugin, engine } = props;
+    const { plugin } = props;
     this.entity = inEntity;
-    this.engine = engine;
-    this.styledCss = this.engine.css;
     this.plugins = normalize(plugin as InlinePlugin);
     this.current = this.plugins.find((plugin) => plugin.name === this.name) || null;
   }
 
   public pipe() {
-    this.values = this.styledCss``;
+    this.values = css``;
   }
 
   public merge() {

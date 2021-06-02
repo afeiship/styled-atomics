@@ -1,4 +1,5 @@
 import { AbstractPlugin } from '../plugin';
+import css from '@jswork/styled-css';
 
 export default class extends AbstractPlugin {
   get name(): string {
@@ -9,7 +10,6 @@ export default class extends AbstractPlugin {
     if (!this.current) return;
     const { name, row, column, wrap, value, align, justify } = this.current;
     if (name === this.name) {
-      const css = this.styledCss;
       this.values = css`
         display: flex;
         box-sizing: border-box;

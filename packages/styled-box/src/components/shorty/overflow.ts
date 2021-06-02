@@ -1,8 +1,10 @@
+import css from '@jswork/styled-css';
+
 export default (options) => {
   const { props, data } = options;
   const { ovh, x, y, ovs, ova } = props;
 
-  const values = props.engine.css`
+  const values = css`
     ${ovh && 'overflow: hidden;'}
     ${ovs && 'overflow: scroll;'}
     ${ova && 'overflow: auto;'}
