@@ -70,6 +70,7 @@ type GeneratorsProps = {
   mr_?: Numeric;
   mb_?: Numeric;
   ml_?: Numeric;
+  o?: Numeric;
 
   p?: Numeric;
   pt?: Numeric;

@@ -8,6 +8,7 @@ import height from './height';
 import lineClamp from './line-clamp';
 import lineHeight from './line-height';
 import margin from './margin';
+import opacity from './opacity';
 import padding from './padding';
 import position from './position';
 import space from './space';
@@ -27,6 +28,7 @@ export default [
   lineClamp,
   lineHeight,
   margin,
+  opacity,
   padding,
   position,
   space,
