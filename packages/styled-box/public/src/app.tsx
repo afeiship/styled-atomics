@@ -174,6 +174,9 @@ export default (props: any) => {
           </View>
         </View>
 
+        <h2>as: image - tobe avatar</h2>
+        <View as="img" circle debug src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gexw87htqhj305k05k74o.jpg" />
+
         <h2>Module: em-justify-list</h2>
         <View w={900} auto debug>
           <View plugin={{ name: 'em-justify-list', value: 5 }}>
