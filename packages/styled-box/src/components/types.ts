@@ -29,7 +29,7 @@ type BasicProps = {
   styled?: any;
   className?: string;
   unit?: string;
-  nodeName?: any;
+  as?: any;
   plugins?: any[];
   sub?: string | string[];
   strip?: boolean;
