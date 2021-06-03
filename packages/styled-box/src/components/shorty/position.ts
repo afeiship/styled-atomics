@@ -4,7 +4,7 @@ import css from '@jswork/styled-css';
 export default (options) => {
   const { props, data } = options;
   const {
-    rel,
+    relative,
     abs,
     fixed,
     sticky,
@@ -30,7 +30,7 @@ export default (options) => {
     b100,
     l100
   } = props;
-  const position = positionValue({ rel, abs, fixed, sticky });
+  const position = positionValue({ relative, abs, fixed, sticky });
   const values = css`
     ${position && 'position:' + position + ';'}
     ${t0 && 'top: 0;'}

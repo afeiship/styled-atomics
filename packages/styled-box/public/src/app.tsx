@@ -150,7 +150,7 @@ export default (props: any) => {
         </View>
 
         <h2>Module: transform-center use InlinePlugin</h2>
-        <View debug wh={200} rel>
+        <View debug wh={200} relative>
           <View
             bg="#f60"
             c="#fff"
@@ -168,7 +168,7 @@ export default (props: any) => {
         </View>
 
         <h2>Module: transform-center use stringInlinePlugin</h2>
-        <View debug wh={200} rel>
+        <View debug wh={200} relative>
           <View bg="#f60" c="#fff" f="38" wh={100} circle plugin="transform-center:xy" tc>
             道
           </View>
