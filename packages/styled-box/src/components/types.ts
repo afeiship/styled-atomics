@@ -1,6 +1,5 @@
 type FlexValue = 'la' | 'lar' | 'ar' | 'lr' | 'ta' | 'tab' | 'ab' | 'tb' | 'center';
 type Numeric = string | number;
-type DivProps = React.HTMLProps<HTMLDivElement>;
 
 interface Flexbox {
   value?: FlexValue;
@@ -208,4 +207,8 @@ type ShortyProps = {
   tsxy5?: boolean;
 };
 
-export type Props = DivProps & BasicProps & GeneratorsProps & PluginProps & ShortyProps;
+export type Props = React.HTMLProps<Element> &
+  BasicProps &
+  GeneratorsProps &
+  PluginProps &
+  ShortyProps;
