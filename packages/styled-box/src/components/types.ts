@@ -208,6 +208,8 @@ type ShortyProps = {
 };
 
 export type Props = React.HTMLProps<Element> &
+  React.HTMLProps<HTMLFormElement> &
+  React.HTMLProps<HTMLImageElement> &
   BasicProps &
   GeneratorsProps &
   PluginProps &
