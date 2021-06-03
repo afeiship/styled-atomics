@@ -5,7 +5,7 @@ export default (options) => {
   const { disabled, hidden } = props;
 
   const values = css`
-    ${disabled && 'pointer-events: none; opacity: 0.5; user-select: none;'}
+    ${disabled && 'pointer-events: none; opacity: 0.5; user-select: none; filter: grayscale(100%);'}
     ${hidden && 'display: none;'}
   `;
 
