@@ -30,7 +30,7 @@ export default class StyledBox extends Component<Props> {
     /**
      * Deault node name.
      */
-    nodeName: PropTypes.any,
+    as: PropTypes.any,
     /**
      * External plugin list.
      */
@@ -61,18 +61,18 @@ export default class StyledBox extends Component<Props> {
   static defaultProps = {
     sub: '*',
     unit: 'px',
-    nodeName: 'div',
+    as: 'div',
     plugins: plugins
   };
 
   render() {
-    const { className, nodeName, styled, plugins, ...props } = this.props;
+    const { className, as, styled, plugins, ...props } = this.props;
     const fn = nxCompose.apply(null, atomics.concat(pluginComposeEntity));
     const defaultEntity: PluginEntity = { props: this.props, data: [] };
     const options = fn(defaultEntity);
     const styles = options.data.filter(Boolean);
     const theProps = filterReactProps(props, FILTERED_PROPS);
-    const Styled = styled(nodeName)`
+    const Styled = styled(as)`
       ${styles.join('')}
     `;
 
