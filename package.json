@@ -11,10 +11,12 @@
     ]
   },
   "devDependencies": {
-    "lerna": "^3.22.1"
+    "lerna": "^3.22.1",
+    "lerna-changelog": "^1.0.1"
   },
   "scripts": {
-    "start": "cd ./packages/sites && yarn start",
+    "i": "lerna bootstrap",
+    "start": "cd ./packages/websites && yarn start",
     "build": "lerna run build --no-private",
     "publish": "npm run build && lerna publish --no-private --no-dist-tag"
   }
