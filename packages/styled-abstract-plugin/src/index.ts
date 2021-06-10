@@ -1,4 +1,4 @@
-import { InlinePlugin, PluginEntity } from './types';
+import { InlinePlugin, PluginEntity } from '@jswork/styled-types';
 import normalize from '@jswork/plugin-normalize';
 import css from '@jswork/styled-css';
 

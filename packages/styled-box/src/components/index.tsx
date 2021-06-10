@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import nxCompose from '@jswork/next-compose';
 import filterReactProps from '@jswork/filter-react-props';
-import { Props, PluginEntity } from './types';
+import { Props, PluginEntity } from '@jswork/styled-types';
 import atomics from './composite';
 import plugins from './plugins';
 import pluginComposeEntity from '@jswork/plugin-compose-entity';
