@@ -15,9 +15,8 @@
     "lerna-changelog": "^1.0.1"
   },
   "scripts": {
-    "i": "lerna bootstrap",
     "start": "cd ./packages/websites && yarn start",
     "build": "lerna run build --no-private",
-    "publish": "npm run build && lerna publish --no-private --no-dist-tag"
+    "publish": "npm run build && lerna publish --no-private"
   }
 }
