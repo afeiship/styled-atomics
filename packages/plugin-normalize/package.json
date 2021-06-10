@@ -1,6 +1,6 @@
 {
   "name": "@jswork/plugin-normalize",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Styled plugin normalize.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -35,5 +35,6 @@
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org"
-  }
+  },
+  "gitHead": "e40cd78585597b0a1ca79095b004ede8a76be0c4"
 }

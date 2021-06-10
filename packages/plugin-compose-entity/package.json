@@ -1,6 +1,6 @@
 {
   "name": "@jswork/plugin-compose-entity",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Plugin compose entity.",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -39,6 +39,7 @@
   "dependencies": {
     "@jswork/next": "^1.0.5",
     "@jswork/next-compose": "^1.0.0",
-    "@jswork/plugin-normalize": "^1.0.2"
-  }
+    "@jswork/plugin-normalize": "^1.0.3"
+  },
+  "gitHead": "e40cd78585597b0a1ca79095b004ede8a76be0c4"
 }

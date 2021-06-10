@@ -1,6 +1,6 @@
 {
   "name": "@jswork/styled-css",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Zero-runtime CSS string creator in JS library.",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
@@ -41,5 +41,6 @@
     "styled",
     "styled-components",
     "atomics"
-  ]
+  ],
+  "gitHead": "e40cd78585597b0a1ca79095b004ede8a76be0c4"
 }

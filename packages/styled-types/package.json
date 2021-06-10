@@ -1,6 +1,6 @@
 {
   "name": "@jswork/styled-types",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Styled types.",
   "homepage": "https://github.com/afeiship/styled-atomics",
   "main": "index.d.ts",
@@ -11,5 +11,6 @@
   "license": "MIT",
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
-  }
+  },
+  "gitHead": "e40cd78585597b0a1ca79095b004ede8a76be0c4"
 }

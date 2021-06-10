@@ -1,9 +1,9 @@
 {
   "name": "sites",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "private": true,
   "dependencies": {
-    "@jswork/styled-box": "^1.0.4",
+    "@jswork/styled-box": "^1.0.16",
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
