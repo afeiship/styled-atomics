@@ -78,6 +78,7 @@
     "@jswork/plugin-compose-entity": "^1.0.2",
     "@jswork/position-value": "^1.0.4",
     "@jswork/styled-css": "^1.0.1",
+    "@jswork/styled-types":"^1.0.0",
     "classnames": "^2.2.6",
     "filter-react-props": "^0.0.4",
     "prop-types": "^15.7.2"

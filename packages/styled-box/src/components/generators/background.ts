@@ -1,4 +1,4 @@
-import { PluginEntity } from '../types';
+import { PluginEntity } from '@jswork/styled-types';
 import css from '@jswork/styled-css';
 
 export default (inEntity: PluginEntity) => {

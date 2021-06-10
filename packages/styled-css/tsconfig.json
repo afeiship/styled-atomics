@@ -11,6 +11,7 @@
     "skipDefaultLibCheck": true,
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
     "noImplicitAny": false,
     "noUnusedLocals": true,
     "noUnusedParameters": true

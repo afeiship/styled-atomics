@@ -2,13 +2,13 @@ import { InlinePlugin, PluginEntity } from '@jswork/styled-types';
 import normalize from '@jswork/plugin-normalize';
 import css from '@jswork/styled-css';
 
-export class AbstractPlugin {
+export default class {
   get aliases(): string[] {
     return [];
   }
 
   get name() {
-    return 'abstract-plugin';
+    return 'styled-abstract-plugin';
   }
 
   private plugins: InlinePlugin[];

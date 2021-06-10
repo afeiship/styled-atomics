@@ -5,7 +5,6 @@ import nxCompose from '@jswork/next-compose';
 import filterReactProps from '@jswork/filter-react-props';
 import { Props, PluginEntity } from '@jswork/styled-types';
 import atomics from './composite';
-import plugins from './plugins';
 import pluginComposeEntity from '@jswork/plugin-compose-entity';
 
 const CLASS_NAME = 'styled-box';
@@ -45,24 +44,11 @@ export default class StyledBox extends Component<Props> {
     options: PropTypes.any
   };
 
-  static mergePlugin(inPlugins) {
-    const props = this.defaultProps;
-    const plugins = props.plugins;
-    const names = plugins.map((plugin) => plugin.prototype.name);
-    inPlugins.forEach((plugin) => {
-      const name = plugin.prototype.name;
-      if (!names.includes(name)) {
-        plugins.push(plugin);
-      }
-    });
-    this.defaultProps.plugins = plugins;
-  }
-
   static defaultProps = {
     sub: '*',
     unit: 'px',
     as: 'div',
-    plugins: plugins
+    plugins: []
   };
 
   render() {
