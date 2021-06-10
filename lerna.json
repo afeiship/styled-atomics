@@ -7,7 +7,8 @@
   ],
   "ignoreChanges": [
     "CHANGELOG.md",
-    "**/__tests__/**"
+    "**/__tests__/**",
+    "**/websites"
   ],
   "ignore": [
     "packages/websites"
