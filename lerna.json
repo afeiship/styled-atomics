@@ -14,7 +14,6 @@
   ],
   "gitTagVersion": false,
   "distTag": false,
-  "noPrivate": true,
   "command": {
     "publish": {
       "message": "chore(release): publish",

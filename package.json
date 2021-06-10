@@ -17,7 +17,7 @@
   "scripts": {
     "start": "cd ./packages/websites && yarn start",
     "build:all": "lerna run build --no-private",
-    "build": "lerna run build --since master",
+    "build": "lerna run build --since master  --no-private",
     "publish": "npm run build && lerna publish"
   }
 }
