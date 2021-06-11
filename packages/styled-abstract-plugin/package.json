@@ -1,6 +1,6 @@
 {
   "name": "@jswork/styled-abstract-plugin",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Abstract plugin for styled atomics.",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
@@ -12,8 +12,8 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@jswork/styled-plugin-normalize": "^1.0.0",
-    "@jswork/styled-css": "^1.0.3"
+    "@jswork/styled-css": "^1.0.8",
+    "@jswork/styled-plugin-normalize": "^1.0.4"
   },
   "devDependencies": {
     "@babel/core": "^7.14.3",
