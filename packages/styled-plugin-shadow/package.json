@@ -1,6 +1,6 @@
 {
   "name": "@jswork/styled-plugin-shadow",
-  "version": "1.0.2",
+  "version": "1.0.5",
   "description": "Styled plugin for shadow.",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",

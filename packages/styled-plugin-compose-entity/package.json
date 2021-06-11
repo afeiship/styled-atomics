@@ -1,6 +1,6 @@
 {
   "name": "@jswork/styled-plugin-compose-entity",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "Plugin compose entity.",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
