@@ -75,7 +75,7 @@
     "@jswork/next-compose": "^1.0.0",
     "@jswork/next-sample": "^1.0.0",
     "@jswork/noop": "^1.0.0",
-    "@jswork/plugin-compose-entity": "^1.0.4",
+    "@jswork/styled-plugin-compose-entity": "^1.0.4",
     "@jswork/position-value": "^1.0.4",
     "@jswork/styled-css": "^1.0.3",
     "@jswork/styled-types": "^1.0.2",

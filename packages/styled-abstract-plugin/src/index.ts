@@ -1,5 +1,5 @@
 import { InlinePlugin, PluginEntity } from '@jswork/styled-types';
-import normalize from '@jswork/plugin-normalize';
+import normalize from '@jswork/styled-plugin-normalize';
 import css from '@jswork/styled-css';
 
 export default class {

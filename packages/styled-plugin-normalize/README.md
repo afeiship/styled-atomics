@@ -8,12 +8,12 @@
 
 ## installation
 ```shell
-npm install @jswork/plugin-normalize
+npm install @jswork/styled-plugin-normalize
 ```
 
 ## usage
 ```js
-import boilerplateTypescriptPackage from '@jswork/plugin-normalize';
+import normalize from '@jswork/styled-plugin-normalize';
 
 // usage goes here.
 ```
@@ -21,14 +21,14 @@ import boilerplateTypescriptPackage from '@jswork/plugin-normalize';
 ## license
 Code released under [the MIT license](https://github.com/afeiship/plugin-normalize/blob/master/LICENSE.txt).
 
-[version-image]: https://img.shields.io/npm/v/@jswork/plugin-normalize
-[version-url]: https://npmjs.org/package/@jswork/plugin-normalize
+[version-image]: https://img.shields.io/npm/v/@jswork/styled-plugin-normalize
+[version-url]: https://npmjs.org/package/@jswork/styled-plugin-normalize
 
-[license-image]: https://img.shields.io/npm/l/@jswork/plugin-normalize
+[license-image]: https://img.shields.io/npm/l/@jswork/styled-plugin-normalize
 [license-url]: https://github.com/afeiship/plugin-normalize/blob/master/LICENSE.txt
 
-[size-image]: https://img.shields.io/bundlephobia/minzip/@jswork/plugin-normalize
+[size-image]: https://img.shields.io/bundlephobia/minzip/@jswork/styled-plugin-normalize
 [size-url]: https://github.com/afeiship/plugin-normalize/blob/master/dist/plugin-normalize.min.js
 
-[download-image]: https://img.shields.io/npm/dm/@jswork/plugin-normalize
-[download-url]: https://www.npmjs.com/package/@jswork/plugin-normalize
+[download-image]: https://img.shields.io/npm/dm/@jswork/styled-plugin-normalize
+[download-url]: https://www.npmjs.com/package/@jswork/styled-plugin-normalize

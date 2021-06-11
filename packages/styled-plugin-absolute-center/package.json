@@ -2,9 +2,9 @@
   "name": "@jswork/styled-plugin-absolute-center",
   "version": "1.0.2",
   "description": "Styled plugin for absolute-center.",
-  "main": "./dist/cjs/index.js",
-  "module": "./dist/esm/index.js",
-  "typings": "./dist/esm/index.d.ts",
+  "main":"dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "typings": "dist/esm/index.d.ts",
   "scripts": {
     "build": "gulp",
     "test": "jest",

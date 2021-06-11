@@ -1,9 +1,10 @@
 {
-  "name": "@jswork/plugin-normalize",
-  "version": "1.0.3",
+  "name": "@jswork/styled-plugin-normalize",
+  "version": "1.0.0",
   "description": "Styled plugin normalize.",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "typings": "dist/esm/index.d.ts",
   "scripts": {
     "build": "gulp",
     "test": "jest",

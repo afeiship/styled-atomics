@@ -12,7 +12,7 @@ export default defineConfig({
     emptyOutDir: true
   },
   optimizeDeps: {
-    include: ['@jswork/plugin-compose-entity', '@jswork/plugin-normalize']
+    include: ['@jswork/styled-plugin-compose-entity', '@jswork/styled-plugin-normalize']
   },
   plugins: [reactRefresh()]
 });

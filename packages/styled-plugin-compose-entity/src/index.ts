@@ -1,6 +1,6 @@
 import nx from '@jswork/next';
 import nxCompose from '@jswork/next-compose';
-import normalize from '@jswork/plugin-normalize';
+import normalize from '@jswork/styled-plugin-normalize';
 
 interface InlinePluiginName {
   name: string;

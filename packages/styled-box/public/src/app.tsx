@@ -2,6 +2,16 @@ import React from 'react';
 import View from '../../src/main';
 import styled from 'styled-components';
 
+import plugin1 from '@jswork/styled-plugin-absolute-center';
+import plugin2 from '@jswork/styled-plugin-em-justify-list';
+import plugin3 from '@jswork/styled-plugin-flexbox';
+import plugin4 from '@jswork/styled-plugin-radius-strip';
+import plugin5 from '@jswork/styled-plugin-shadow';
+import plugin6 from '@jswork/styled-plugin-transform-center';
+
+console.log(plugin1);
+
+
 // const pluing1 = (options) => {
 //   const { props, data } = options;
 //   const { plugin } = props;
@@ -17,7 +27,10 @@ import styled from 'styled-components';
 // };
 
 // global config engine:
-Object.assign(View.defaultProps, { styled });
+Object.assign(View.defaultProps, {
+  styled,
+  plugins: [plugin1, plugin2, plugin3, plugin4, plugin5, plugin6]
+});
 
 const Container = styled.div`
   width: 80%;
@@ -175,7 +188,12 @@ export default (props: any) => {
         </View>
 
         <h2>as: image - tobe avatar</h2>
-        <View as="img" circle debug src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gexw87htqhj305k05k74o.jpg" />
+        <View
+          as="img"
+          circle
+          debug
+          src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gexw87htqhj305k05k74o.jpg"
+        />
 
         <h2>Module: em-justify-list</h2>
         <View w={900} auto debug>

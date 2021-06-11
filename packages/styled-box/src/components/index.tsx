@@ -5,7 +5,7 @@ import nxCompose from '@jswork/next-compose';
 import filterReactProps from '@jswork/filter-react-props';
 import { Props, PluginEntity } from '@jswork/styled-types';
 import atomics from './composite';
-import pluginComposeEntity from '@jswork/plugin-compose-entity';
+import pluginComposeEntity from '@jswork/styled-plugin-compose-entity';
 
 const CLASS_NAME = 'styled-box';
 const FILTERED_PROPS = ['rel', 'x', 'y'];
