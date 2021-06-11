@@ -207,10 +207,15 @@ type ShortyProps = {
   tsxy5?: boolean;
 };
 
+type ExtensionProps = {
+  [key: string]: any;
+};
+
 export type Props = React.HTMLProps<Element> &
   React.HTMLProps<HTMLFormElement> &
   React.HTMLProps<HTMLImageElement> &
   BasicProps &
   GeneratorsProps &
   PluginProps &
-  ShortyProps;
+  ShortyProps &
+  ExtensionProps;

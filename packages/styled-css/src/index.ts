@@ -1,6 +1,6 @@
 export default function (inTemplate, ...args): string[] {
   const values = args.map((arg) => {
-    if (typeof arg === 'string') {
+    if (typeof arg === 'string' || typeof arg === 'number') {
       return arg;
     }
   });

@@ -8,9 +8,8 @@ import plugin3 from '@jswork/styled-plugin-flexbox';
 import plugin4 from '@jswork/styled-plugin-radius-strip';
 import plugin5 from '@jswork/styled-plugin-shadow';
 import plugin6 from '@jswork/styled-plugin-transform-center';
-
-console.log(plugin1);
-
+import plugin7 from '@jswork/styled-plugin-scaleable-image';
+import ReactList from '@jswork/react-list';
 
 // const pluing1 = (options) => {
 //   const { props, data } = options;
@@ -29,7 +28,7 @@ console.log(plugin1);
 // global config engine:
 Object.assign(View.defaultProps, {
   styled,
-  plugins: [plugin1, plugin2, plugin3, plugin4, plugin5, plugin6]
+  plugins: [plugin1, plugin2, plugin3, plugin4, plugin5, plugin6, plugin7]
 });
 
 const Container = styled.div`
@@ -150,9 +149,12 @@ export default (props: any) => {
         </View>
 
         <h2>elements: lc(1/2/3)</h2>
-        <View debug lc={1} mb={10} className="is-item">
-          道可道，非常道；名可名，非常名。 无名，天地之始，有名，万物之母。
-          故常无欲，以观其妙，常有欲，以观其徼。 此两者，同出而异名，同谓之玄，玄之又玄，众妙之门。
+        <View value="green" debug p={10} mb={10}>
+          <View lc={1} className="is-item">
+            道可道，非常道；名可名，非常名。 无名，天地之始，有名，万物之母。
+            故常无欲，以观其妙，常有欲，以观其徼。
+            此两者，同出而异名，同谓之玄，玄之又玄，众妙之门。
+          </View>
         </View>
         <View debug lc={2} mb={10} wp={2} className="is-item">
           道可道，非常道；名可名，非常名。 无名，天地之始，有名，万物之母。
@@ -188,12 +190,14 @@ export default (props: any) => {
         </View>
 
         <h2>as: image - tobe avatar</h2>
-        <View
-          as="img"
-          circle
-          debug
-          src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gexw87htqhj305k05k74o.jpg"
-        />
+        <View plugin="scaleable-image">
+          <View
+            as="img"
+            circle
+            className="is-scaleable"
+            src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gexw87htqhj305k05k74o.jpg"
+          />
+        </View>
 
         <h2>Module: em-justify-list</h2>
         <View w={900} auto debug>
@@ -223,8 +227,14 @@ export default (props: any) => {
         </View>
 
         <h1>Module: shadow</h1>
-        <View p={10} plugin="shadow:2">
-          道可道，非常道；名可名，非常名。
+        <View mb_={10}>
+          <View p={10} plugin="shadow:2">
+            道可道，非常道；名可名，非常名。
+          </View>
+
+          <View p={10} plugin={[{ name: 'shadow', inset: true, value: 1 }]}>
+            道可道，非常道；名可名，非常名。
+          </View>
         </View>
 
         <h1> Mouule: Multiple plugins</h1>
@@ -249,6 +259,26 @@ export default (props: any) => {
           道可道，非常道；名可名，非常名。 无名，天地之始，有名，万物之母。 故常无欲，以观其妙，常有欲，以观其徼。
           此两者，同出而异名，同谓之玄，玄之又玄，众妙之门。
         </View> */}
+
+        <h1> As: details!</h1>
+        <View as="details" open>
+          <summary>Epcot Center</summary>
+          <p>
+            Epcot is a theme park at Walt Disney World Resort featuring exciting attractions,
+            international pavilions, award-winning fireworks and seasonal special events.
+          </p>
+        </View>
+
+        <h1> As: ReactList?</h1>
+        <View debug value="green">
+          <View
+            as={ReactList}
+            items={[1, 2, 3]}
+            template={({ item }) => {
+              return <View debug>{item}</View>;
+            }}
+          />
+        </View>
       </View>
     </Container>
   );
