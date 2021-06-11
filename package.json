@@ -15,14 +15,7 @@
     ]
   },
   "devDependencies": {
-    "lerna": "^3.22.1",
-    "lerna-changelog": "^1.0.1"
-  },
-  "changelog": {
-    "labels": {
-      "feature": "New Feature",
-      "bug": "Bug Fix"
-    }
+    "lerna": "^3.22.1"
   },
   "scripts": {
     "lerna:clean": "lerna clean",
