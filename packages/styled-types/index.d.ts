@@ -199,8 +199,8 @@ type ShortyProps = {
   tlr_?: boolean;
   nowrap?: boolean;
   ell?: boolean;
-  b?: boolean;
-  n?: boolean;
+  fwb?: boolean;
+  fsn?: boolean;
   usn?: boolean;
   tsy5?: boolean;
   tsx5?: boolean;
