@@ -58,6 +58,7 @@ type GeneratorsProps = {
   lc?: Numeric;
   lh?: Numeric;
   hlh?: Numeric;
+  flex?: Numeric | boolean;
 
   m?: Numeric;
   mt?: Numeric;
@@ -140,6 +141,13 @@ type ShortyProps = {
   dib_?: boolean;
   dtbc_?: boolean;
 
+  // flex
+  wrap?: boolean;
+  align?: boolean;
+  justify?: boolean;
+  row?: boolean;
+  column?: boolean;
+
   f0?: boolean;
   h100?: boolean;
   min100?: boolean;
@@ -198,7 +206,6 @@ type ShortyProps = {
   tr?: boolean;
   tj?: boolean;
   tlr_?: boolean;
-  nowrap?: boolean;
   ell?: boolean;
   fwb?: boolean;
   fsn?: boolean;

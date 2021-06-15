@@ -8,20 +8,11 @@ export default class extends StyledAbstractPlugin {
 
   public pipe() {
     if (!this.current) return;
-    const { name, row, column, wrap, value, align, justify } = this.current;
+    const { name, value } = this.current;
     if (name === this.name) {
       this.values = css`
         display: flex;
         box-sizing: border-box;
-        flex-wrap: ${wrap ? 'wrap' : 'nowrap'};
-
-        ${row && 'flex-direction: row; '}
-        ${column && 'flex-direction: column; '}
-
-        /* align */
-        ${align && 'align-items:' + align + ';'}
-        /* justify */
-        ${justify && 'justify-content:' + justify + ';'}
 
         /* center */
         ${value === 'center' && 'align-items: center; justify-content: center;'}
