@@ -7,7 +7,7 @@ export default (options) => {
   const values = css`
     ${w && 'width:' + w + unit + ';'}
     ${wp && 'width:' + wp * 10 + '%;'}
-    ${w1 && 'width:' + w1 / 10 + '%;'}
+    ${w1 && 'width:' + 100 / w1 + '%;'}
   `;
 
   options.data = data.concat(values);
