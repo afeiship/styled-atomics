@@ -33,6 +33,7 @@ type BasicProps = {
   sub?: string | string[];
   strip?: boolean;
   value?: boolean | Numeric;
+  val?: (val: any) => string;
   x?: boolean | Numeric;
   y?: boolean | Numeric;
   h?: boolean | Numeric;

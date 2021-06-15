@@ -28,6 +28,8 @@ import ReactList from '@jswork/react-list';
 // global config engine:
 Object.assign(View.defaultProps, {
   styled,
+  val: (value) => (parseInt(value) / 16).toFixed(2),
+  unit: 'rem',
   plugins: [plugin1, plugin2, plugin3, plugin4, plugin5, plugin6, plugin7]
 });
 

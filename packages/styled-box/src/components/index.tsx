@@ -1,6 +1,7 @@
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
+import nx from '@jswork/next';
 import nxCompose from '@jswork/next-compose';
 import filterReactProps from '@jswork/filter-react-props';
 import { Props, PluginEntity } from '@jswork/styled-types';
@@ -31,6 +32,10 @@ export default class StyledBox extends Component<Props> {
      */
     as: PropTypes.any,
     /**
+     * The rem value transformer.
+     */
+    val: PropTypes.func,
+    /**
      * External plugin list.
      */
     plugins: PropTypes.array,
@@ -48,6 +53,7 @@ export default class StyledBox extends Component<Props> {
     sub: '*',
     unit: 'px',
     as: 'div',
+    val: nx.stubValue,
     plugins: []
   };
 
