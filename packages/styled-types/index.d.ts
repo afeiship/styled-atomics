@@ -111,6 +111,7 @@ type ShortyProps = {
   vab_?: boolean;
   vam_?: boolean;
   vabs_?: boolean;
+
   bgn?: boolean;
   bdn?: boolean;
   bsb?: boolean;
@@ -149,6 +150,7 @@ type ShortyProps = {
   column?: boolean;
 
   f0?: boolean;
+  v100?: boolean;
   h100?: boolean;
   min100?: boolean;
   max100?: boolean;
