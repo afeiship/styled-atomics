@@ -1,6 +1,6 @@
 {
   "name": "@jswork/styled-plugin-flexbox",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Styled plugin for flexbox.",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
