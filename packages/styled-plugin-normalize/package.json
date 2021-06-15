@@ -1,6 +1,6 @@
 {
   "name": "@jswork/styled-plugin-normalize",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Styled plugin normalize.",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",

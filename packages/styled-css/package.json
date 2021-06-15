@@ -1,6 +1,6 @@
 {
   "name": "@jswork/styled-css",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Zero-runtime CSS string creator in JS library.",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
