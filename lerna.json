@@ -13,8 +13,6 @@
   "ignore": [
     "packages/websites"
   ],
-  "gitTagVersion": false,
-  "distTag": false,
   "command": {
     "publish": {
       "message": "chore(release): publish",
