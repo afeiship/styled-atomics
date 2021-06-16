@@ -145,8 +145,8 @@ type ShortyProps = {
 
   // flex
   wrap?: boolean;
-  align?: boolean;
-  justify?: boolean;
+  align?: string;
+  justify?: string;
   row?: boolean;
   column?: boolean;
 
