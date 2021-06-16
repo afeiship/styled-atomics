@@ -7,6 +7,7 @@ import clearfix from './clearfix';
 import cursor from './cursor';
 import debug from './debug';
 import display from './display';
+import flex from './flex';
 import float from './float';
 import fontSize from './font-size';
 import height from './height';
@@ -30,6 +31,7 @@ export default [
   cursor,
   debug,
   display,
+  flex,
   float,
   fontSize,
   height,

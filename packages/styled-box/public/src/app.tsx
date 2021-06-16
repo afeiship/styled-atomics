@@ -42,6 +42,13 @@ export default (props: any) => {
   return (
     <Container>
       <View c="#000" wp={8} bdw="2" bds="dashed" bdc="#ccc" bg="#fefefe" p={20} auto>
+        <View p_={10} mb={10} debug dflex flex_={1}>
+          <div className="is-item">item1</div>
+          <div className="is-item">item2</div>
+          <div className="is-item">item3</div>
+          <div className="is-item">item4</div>
+        </View>
+
         <View radius={8} c="#fff" bg="#4cd964" p={10} mb={10} f={14} lh={1.6}>
           道可道，非常道；名可名，非常名。 无名，天地之始，有名，万物之母。
           故常无欲，以观其妙，常有欲，以观其徼。 此两者，同出而异名，同谓之玄，玄之又玄，众妙之门。

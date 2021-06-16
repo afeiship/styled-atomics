@@ -59,6 +59,7 @@ type GeneratorsProps = {
   lh?: Numeric;
   hlh?: Numeric;
   flex?: Numeric | boolean;
+  flex_?: Numeric;
 
   m?: Numeric;
   mt?: Numeric;
