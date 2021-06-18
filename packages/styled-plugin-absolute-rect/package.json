@@ -1,6 +1,6 @@
 {
   "name": "@jswork/styled-plugin-absolute-rect",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Absolute rect for layout.",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
