@@ -15,6 +15,7 @@ import margin from './margin';
 import overflow from './overflow';
 import padding from './padding';
 import position from './position';
+import scroll from './scroll';
 import shape from './shape';
 import status from './status';
 import text from './text';
@@ -39,6 +40,7 @@ export default [
   overflow,
   padding,
   position,
+  scroll,
   shape,
   status,
   text,

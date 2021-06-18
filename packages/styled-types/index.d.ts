@@ -200,6 +200,7 @@ type ShortyProps = {
   r100?: boolean;
   b100?: boolean;
   l100?: boolean;
+  smooth?: boolean;
   circle?: boolean;
   round?: boolean;
   rect?: boolean;
