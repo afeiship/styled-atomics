@@ -2,7 +2,7 @@ import css from '@jswork/styled-css';
 
 export default (options) => {
   const { props, data } = options;
-  const { tdn, tdu, tdlh, tl, tc, tr, tj, tlr_, ell, fwb, fsn, usn } = props;
+  const { tdn, tdu, tdlh, tl, tc, tr, tj, tlr_, ell, fwb, fsn, usn, wsn, wsnw } = props;
 
   const values = css`
     ${tdn && 'text-decoration: none;'}
@@ -19,6 +19,8 @@ export default (options) => {
     ${fwb && 'font-weight: bold;'}
     ${fsn && 'font-weight: normal; font-style: normal;'}
     ${usn && 'user-select: none;'}
+    ${wsn && 'white-space: normal;'}
+    ${wsnw && 'white-space: nowrap;'}
   `;
 
   options.data = data.concat(values);

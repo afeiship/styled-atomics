@@ -5,8 +5,8 @@ export default (options) => {
   const { ovh, x, y, ovs, ova } = props;
 
   const values = css`
-    ${ovh && 'overflow: hidden;'}
-    ${ovs && 'overflow: scroll;'}
+    ${ovh && !x && !y && 'overflow: hidden;'}
+    ${ovs && !x && !y && 'overflow: scroll;'}
     ${ova && 'overflow: auto;'}
 
     ${ovh && x && 'overflow-x: hidden;'}

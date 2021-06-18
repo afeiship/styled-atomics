@@ -75,6 +75,10 @@ type GeneratorsProps = {
   ml_?: Numeric;
   o?: Numeric;
 
+  ov?: string;
+  ovx?: string;
+  ovy?: string;
+
   p?: Numeric;
   pt?: Numeric;
   pr?: Numeric;
@@ -210,6 +214,8 @@ type ShortyProps = {
   tj?: boolean;
   tlr_?: boolean;
   ell?: boolean;
+  wsn?: boolean;
+  wsnw?: boolean;
   fwb?: boolean;
   fsn?: boolean;
   usn?: boolean;

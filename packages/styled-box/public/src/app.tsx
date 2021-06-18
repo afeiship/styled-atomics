@@ -9,6 +9,7 @@ import plugin4 from '@jswork/styled-plugin-radius-strip';
 import plugin5 from '@jswork/styled-plugin-shadow';
 import plugin6 from '@jswork/styled-plugin-transform-center';
 import plugin7 from '@jswork/styled-plugin-scaleable-image';
+import plugin8 from '@jswork/styled-plugin-absolute-rect';
 import ReactList from '@jswork/react-list';
 
 // const pluing1 = (options) => {
@@ -30,7 +31,7 @@ Object.assign(View.defaultProps, {
   styled,
   val: (value) => (parseInt(value) / 16).toFixed(2),
   unit: 'rem',
-  plugins: [plugin1, plugin2, plugin3, plugin4, plugin5, plugin6, plugin7]
+  plugins: [plugin1, plugin2, plugin3, plugin4, plugin5, plugin6, plugin7, plugin8]
 });
 
 const Container = styled.div`
@@ -42,6 +43,27 @@ export default (props: any) => {
   return (
     <Container>
       <View c="#000" wp={8} bdw="2" bds="dashed" bdc="#ccc" bg="#fefefe" p={20} auto>
+        <View debug relative value="green" w={200} h={200}>
+          <View debug plugin="absolute-rect:10" ovs y>
+            <p>道可道，非常道；名可名，非常名。 </p>
+            <p>无名，天地之始，有名，万物之母。</p>
+            <p>故常无欲，以观其妙，常有欲，以观其徼。</p>
+            <p>此两者，同出而异名，同谓之玄，玄之又玄，众妙之门。</p>
+          </View>
+        </View>
+
+        <View debug relative value="green" w={300} h={300}>
+          <View debug plugin="absolute-rect" wsnw ov="hidden" ovs x>
+            <p>道可道，非常道；名可名，非常名。 </p>
+            <p>无名，天地之始，有名，万物之母。</p>
+            <p>故常无欲，以观其妙，常有欲，以观其徼。</p>
+            <p>此两者，同出而异名，同谓之玄，玄之又玄，众妙之门。</p>
+            <p>天下皆知美之为美，斯恶已，皆知善之为善，斯不善已。</p>
+            <p>故有无相生，难易相成，长短相形，高下相倾，音声相和，前后相随。</p>
+            <p>是以圣人处无为之事，行不言之教，万物作焉而不辞，生而不有，为而不恃，功成而弗居。</p>
+            <p>夫惟弗居，是以不去。</p>
+          </View>
+        </View>
         <View p_={10} mb={10} debug dflex flex_={1}>
           <div className="is-item">item1</div>
           <div className="is-item">item2</div>
@@ -161,8 +183,7 @@ export default (props: any) => {
         <View value="green" debug p={10} mb={10}>
           <View lc={1} className="is-item">
             道可道，非常道；名可名，非常名。 无名，天地之始，有名，万物之母。
-            故常无欲，以观其妙，常有欲，以观其徼。
-            此两者，同出而异名，同谓之玄，玄之又玄，众妙之门。
+            故常无欲，以观其妙，常有欲，以观其徼。 此两者，同出而异名，同谓之玄，玄之又玄，众妙之门。
           </View>
         </View>
         <View debug lc={2} mb={10} wp={2} className="is-item">
@@ -273,8 +294,8 @@ export default (props: any) => {
         <View as="details" open>
           <summary>Epcot Center</summary>
           <p>
-            Epcot is a theme park at Walt Disney World Resort featuring exciting attractions,
-            international pavilions, award-winning fireworks and seasonal special events.
+            Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international
+            pavilions, award-winning fireworks and seasonal special events.
           </p>
         </View>
 
