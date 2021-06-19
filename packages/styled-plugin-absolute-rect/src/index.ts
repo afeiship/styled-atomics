@@ -10,7 +10,6 @@ export default class extends StyledAbstractPlugin {
     if (!this.current) return;
     const { val, unit } = this.entity.props;
     const { name, value } = this.current;
-    console.log(this.current);
     const suffix = val!(value || 0) + unit;
     const values =
       [

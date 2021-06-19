@@ -10,6 +10,7 @@ import plugin5 from '@jswork/styled-plugin-shadow';
 import plugin6 from '@jswork/styled-plugin-transform-center';
 import plugin7 from '@jswork/styled-plugin-scaleable-image';
 import plugin8 from '@jswork/styled-plugin-absolute-rect';
+import plugin9 from '@jswork/styled-plugin-position-box';
 import ReactList from '@jswork/react-list';
 
 // const pluing1 = (options) => {
@@ -31,7 +32,7 @@ Object.assign(View.defaultProps, {
   styled,
   val: (value) => (parseInt(value) / 16).toFixed(2),
   unit: 'rem',
-  plugins: [plugin1, plugin2, plugin3, plugin4, plugin5, plugin6, plugin7, plugin8]
+  plugins: [plugin1, plugin2, plugin3, plugin4, plugin5, plugin6, plugin7, plugin8, plugin9]
 });
 
 const Container = styled.div`
@@ -43,6 +44,36 @@ export default (props: any) => {
   return (
     <Container>
       <View c="#000" wp={8} bdw="2" bds="dashed" bdc="#ccc" bg="#fefefe" p={20} auto>
+        <View relative debug wh={300} auto mb={20}>
+          <View debug plugin="position-box:center">
+            Center
+          </View>
+          <View debug plugin="position-box:tr">
+            tr
+          </View>
+          <View debug plugin="position-box:tl">
+            tl
+          </View>
+          <View debug plugin="position-box:bl">
+            bl
+          </View>
+          <View debug plugin="position-box:br">
+            br
+          </View>
+
+          <View debug plugin="position-box:top">
+            top
+          </View>
+          <View debug plugin="position-box:right">
+            right
+          </View>
+          <View debug plugin="position-box:bottom">
+            bottom
+          </View>
+          <View debug plugin="position-box:left">
+            left
+          </View>
+        </View>
         <View debug relative value="green" w={200} h={200}>
           <View debug plugin="absolute-rect:10" ovs y>
             <p>道可道，非常道；名可名，非常名。 </p>
