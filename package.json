@@ -19,6 +19,7 @@
   },
   "scripts": {
     "lerna:clean": "lerna clean",
+    "lerna:list": "lerna list",
     "lerna:bootstrap": "lerna bootstrap",
     "start": "cd ./packages/websites && yarn start",
     "build:all": "lerna run build --no-private",
