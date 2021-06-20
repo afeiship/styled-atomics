@@ -8,10 +8,14 @@
   "ignoreChanges": [
     "CHANGELOG.md",
     "**/__tests__/**",
-    "**/websites"
+    "**/websites",
+    "packages/styled-box/docs",
+    "packages/styled-box/public"
   ],
   "ignore": [
-    "packages/websites"
+    "packages/websites",
+    "packages/styled-box/docs",
+    "packages/styled-box/public"
   ],
   "command": {
     "publish": {
