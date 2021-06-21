@@ -27,7 +27,10 @@ export default class {
     const { plugin } = props;
     this.entity = inEntity;
     this.plugins = normalize(plugin as InlinePlugin);
-    this.current = this.plugins.find((plugin) => plugin.name === this.name) || null;
+    this.current =
+      this.plugins.find((plugin) => {
+        return plugin.name === this.name && !plugin.done;
+      }) || null;
   }
 
   public pipe() {
@@ -41,6 +44,7 @@ export default class {
   public get() {
     this.pipe();
     this.merge();
+    this.current && (this.current.done = true);
     return this.entity;
   }
 }

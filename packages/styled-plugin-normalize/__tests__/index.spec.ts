@@ -61,4 +61,16 @@ describe('api.basic', () => {
       { name: 'shadow', value: '5' }
     ]);
   });
+
+  test('plugin the same plugin with diff params', () => {
+    const plugin = [
+      { name: 'fixed-toolbar', value: 200, gap: 20, role: 'header' },
+      { name: 'fixed-toolbar', value: 300, gap: 10, role: 'footer' }
+    ];
+
+    expect(fn(plugin)).toEqual([
+      { name: 'fixed-toolbar', value: 200, gap: 20, role: 'header' },
+      { name: 'fixed-toolbar', value: 300, gap: 10, role: 'footer' }
+    ]);
+  });
 });

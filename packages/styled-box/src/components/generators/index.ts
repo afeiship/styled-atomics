@@ -13,6 +13,7 @@ import opacity from './opacity';
 import overflow from './overflow';
 import padding from './padding';
 import position from './position';
+import raw from './raw';
 import space from './space';
 import wh from './wh';
 import width from './width';
@@ -35,6 +36,7 @@ export default [
   overflow,
   padding,
   position,
+  raw,
   space,
   wh,
   width,
