@@ -17,8 +17,8 @@ export default (options) => {
     ${mb_ && '> ' + sub + ' { margin-bottom: ' + val(mb_) + unit + '; }'}
     ${ml_ && '> ' + sub + ' { margin-left: ' + val(ml_) + unit + '; }'}
 
-    ${mx && 'margin-left:' + mx + unit + '; margin-right:' + val(mx) + unit + ';'}
-    ${my && 'margin-top:' + my + unit + '; margin-bottom:' + val(my) + unit + ';'}
+    ${mx && 'margin-left:' + val(mx) + unit + '; margin-right:' + val(mx) + unit + ';'}
+    ${my && 'margin-top:' + val(my) + unit + '; margin-bottom:' + val(my) + unit + ';'}
   `;
 
   options.data = data.concat(values);
