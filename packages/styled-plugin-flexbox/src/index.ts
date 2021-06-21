@@ -18,10 +18,10 @@ export default class extends StyledAbstractPlugin {
         ${value === 'center' && 'align-items: center; justify-content: center;'}
 
         /* la\lar\ar\lr */
-        ${['la', 'lar', 'ar', 'lr'].includes(value) && 'width: 100%; flex-direction: row;'}
+        ${['la', 'lar', 'ar', 'lr'].includes(value) && 'flex-direction: row;'}
 
         /* ta|tab|ab|tb */
-        ${['ta', 'tab', 'ab', 'tb'].includes(value) && 'height: 100%; flex-direction: column;'}
+        ${['ta', 'tab', 'ab', 'tb'].includes(value) && 'flex-direction: column;'}
 
         /* la|lar|ta|tab */
         ${['la', 'lar', 'ta', 'tab'].includes(value) && '& > * { &:nth-child(2) { flex: 1; } }'}
