@@ -43,6 +43,17 @@ describe('api.basic', () => {
     ]);
   });
 
+  test('plugin is string with space', () => {
+    const plg1 = 'trans-center:x; abs-center: xy;';
+    const plg2 = 'trans-center:x; abs-center: xy';
+    const result = [
+      { name: 'trans-center', value: 'x' },
+      { name: 'abs-center', value: 'xy' }
+    ];
+    expect(fn(plg1)).toEqual(result);
+    expect(fn(plg2)).toEqual(result);
+  });
+
   test('plugin is mixed array', () => {
     const plugin = ['trans-center:x', { name: 'shadow', value: '5' }];
     expect(fn(plugin)).toEqual([
