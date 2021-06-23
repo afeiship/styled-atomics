@@ -61,6 +61,20 @@ type GeneratorsProps = {
   flex?: Numeric | boolean;
   flex_?: Numeric;
 
+  // raw
+  color?: string;
+  background?: string;
+  width?: string;
+  height?: string;
+  opacity?: string;
+  size?: string;
+  margin?: string;
+  padding?: string;
+  top?: string;
+  right?: string;
+  bottom?: string;
+  left?: string;
+
   m?: Numeric;
   mt?: Numeric;
   mr?: Numeric;
