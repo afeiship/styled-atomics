@@ -2,9 +2,12 @@ import css from '@jswork/styled-css';
 
 export default (options) => {
   const { props, data } = options;
-  const { width, height, opacity, size, margin, padding, top, right, bottom, left } = props;
+  const { color, background, width, height, opacity, size, margin, padding, top, right, bottom, left } =
+    props;
 
   const values = css`
+    ${color && 'color:' + color + ';'}
+    ${background && 'background:' + background + ';'}
     ${height && 'height:' + height + ';'}
     ${width && 'width:' + width + ';'}
     ${margin && 'margin:' + margin + ';'}
