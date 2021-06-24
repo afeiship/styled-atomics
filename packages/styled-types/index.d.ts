@@ -63,6 +63,7 @@ type GeneratorsProps = {
 
   // raw
   color?: string;
+  cursor?: string;
   background?: string;
   width?: string;
   height?: string;
