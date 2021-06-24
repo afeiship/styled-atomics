@@ -12,7 +12,7 @@ export default class {
   }
 
   private plugins: InlinePlugin[];
-  protected current: InlinePlugin | null = null;
+  protected current: InlinePlugin;
   protected values: string[] = [];
   protected styledCss: any;
   protected entity: PluginEntity;
@@ -22,15 +22,23 @@ export default class {
     return instance.get();
   }
 
+  get defaults(): any {
+    return {};
+  }
+
   constructor(inEntity: PluginEntity) {
     const { props } = inEntity;
     const { plugin } = props;
     this.entity = inEntity;
     this.plugins = normalize(plugin as InlinePlugin);
-    this.current =
-      this.plugins.find((plugin) => {
-        return plugin.name === this.name && !plugin.done;
-      }) || null;
+    this.current = this.plugins.find((plugin) => {
+      const ifeName = this.name === plugin.name;
+      const ifeAlias = this.aliases.includes(plugin.name);
+      return (ifeName || ifeAlias) && !plugin.done;
+    })!;
+
+    // override defaluts
+    this.current && Object.assign(this.current, this.defaults, this.current);
   }
 
   public pipe() {

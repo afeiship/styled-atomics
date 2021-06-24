@@ -12,6 +12,7 @@ import plugin7 from '@jswork/styled-plugin-scaleable-image';
 import plugin8 from '@jswork/styled-plugin-absolute-rect';
 import plugin9 from '@jswork/styled-plugin-position-box';
 import plugin10 from '@jswork/styled-plugin-fixed-toolbar';
+import plugin11 from '@jswork/styled-plugin-icon-text';
 import ReactList from '@jswork/react-list';
 
 // const pluing1 = (options) => {
@@ -33,7 +34,19 @@ Object.assign(View.defaultProps, {
   styled,
   val: (value) => (parseInt(value) / 16).toFixed(2),
   unit: 'rem',
-  plugins: [plugin1, plugin2, plugin3, plugin4, plugin5, plugin6, plugin7, plugin8, plugin9, plugin10]
+  plugins: [
+    plugin1,
+    plugin2,
+    plugin3,
+    plugin4,
+    plugin5,
+    plugin6,
+    plugin7,
+    plugin8,
+    plugin9,
+    plugin10,
+    plugin11
+  ]
 });
 
 export default (props: any) => {
@@ -51,6 +64,50 @@ export default (props: any) => {
 
       <View className="is-footer" bg="#4cd964">
         FOOTER
+      </View>
+      <View debug plugin="icon-text:10">
+        <img width="104" src="https://pic.rmb.bdstatic.com/7f7a8d7b247d3aa430010f10a5765239.jpeg" />
+        <label>
+          <input
+            type="text"
+            onChange={(e) => {
+              console.log('change.', e.target.value);
+            }}
+          />
+        </label>
+      </View>
+      <View debug value="seagreen" p={10} mr_={20}>
+        <View as="span" debug value="green" plugin="icon-text:10" sub="img">
+          <img width="24" src="https://pic.rmb.bdstatic.com/7f7a8d7b247d3aa430010f10a5765239.jpeg" />
+          <span>这个是一个头像</span>
+        </View>
+
+        <View as="span" debug value="green" plugin="icon-text:10" sub="img">
+          <img width="24" src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gexw87htqhj305k05k74o.jpg" />
+          <span>另一个头像</span>
+        </View>
+      </View>
+
+      <View debug value="seagreen" p={10} mr_={20}>
+        <View as="span" debug value="green" plugin={{ name: 'icon-text', value: 10, x: false }} sub="img">
+          <View
+            as="img"
+            circle
+            width="50"
+            src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gexw87htqhj305k05k74o.jpg"
+          />
+          <span>这个是一个头像</span>
+        </View>
+
+        <View as="span" debug value="green" plugin={{ name: 'icon-text-y', value: 10 }} sub="img">
+          <View
+            as="img"
+            radius="5"
+            width="50"
+            src="https://pic.rmb.bdstatic.com/7f7a8d7b247d3aa430010f10a5765239.jpeg"
+          />
+          <span>另一个头像</span>
+        </View>
       </View>
 
       <View relative debug wh={300} auto mb={20}>
