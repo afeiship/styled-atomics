@@ -46,7 +46,11 @@ export default class StyledBox extends Component<Props> {
     /**
      * Plugin options.
      */
-    options: PropTypes.any
+    options: PropTypes.any,
+    /**
+     * Should update every time.
+     */
+    shouldUpdate: PropTypes.bool
   };
 
   static defaultProps = {
@@ -54,8 +58,14 @@ export default class StyledBox extends Component<Props> {
     unit: 'px',
     as: 'div',
     val: nx.stubValue,
+    shouldUpdate: false,
     plugins: []
   };
+
+  shouldComponentUpdate() {
+    const { shouldUpdate } = this.props;
+    return shouldUpdate;
+  }
 
   render() {
     const { className, as, styled, plugins, ...props } = this.props;
