@@ -1,6 +1,6 @@
 {
   "name": "@jswork/styled-types",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "description": "Styled types.",
   "homepage": "https://github.com/afeiship/styled-atomics",
   "main": "index.d.ts",
