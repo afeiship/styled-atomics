@@ -62,10 +62,10 @@ export default class StyledBox extends Component<Props> {
     plugins: []
   };
 
-  shouldComponentUpdate() {
-    const { shouldUpdate } = this.props;
-    return shouldUpdate;
-  }
+  // shouldComponentUpdate() {
+  //   const { shouldUpdate } = this.props;
+  //   return shouldUpdate;
+  // }
 
   render() {
     const { className, as, styled, plugins, ...props } = this.props;
