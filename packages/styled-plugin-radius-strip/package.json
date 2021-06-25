@@ -1,6 +1,6 @@
 {
   "name": "@jswork/styled-plugin-radius-strip",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Styled plugin for radius-strip.",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
@@ -34,7 +34,7 @@
     "typescript": "^4.1.3"
   },
   "dependencies": {
-    "@jswork/styled-abstract-plugin": "^1.0.9"
+    "@jswork/styled-abstract-plugin": "^1.0.10"
   },
   "publishConfig": {
     "access": "public",
