@@ -11,7 +11,7 @@ import pluginComposeEntity from '@jswork/styled-plugin-compose-entity';
 const CLASS_NAME = 'styled-box';
 const FILTERED_PROPS = ['rel', 'x', 'y'];
 
-export default class StyledBox extends Component<Props, { isMounted: boolean }> {
+export default class StyledBox extends Component<Props> {
   static displayName = CLASS_NAME;
   static version = '__VERSION__';
   static propTypes = {
@@ -47,10 +47,6 @@ export default class StyledBox extends Component<Props, { isMounted: boolean }> 
      * Plugin options.
      */
     options: PropTypes.any,
-    /**
-     * Should update every time.
-     */
-    shouldUpdate: PropTypes.bool
   };
 
   static defaultProps = {
@@ -58,40 +54,21 @@ export default class StyledBox extends Component<Props, { isMounted: boolean }> 
     unit: 'px',
     as: 'div',
     val: nx.stubValue,
-    shouldUpdate: false,
     plugins: []
   };
 
-  private theProps;
-  private Styled;
 
-  constructor(inProps) {
-    super(inProps);
-    this.state = { isMounted: false };
-  }
-
-  shouldComponentUpdate() {
-    return this.props.shouldUpdate;
-  }
-
-  componentDidMount() {
+  render() {
     const { className, as, styled, plugins, ...props } = this.props;
     const fn = nxCompose.apply(null, atomics.concat(pluginComposeEntity));
     const defaultEntity: PluginEntity = { props: this.props, data: [] };
     const options = fn(defaultEntity);
     const styles = options.data.filter(Boolean);
-    this.theProps = filterReactProps(props, FILTERED_PROPS);
-    this.Styled = styled(as)`
+    const theProps = filterReactProps(props, FILTERED_PROPS);
+    const Styled = styled(as)`
       ${styles.join('')}
     `;
 
-    this.setState({ isMounted: true });
-  }
-
-  render() {
-    const { className } = this.props;
-    const { isMounted } = this.state;
-    if (!isMounted) return null;
-    return <this.Styled className={classNames(CLASS_NAME, className)} {...this.theProps} />;
+    return <Styled className={classNames(CLASS_NAME, className)} {...theProps} />;
   }
 }
