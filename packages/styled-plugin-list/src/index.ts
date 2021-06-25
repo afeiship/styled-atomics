@@ -4,6 +4,8 @@ import css from '@jswork/styled-css';
 /**
  * 1. The last row: https://codepen.io/keithclark/pen/Hygkt
  * 2. The last column: > ${sub}:nth-child(${value}n)
+ *
+ * https://dockyard.com/blog/2019/04/16/css-selectors-for-the-entire-last-row-of-a-dynamic-grid
  */
 
 export default class extends StyledAbstractPlugin {
