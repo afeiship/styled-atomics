@@ -13,6 +13,7 @@ import plugin8 from '@jswork/styled-plugin-absolute-rect';
 import plugin9 from '@jswork/styled-plugin-position-box';
 import plugin10 from '@jswork/styled-plugin-fixed-toolbar';
 import plugin11 from '@jswork/styled-plugin-icon-text';
+import plugin12 from '@jswork/styled-plugin-list';
 import ReactList from '@jswork/react-list';
 
 // const pluing1 = (options) => {
@@ -45,7 +46,8 @@ Object.assign(View.defaultProps, {
     plugin8,
     plugin9,
     plugin10,
-    plugin11
+    plugin11,
+    plugin12
   ]
 });
 
@@ -58,6 +60,62 @@ export default (props: any) => {
         { name: 'fixed-toolbar', value: 100, gap: 20, role: 'header' },
         { name: 'fixed-toolbar', value: 50, gap: 10, role: 'footer' }
       ]}>
+      <h2>Module: list</h2>
+      <View w={900} auto style={{ outline: '1px solid red' }}>
+        <View plugin={{ name: 'list', value: 5, width: 150, gap: 20 }}>
+          <View bg="#eee" h={100} className="is-item">
+            item1
+          </View>
+          <View bg="#f30" h={100} className="is-item">
+            item2
+          </View>
+          <View bg="#ddd" h={100} className="is-item">
+            item3
+          </View>
+          <View bg="#030" h={100} className="is-item">
+            item2
+          </View>
+          <View bg="#ddd" h={100} className="is-item">
+            item3
+          </View>
+          <View bg="#ccc" h={100} className="is-item">
+            item3
+          </View>
+          <View bg="#999" h={100} className="is-item">
+            item3
+          </View>
+        </View>
+      </View>
+
+      <View wp="9" my={20} auto style={{ outline: '1px solid red' }}>
+        <View plugin={{ name: 'list', value: 6, width: 160, gap: 20 }}>
+          <View bg="#eee" h={100} className="is-item">
+            item1
+          </View>
+          <View bg="#f30" h={100} className="is-item">
+            item2
+          </View>
+          <View bg="#ddd" h={100} className="is-item">
+            item3
+          </View>
+          <View bg="#030" h={100} className="is-item">
+            item4
+          </View>
+          <View bg="#ddd" h={100} className="is-item">
+            item5
+          </View>
+          <View bg="#ccc" h={100} className="is-item">
+            item6
+          </View>
+          <View bg="#999" h={100} className="is-item">
+            item7
+          </View>
+          <View bg="#505" h={100} className="is-item">
+            item8
+          </View>
+        </View>
+      </View>
+
       <View className="is-header" bg="#007aff">
         Header
       </View>
