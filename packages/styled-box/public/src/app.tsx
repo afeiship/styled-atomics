@@ -14,6 +14,7 @@ import plugin9 from '@jswork/styled-plugin-position-box';
 import plugin10 from '@jswork/styled-plugin-fixed-toolbar';
 import plugin11 from '@jswork/styled-plugin-icon-text';
 import plugin12 from '@jswork/styled-plugin-list';
+import plugin13 from '@jswork/styled-plugin-line';
 import ReactList from '@jswork/react-list';
 
 // const pluing1 = (options) => {
@@ -47,7 +48,8 @@ Object.assign(View.defaultProps, {
     plugin9,
     plugin10,
     plugin11,
-    plugin12
+    plugin12,
+    plugin13
   ]
 });
 
@@ -86,6 +88,14 @@ export default (props: any) => {
           </View>
         </View>
       </View>
+
+      <View plugin="line:1" my={10} />
+      <View plugin="line:2" my={10} />
+      <View plugin="line:3" my={10} />
+      <View plugin="line:5" my={10} />
+      <View plugin="line:10" my={10} />
+      <View plugin="line:20" my={10} />
+      <View plugin="line:100" my={10} />
 
       <View wp="9" my={20} auto style={{ outline: '1px solid red' }}>
         <View plugin={{ name: 'list', value: 6, width: 160, gap: 20 }}>

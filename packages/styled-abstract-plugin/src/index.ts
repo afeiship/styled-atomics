@@ -38,7 +38,7 @@ export default class {
     })!;
 
     // override defaluts
-    this.current && Object.assign(this.current, this.defaults, this.current);
+    this.current && Object.assign(this.current, Object.assign(this.defaults, this.current));
   }
 
   public pipe() {
