@@ -47,10 +47,6 @@ export default class StyledBox extends Component<Props, { isMounted: boolean }> 
      * Plugin options.
      */
     options: PropTypes.any,
-    /**
-     * Should update every time.
-     */
-    shouldUpdate: PropTypes.bool
   };
 
   static defaultProps = {
@@ -58,7 +54,6 @@ export default class StyledBox extends Component<Props, { isMounted: boolean }> 
     unit: 'px',
     as: 'div',
     val: nx.stubValue,
-    shouldUpdate: false,
     plugins: []
   };
 
