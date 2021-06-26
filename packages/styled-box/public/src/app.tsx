@@ -55,6 +55,15 @@ Object.assign(View.defaultProps, {
   ]
 });
 
+const Container = styled(View)`
+  border: 1px solid #eee;
+  .is-text {
+    &:hover {
+      color: red;
+    }
+  }
+`;
+
 export default (props: any) => {
   return (
     <View
@@ -64,6 +73,32 @@ export default (props: any) => {
         { name: 'fixed-toolbar', value: 100, gap: 20, role: 'header' },
         { name: 'fixed-toolbar', value: 50, gap: 10, role: 'footer' }
       ]}>
+      <View debug plugin={{ name: 'list', value: 5, gap: 20, width: 230 }}>
+        {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((item) => {
+          return (
+            <a key={item}>
+              <Container plugin="scaleable-image" sub="img" w={230} radius={10}>
+                <View
+                  w100
+                  cp
+                  h={130}
+                  as="img"
+                  src="https://pic.rmb.bdstatic.com/7f7a8d7b247d3aa430010f10a5765239.jpeg"
+                />
+                <View cd f={16} lc={2} m={8} className="is-text">
+                  退隐江湖多年，佛门神尼再出江湖，万千剑气从天而降，谁敢造次！
+                </View>
+              </Container>
+            </a>
+          );
+        })}
+      </View>
+
+      <View mr_={10} strip>
+        <button>添加</button>
+        <button>删除</button>
+      </View>
+
       <h2>Module: list</h2>
       <View w={900} auto style={{ outline: '1px solid red' }}>
         <View plugin={{ name: 'list', value: 5, width: 150, gap: 20 }}>
@@ -396,7 +431,7 @@ export default (props: any) => {
       </View>
 
       <h2>as: image - tobe avatar</h2>
-      <View plugin="scaleable-image">
+      <View plugin="scaleable-image" sub="img">
         <View
           as="img"
           circle

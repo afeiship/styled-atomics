@@ -13,14 +13,16 @@ export default class extends StyledAbstractPlugin {
   public pipe() {
     if (!this.current) return;
     const { name, value, duration } = this.current;
+    const { sub } = this.entity.props;
+
     this.values = css`
       ${name === this.name && 'display: block; overflow: hidden;'}
-      .is-scaleable {
+      > ${sub} {
         transition: all ease-out ${duration};
       }
 
       &:hover {
-        .is-scaleable {
+        > ${sub} {
           transform: scale(${value}, ${value});
         }
       }

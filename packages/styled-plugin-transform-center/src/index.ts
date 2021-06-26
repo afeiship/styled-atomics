@@ -2,8 +2,16 @@ import StyledAbstractPlugin from '@jswork/styled-abstract-plugin';
 import css from '@jswork/styled-css';
 
 export default class extends StyledAbstractPlugin {
+  get aliases(): string[] {
+    return ['center'];
+  }
+
   get name(): string {
     return 'transform-center';
+  }
+
+  get defaults() {
+    return { value: 'xy' };
   }
 
   public pipe() {
