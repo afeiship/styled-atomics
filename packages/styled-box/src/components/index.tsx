@@ -74,6 +74,7 @@ export default class StyledBox extends Component<Props, { isMounted: boolean }> 
 
   componentDidMount() {
     this.styledUpdate();
+    this.setState({ isMounted: true });
   }
 
   styledUpdate() {
@@ -86,8 +87,6 @@ export default class StyledBox extends Component<Props, { isMounted: boolean }> 
     this.Styled = styled(as)`
       ${styles.join('')}
     `;
-
-    this.setState({ isMounted: true });
   }
 
   render() {
