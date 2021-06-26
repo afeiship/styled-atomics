@@ -12,7 +12,7 @@ import pluginComposeEntity from '@jswork/styled-plugin-compose-entity';
 const CLASS_NAME = 'styled-box';
 const FILTERED_PROPS = ['rel', 'x', 'y'];
 
-export default class StyledBox extends Component<Props, { isMounted: boolean }> {
+export default class StyledBox extends Component<Props> {
   static displayName = CLASS_NAME;
   static version = '__VERSION__';
   static propTypes = {
@@ -66,11 +66,6 @@ export default class StyledBox extends Component<Props, { isMounted: boolean }> 
     plugins: [],
     staticStyled: false
   };
-
-  constructor(inProps) {
-    super(inProps);
-    this.state = { isMounted: false };
-  }
 
   shouldComponentUpdate(inProps) {
     const { staticStyled, deps } = inProps;
