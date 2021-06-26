@@ -30,6 +30,10 @@ export default class extends StyledAbstractPlugin {
       display: inline-flex;
       vertical-align: middle;
       align-items: center;
+      /* Strip margin: x/y */
+      ${x && '> ' + sub + '{ &:last-child{ margin-right: 0; } }'}
+      ${!x && '> ' + sub + '{ &:last-child{ margin-bottom: 0; } }'}
+
       ${x && 'flex-direction: row;'}
       ${!x && 'flex-direction: column;'}
       ${value && x && '> ' + sub + ' { margin-right: ' + val!(value) + unit + '}'};

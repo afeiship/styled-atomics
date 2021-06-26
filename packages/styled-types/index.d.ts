@@ -156,6 +156,8 @@ type ShortyProps = {
   dtbc?: boolean;
   dtb?: boolean;
   dflex?: boolean;
+  diflex?: boolean;
+  dgrid?: boolean;
   dn?: boolean;
   db_?: boolean;
   di_?: boolean;

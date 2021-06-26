@@ -15,6 +15,7 @@ import plugin10 from '@jswork/styled-plugin-fixed-toolbar';
 import plugin11 from '@jswork/styled-plugin-icon-text';
 import plugin12 from '@jswork/styled-plugin-list';
 import plugin13 from '@jswork/styled-plugin-line';
+import plugin14 from '@jswork/styled-plugin-arrow';
 import ReactList from '@jswork/react-list';
 
 // const pluing1 = (options) => {
@@ -49,7 +50,8 @@ Object.assign(View.defaultProps, {
     plugin10,
     plugin11,
     plugin12,
-    plugin13
+    plugin13,
+    plugin14
   ]
 });
 
@@ -87,6 +89,16 @@ export default (props: any) => {
             item3
           </View>
         </View>
+      </View>
+
+      <View plugin="icon-text:10">
+        MORE
+        <View as="span" plugin="arrow" />
+      </View>
+
+      <View plugin="icon-text:10">
+        更多
+        <View as="span" plugin="arrow" />
       </View>
 
       <View plugin="line:1" my={10} />

@@ -2,7 +2,7 @@ import css from '@jswork/styled-css';
 
 export default (options) => {
   const { props, data } = options;
-  const { db, di, dib, dtbc, dtb, dflex, dn, db_, di_, dib_, dtbc_, sub } = props;
+  const { db, di, dib, dtbc, dtb, dflex, diflex, dgrid, dn, db_, di_, dib_, dtbc_, sub } = props;
 
   const values = css`
     ${db && 'display: block;'}
@@ -11,6 +11,8 @@ export default (options) => {
     ${dtbc && 'display: table-cell;'}
     ${dtb && 'display: table;'}
     ${dflex && 'display: flex;'}
+    ${diflex && 'display: inline-flex;'}
+    ${dgrid && 'display: grid;'}
     ${dn && 'display: none;'}
 
     ${db_ && '> ' + sub + ' { display: block; }'}
