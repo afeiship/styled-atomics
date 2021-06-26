@@ -5,6 +5,7 @@ import nx from '@jswork/next';
 import nxCompose from '@jswork/next-compose';
 import filterReactProps from '@jswork/filter-react-props';
 import { Props, PluginEntity } from '@jswork/styled-types';
+import deepEqual from 'deep-equal';
 import atomics from './composite';
 import pluginComposeEntity from '@jswork/styled-plugin-compose-entity';
 
@@ -46,7 +47,15 @@ export default class StyledBox extends Component<Props, { isMounted: boolean }> 
     /**
      * Plugin options.
      */
-    options: PropTypes.any
+    options: PropTypes.any,
+    /**
+     * The dependencies of the component.
+     */
+    dependencies: PropTypes.any,
+    /**
+     * The dynamic render for styled box.
+     */
+    staticStyled: PropTypes.bool
   };
 
   static defaultProps = {
@@ -67,8 +76,9 @@ export default class StyledBox extends Component<Props, { isMounted: boolean }> 
   }
 
   shouldComponentUpdate(inProps) {
-    const { staticStyled } = inProps;
-    if (!staticStyled) this.styledUpdate();
+    const { staticStyled, dependencies } = inProps;
+    const isDeepEqual = deepEqual(dependencies, inProps.dependencies);
+    if (!staticStyled || !isDeepEqual) this.styledUpdate();
     return true;
   }
 

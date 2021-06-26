@@ -84,6 +84,7 @@
     "@jswork/styled-types": "^1.0.18",
     "classnames": "^2.2.6",
     "filter-react-props": "^0.0.4",
+    "deep-equal": "^2.0.5",
     "prop-types": "^15.7.2"
   },
   "publishConfig": {

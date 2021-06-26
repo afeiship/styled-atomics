@@ -28,6 +28,7 @@ type BasicProps = {
   styled?: any;
   className?: string;
   staticStyled?: boolean;
+  dependencies?: any;
   unit?: string;
   as?: any;
   plugins?: any[];
