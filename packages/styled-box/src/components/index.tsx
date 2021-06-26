@@ -51,7 +51,7 @@ export default class StyledBox extends Component<Props, { isMounted: boolean }> 
     /**
      * The dependencies of the component.
      */
-    dependencies: PropTypes.any,
+    deps: PropTypes.any,
     /**
      * The dynamic render for styled box.
      */
@@ -67,42 +67,29 @@ export default class StyledBox extends Component<Props, { isMounted: boolean }> 
     staticStyled: false
   };
 
-  private theProps;
-  private Styled;
-
   constructor(inProps) {
     super(inProps);
     this.state = { isMounted: false };
   }
 
   shouldComponentUpdate(inProps) {
-    const { staticStyled, dependencies } = inProps;
-    const isDeepEqual = deepEqual(dependencies, inProps.dependencies);
-    if (!staticStyled || !isDeepEqual) this.styledUpdate();
+    const { staticStyled, deps } = inProps;
+    const isDeepEqual = deepEqual(deps, inProps.deps);
+    if (staticStyled && isDeepEqual) return false;
     return true;
   }
 
-  componentDidMount() {
-    this.styledUpdate();
-    this.setState({ isMounted: true });
-  }
-
-  styledUpdate() {
+  render() {
     const { className, as, styled, plugins, ...props } = this.props;
     const fn = nxCompose.apply(null, atomics.concat(pluginComposeEntity));
     const defaultEntity: PluginEntity = { props: this.props, data: [] };
     const options = fn(defaultEntity);
     const styles = options.data.filter(Boolean);
-    this.theProps = filterReactProps(props, FILTERED_PROPS);
-    this.Styled = styled(as)`
+    const theProps = filterReactProps(props, FILTERED_PROPS);
+    const Styled = styled(as)`
       ${styles.join('')}
     `;
-  }
 
-  render() {
-    const { className } = this.props;
-    const { isMounted } = this.state;
-    if (!isMounted) return null;
-    return <this.Styled className={classNames(CLASS_NAME, className)} {...this.theProps} />;
+    return <Styled className={classNames(CLASS_NAME, className)} {...theProps} />;
   }
 }

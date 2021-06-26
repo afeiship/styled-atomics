@@ -28,7 +28,7 @@ type BasicProps = {
   styled?: any;
   className?: string;
   staticStyled?: boolean;
-  dependencies?: any;
+  deps?: any;
   unit?: string;
   as?: any;
   plugins?: any[];
