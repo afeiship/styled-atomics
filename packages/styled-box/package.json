@@ -1,6 +1,6 @@
 {
   "name": "@jswork/styled-box",
-  "version": "1.0.44",
+  "version": "1.0.45",
   "description": "Styled box for react.",
   "license": "MIT",
   "main": "dist/index.js",
@@ -81,10 +81,10 @@
     "@jswork/position-value": "^1.0.4",
     "@jswork/styled-css": "^1.0.9",
     "@jswork/styled-plugin-compose-entity": "^1.0.5",
-    "@jswork/styled-types": "^1.0.18",
+    "@jswork/styled-types": "^1.0.19",
     "classnames": "^2.2.6",
-    "filter-react-props": "^0.0.4",
     "deep-equal": "^2.0.5",
+    "filter-react-props": "^0.0.4",
     "prop-types": "^15.7.2"
   },
   "publishConfig": {
