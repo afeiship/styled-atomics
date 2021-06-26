@@ -1,6 +1,6 @@
 {
   "name": "@jswork/styled-plugin-icon-text",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Icon with text for styled box.",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
