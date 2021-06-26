@@ -27,6 +27,7 @@ export interface PluginEntity {
 type BasicProps = {
   styled?: any;
   className?: string;
+  staticStyled?: boolean;
   unit?: string;
   as?: any;
   plugins?: any[];

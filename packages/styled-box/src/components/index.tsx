@@ -11,7 +11,7 @@ import pluginComposeEntity from '@jswork/styled-plugin-compose-entity';
 const CLASS_NAME = 'styled-box';
 const FILTERED_PROPS = ['rel', 'x', 'y'];
 
-export default class StyledBox extends Component<Props> {
+export default class StyledBox extends Component<Props, { isMounted: boolean }> {
   static displayName = CLASS_NAME;
   static version = '__VERSION__';
   static propTypes = {
@@ -46,7 +46,7 @@ export default class StyledBox extends Component<Props> {
     /**
      * Plugin options.
      */
-    options: PropTypes.any,
+    options: PropTypes.any
   };
 
   static defaultProps = {
@@ -54,21 +54,46 @@ export default class StyledBox extends Component<Props> {
     unit: 'px',
     as: 'div',
     val: nx.stubValue,
-    plugins: []
+    plugins: [],
+    staticStyled: false
   };
 
+  private theProps;
+  private Styled;
 
-  render() {
+  constructor(inProps) {
+    super(inProps);
+    this.state = { isMounted: false };
+  }
+
+  shouldComponentUpdate(inProps) {
+    const { staticStyled } = inProps;
+    if (!staticStyled) this.styledUpdate();
+    return true;
+  }
+
+  componentDidMount() {
+    this.styledUpdate();
+  }
+
+  styledUpdate() {
     const { className, as, styled, plugins, ...props } = this.props;
     const fn = nxCompose.apply(null, atomics.concat(pluginComposeEntity));
     const defaultEntity: PluginEntity = { props: this.props, data: [] };
     const options = fn(defaultEntity);
     const styles = options.data.filter(Boolean);
-    const theProps = filterReactProps(props, FILTERED_PROPS);
-    const Styled = styled(as)`
+    this.theProps = filterReactProps(props, FILTERED_PROPS);
+    this.Styled = styled(as)`
       ${styles.join('')}
     `;
 
-    return <Styled className={classNames(CLASS_NAME, className)} {...theProps} />;
+    this.setState({ isMounted: true });
+  }
+
+  render() {
+    const { className } = this.props;
+    const { isMounted } = this.state;
+    if (!isMounted) return null;
+    return <this.Styled className={classNames(CLASS_NAME, className)} {...this.theProps} />;
   }
 }
