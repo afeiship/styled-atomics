@@ -1,6 +1,8 @@
 import StyledAbstractPlugin from '@jswork/styled-abstract-plugin';
 import css from '@jswork/styled-css';
 
+// https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_arrows
+
 const DIREACTION_DEG = {
   top: '-135deg',
   right: '-45deg',
