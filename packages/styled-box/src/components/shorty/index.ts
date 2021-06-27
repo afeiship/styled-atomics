@@ -5,7 +5,6 @@ import boxSizing from './box-sizing';
 import box from './box';
 import clearfix from './clearfix';
 import cursor from './cursor';
-import debug from './debug';
 import display from './display';
 import flex from './flex';
 import float from './float';
@@ -30,7 +29,6 @@ export default [
   box,
   clearfix,
   cursor,
-  debug,
   display,
   flex,
   float,

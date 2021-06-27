@@ -1,25 +1,36 @@
 import StyledAbstractPlugin from '@jswork/styled-abstract-plugin';
 import css from '@jswork/styled-css';
 
+// https://github.com/afeiship/wsui-em-justify-list
+
 export default class extends StyledAbstractPlugin {
+  get aliases(): string[] {
+    return ['emlist'];
+  }
+
   get name(): string {
     return 'em-justify-list';
   }
 
+  get defaults() {
+    return { unit: 0.5 };
+  }
+
   public pipe() {
     if (!this.current) return;
-    const { value } = this.current;
+    const { unit, value } = this.current;
     const { props } = this.entity;
     const percentage = `${100 / value}%`;
+
     this.values = css`
-      margin: -0.5em;
+      margin: -${unit}em;
       overflow: hidden;
 
       > ${props.sub} {
         box-sizing: border-box;
         float: left;
-        margin: 0.5em;
-        width: calc(${percentage} - 1em);
+        margin: ${unit}em;
+        width: calc(${percentage} - ${2 * unit}em);
       }
     `;
   }

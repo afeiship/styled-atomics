@@ -3,6 +3,7 @@ import blank from './blank';
 import borderRadius from './border-radius';
 import border from './border';
 import color from './color';
+import debug from './debug';
 import flex from './flex';
 import fontSize from './font-size';
 import height from './height';
@@ -26,6 +27,7 @@ export default [
   borderRadius,
   border,
   color,
+  debug,
   flex,
   fontSize,
   height,

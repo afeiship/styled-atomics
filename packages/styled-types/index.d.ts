@@ -62,6 +62,7 @@ type GeneratorsProps = {
   hlh?: Numeric;
   flex?: Numeric | boolean;
   flex_?: Numeric;
+  deubg?: boolean | string;
 
   // raw
   color?: string;
@@ -151,7 +152,6 @@ type ShortyProps = {
   fl_?: boolean;
   fr_?: boolean;
 
-  debug?: boolean;
   db?: boolean;
   di?: boolean;
   dib?: boolean;

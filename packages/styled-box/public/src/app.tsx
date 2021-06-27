@@ -73,7 +73,7 @@ export default (props: any) => {
         { name: 'fixed-toolbar', value: 100, gap: 20, role: 'header' },
         { name: 'fixed-toolbar', value: 50, gap: 10, role: 'footer' }
       ]}>
-      <View debug plugin={{ name: 'list', value: 5, gap: 20, width: 230 }}>
+      <View debug="@3" plugin={{ name: 'list', value: 5, gap: 20, width: 230 }}>
         {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((item) => {
           return (
             <a key={item}>
@@ -441,7 +441,7 @@ export default (props: any) => {
       </View>
 
       <h2>Module: em-justify-list</h2>
-      <View w={900} auto debug>
+      <View w={900} auto debug="@2">
         <View plugin={{ name: 'em-justify-list', value: 5 }}>
           <View bg="#eee" h={100} className="is-item">
             item1
