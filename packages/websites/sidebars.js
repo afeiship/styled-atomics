@@ -9,7 +9,7 @@
 
 module.exports = {
   someSidebar: {
-    关于StyledBox: ['about/about'],
+    开始: ['get-started/about', 'get-started/installation'],
     // Generators: ['generators/mdx'],
     生成器: [
       'generators/background',
@@ -33,6 +33,6 @@ module.exports = {
       'generators/z-index',
     ],
     简写: ['mdx'],
-    插件: ['mdx'],
+    插件: ['plugins/absolute-center'],
   },
 };
