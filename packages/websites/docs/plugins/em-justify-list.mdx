@@ -20,14 +20,22 @@ aliases: ['emlist']
 > 一种 em-justify-list 的列表布局。
 
 ### 原理
+1. `container` 自动适应外层的宽度，高度
+2. `emlist` 层， `margin: -0.5em;`
+3. `item` 层，`margin: 0.5em;`
 
 ### 用法
 
 ```jsx
-<StyledBox dib>
-  更多
-  <StyledBox plugin="em-justify-list:right" />
-</StyledBox>
+// Container>emlist>item
+<View w={900} auto debug="@2">
+  <View plugin="emlist:6">
+    <View bg="#eee" h={100} className="is-item">
+      item1
+    </View>
+    {/* .... */}
+  </View>
+</View>
 ```
 
 ## 代码
@@ -39,35 +47,35 @@ import CodeBlock from '@theme/CodeBlock';
 
 ## 演示
 
-import StyledBox from '@jswork/styled-box';
+import View from '@jswork/styled-box';
 import styled from 'styled-components';
-Object.assign(StyledBox.defaultProps, {
+Object.assign(View.defaultProps, {
   styled,
   plugins: [require('@jswork/styled-plugin-em-justify-list').default],
 });
 
-<StyledBox w={900} auto debug="@2">
-  <StyledBox plugin={{name: 'em-justify-list', value: 5, gap: 4}}>
-    <StyledBox bg="#eee" h={100} className="is-item">
+<View w={900} auto debug="@2">
+  <View plugin="emlist:6">
+    <View bg="#eee" h={100} className="is-item">
       item1
-    </StyledBox>
-    <StyledBox bg="#f30" h={100} className="is-item">
+    </View>
+    <View bg="#f30" h={100} className="is-item">
       item2
-    </StyledBox>
-    <StyledBox bg="#ddd" h={100} className="is-item">
+    </View>
+    <View bg="#ddd" h={100} className="is-item">
       item3
-    </StyledBox>
-    <StyledBox bg="#030" h={100} className="is-item">
+    </View>
+    <View bg="#030" h={100} className="is-item">
       item2
-    </StyledBox>
-    <StyledBox bg="#ddd" h={100} className="is-item">
+    </View>
+    <View bg="#ddd" h={100} className="is-item">
       item3
-    </StyledBox>
-    <StyledBox bg="#ccc" h={100} className="is-item">
+    </View>
+    <View bg="#ccc" h={100} className="is-item">
       item3
-    </StyledBox>
-    <StyledBox bg="#999" h={100} className="is-item">
+    </View>
+    <View bg="#999" h={100} className="is-item">
       item3
-    </StyledBox>
-  </StyledBox>
-</StyledBox>
+    </View>
+  </View>
+</View>

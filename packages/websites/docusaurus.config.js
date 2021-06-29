@@ -22,7 +22,7 @@ module.exports = {
     navbar: {
       title: 'StyledBox',
       logo: {
-        alt: 'My Facebook Project Logo',
+        alt: 'My Styledbox Project Logo',
         src: 'img/logo.svg',
       },
       items: [

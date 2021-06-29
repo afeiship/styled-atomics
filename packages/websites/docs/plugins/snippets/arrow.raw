@@ -1,18 +1,11 @@
-import StyledBox from '@jswork/styled-box';
-import styled from 'styled-components';
-Object.assign(StyledBox.defaultProps, {
-  styled,
-  plugins: [require('@jswork/styled-plugin-arrow').default],
-});
-
-<StyledBox db>
+<View db>
   更多
-  <StyledBox plugin="arrow:right" />
-</StyledBox>
+  <View plugin="arrow:right" />
+</View>
 
-<StyledBox db>
-  <StyledBox dib mr={10}>
+<View db>
+  <View dib mr={10}>
     展开查看更多
-  </StyledBox>
-  <StyledBox plugin="arrow:top" />
-</StyledBox>
+  </View>
+  <View plugin="arrow:top" />
+</View>

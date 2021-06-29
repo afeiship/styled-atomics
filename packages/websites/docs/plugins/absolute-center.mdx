@@ -29,25 +29,25 @@ absolute-center
 > 仅 X 方向居中
 
 ```jsx
-<StyledBox plugin="absolute-center:x">
+<View plugin="absolute-center:x">
   <div style={{width: 200, height: 400}}>我是要被居中的 element</div>
-</StyledBox>
+</View>
 ```
 
 > 仅 Y 方向居中
 
 ```jsx
-<StyledBox plugin="absolute-center:y">
+<View plugin="absolute-center:y">
   <div style={{width: 200, height: 400}}>我是要被居中的 element</div>
-</StyledBox>
+</View>
 ```
 
 > XY 方向居中
 
 ```jsx
-<StyledBox plugin="absolute-center:xy">
+<View plugin="absolute-center:xy">
   <div style={{width: 200, height: 400}}>我是要被居中的 element</div>
-</StyledBox>
+</View>
 ```
 
 ## 代码
@@ -58,18 +58,18 @@ import CodeBlock from '@theme/CodeBlock';
 
 
 ## 演示
-import StyledBox from '@jswork/styled-box';
+import View from '@jswork/styled-box';
 import styled from 'styled-components';
-Object.assign(StyledBox.defaultProps, {
+Object.assign(View.defaultProps, {
   styled,
   plugins: [require('@jswork/styled-plugin-absolute-center').default],
 });
 
-<StyledBox debug relative w={400} auto h={400}>
-  <StyledBox
+<View debug relative w={400} auto h={400}>
+  <View
     plugin="absolute-center:xy"
     debug
     bg="#f60"
     style={{width: 200, height: 120}}
   />
-</StyledBox>
+</View>

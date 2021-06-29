@@ -1,15 +1,8 @@
-import StyledBox from '@jswork/styled-box';
-import styled from 'styled-components';
-Object.assign(StyledBox.defaultProps, {
-  styled,
-  plugins: [require('@jswork/styled-plugin-absolute-center').default],
-});
-
-<StyledBox debug relative w={400} auto h={400}>
-  <StyledBox
+<View debug relative w={400} auto h={400}>
+  <View
     plugin="absolute-center:xy"
     debug
     bg="#f60"
     style={{width: 200, height: 120}}
   />
-</StyledBox>
+</View>
