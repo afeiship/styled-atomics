@@ -34,12 +34,12 @@ module.exports = {
         },
         // Please keep GitHub link to the right for consistency.
         {
-          href: '/afeiship/styled-atomics',
+          href: 'https://github.com/afeiship/styled-atomics',
           label: 'GitHub',
           position: 'right',
         },
       ],
-    }
+    },
   },
   presets: [
     [

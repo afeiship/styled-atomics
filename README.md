@@ -1,2 +1,2 @@
 # styled-atomics
-> Atom css based on styled-components..
+> Atom css based on styled-components.

@@ -33,6 +33,11 @@ module.exports = {
       'generators/z-index',
     ],
     简写: ['mdx'],
-    插件: ['plugins/absolute-center'],
+    插件: [
+      'plugins/absolute-center',
+      'plugins/arrow',
+      'plugins/em-justify-list',
+      'plugins/fixed-toolbar',
+    ],
   },
 };

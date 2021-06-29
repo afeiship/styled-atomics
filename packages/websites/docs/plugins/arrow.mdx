@@ -1,0 +1,66 @@
+---
+id: arrow
+title: arrow
+sidebar_label: arrow
+slug: /plugins/arrow
+---
+
+### 插件名
+
+```config
+arrow
+```
+
+### 参数
+
+<!-- value: 'right', thick: 1, size: 3, color: 'gray' -->
+
+| 名称  | 类型   | description                              |
+| ----- | ------ | ---------------------------------------- |
+| value | string | 方向(top/right/bottom/left; 默认: right) |
+| thick | number | 厚度                                     |
+| size  | number | 箭头的大小                               |
+| color | string | 颜色                                     |
+
+> 绝对居中的一种实现方式。
+
+### 原理
+
+1. 设置一个上/右的边框
+2. 旋转 45deg，以及倍数
+
+### 用法
+
+```jsx
+<StyledBox dib>
+  更多
+  <StyledBox plugin="arrow:right" />
+</StyledBox>
+```
+
+## 代码
+import Raw from '!!raw-loader!./snippets/arrow.raw';
+import CodeBlock from '@theme/CodeBlock';
+
+<CodeBlock className="language-jsx">{Raw}</CodeBlock>
+
+## 演示
+
+import StyledBox from '@jswork/styled-box';
+import styled from 'styled-components';
+Object.assign(StyledBox.defaultProps, {
+  styled,
+  plugins: [require('@jswork/styled-plugin-arrow').default],
+});
+
+<StyledBox db>
+  更多
+  <StyledBox plugin="arrow:right" />
+</StyledBox>
+
+<StyledBox db>
+  <StyledBox dib mr={10}>
+    展开查看更多
+  </StyledBox>
+  <StyledBox plugin="arrow:top" />
+</StyledBox>

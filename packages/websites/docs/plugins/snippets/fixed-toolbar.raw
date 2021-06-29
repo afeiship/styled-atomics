@@ -1,0 +1,33 @@
+import StyledBox from '@jswork/styled-box';
+import styled from 'styled-components';
+Object.assign(StyledBox.defaultProps, {
+  styled,
+  plugins: [require('@jswork/styled-plugin-fixed-toolbar').default],
+});
+
+
+<StyledBox w={900} auto debug="@2">
+  <StyledBox plugin={{ name: 'fixed-toolbar', value: 5 }}>
+    <StyledBox bg="#eee" h={100} className="is-item">
+      item1
+    </StyledBox>
+    <StyledBox bg="#f30" h={100} className="is-item">
+      item2
+    </StyledBox>
+    <StyledBox bg="#ddd" h={100} className="is-item">
+      item3
+    </StyledBox>
+    <StyledBox bg="#030" h={100} className="is-item">
+      item2
+    </StyledBox>
+    <StyledBox bg="#ddd" h={100} className="is-item">
+      item3
+    </StyledBox>
+    <StyledBox bg="#ccc" h={100} className="is-item">
+      item3
+    </StyledBox>
+    <StyledBox bg="#999" h={100} className="is-item">
+      item3
+    </StyledBox>
+  </StyledBox>
+</StyledBox>

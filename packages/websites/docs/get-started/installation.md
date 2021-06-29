@@ -6,4 +6,14 @@ slug: /get-started/installation
 ---
 
 # 安装
-> 一个可以方便写样式的工具。
+> 直接用 `npm` 或者 `yarn` 安装。
+
+### npm
+```shell
+npm i @jswork/styled-box
+```
+
+### yarn
+```shell
+yarn add @jswork/styled-box
+```

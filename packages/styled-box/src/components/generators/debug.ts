@@ -10,7 +10,7 @@ export default (options) => {
   const { color, width } = normalize(debug);
   const value = val!(width) + unit;
   const values = css`
-    outline: ${value} solid ${color};
+    border: ${value} solid ${color};
   `;
 
   options.data = data.concat(values);
