@@ -13,14 +13,15 @@ export default class extends StyledAbstractPlugin {
   }
 
   get defaults() {
-    return { unit: 0.5 };
+    return { gap: 5 };
   }
 
   public pipe() {
     if (!this.current) return;
-    const { unit, value } = this.current;
+    const { gap, value } = this.current;
     const { props } = this.entity;
     const percentage = `${100 / value}%`;
+    const unit = gap / 10;
 
     this.values = css`
       margin: -${unit}em;

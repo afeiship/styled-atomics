@@ -11,7 +11,7 @@
 module.exports = {
   title: 'StyledBox Website',
   tagline: 'The atomics css solution based on styled components.',
-  url: 'https://github.com/afeiship/styled-atomics',
+  url: '/afeiship/styled-atomics',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',

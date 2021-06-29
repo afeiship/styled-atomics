@@ -5,22 +5,21 @@ sidebar_label: em-justify-list
 slug: /plugins/em-justify-list
 ---
 
-### 插件名
-
-```config
-em-justify-list
+### 名称
+```conf
+name: em-justify-list
+aliases: ['emlist']
 ```
 
 ### 参数
 
 | 名称  | 类型   | description                              |
 | ----- | ------ | ---------------------------------------- |
-| value | string | 方向(top/right/bottom/left; 默认: right) |
+| value | number | 方向(top/right/bottom/left; 默认: right) |
 
 > 一种 em-justify-list 的列表布局。
 
 ### 原理
-
 
 ### 用法
 
@@ -32,6 +31,7 @@ em-justify-list
 ```
 
 ## 代码
+
 import Raw from '!!raw-loader!./snippets/em-justify-list.raw';
 import CodeBlock from '@theme/CodeBlock';
 
@@ -46,9 +46,8 @@ Object.assign(StyledBox.defaultProps, {
   plugins: [require('@jswork/styled-plugin-em-justify-list').default],
 });
 
-
 <StyledBox w={900} auto debug="@2">
-  <StyledBox plugin={{ name: 'em-justify-list', value: 5 }}>
+  <StyledBox plugin={{name: 'em-justify-list', value: 5, gap: 4}}>
     <StyledBox bg="#eee" h={100} className="is-item">
       item1
     </StyledBox>

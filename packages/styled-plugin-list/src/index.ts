@@ -19,11 +19,11 @@ export default class extends StyledAbstractPlugin {
     const { val, sub, unit } = this.entity.props;
     const _width = val!(width) + unit;
     this.values = css`
-      &:before,
       &:after {
-        content: ' '; /* 1 */
-        display: table; /* 2 */
         clear: both;
+        content: '\200B';
+        display: block;
+        height: 0;
       }
 
       > ${sub} {
