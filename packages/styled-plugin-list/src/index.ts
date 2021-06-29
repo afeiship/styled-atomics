@@ -6,6 +6,7 @@ import css from '@jswork/styled-css';
  * 2. The last column: > ${sub}:nth-child(${value}n)
  *
  * https://dockyard.com/blog/2019/04/16/css-selectors-for-the-entire-last-row-of-a-dynamic-grid
+ * https://github.com/afeiship/wsui-justify-list/blob/master/src/index.scss
  */
 
 export default class extends StyledAbstractPlugin {
