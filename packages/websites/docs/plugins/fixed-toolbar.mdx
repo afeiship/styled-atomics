@@ -25,10 +25,21 @@ fixed-toolbar
 ### 用法
 
 ```jsx
-<StyledBox dib>
-  更多
-  <StyledBox plugin="fixed-toolbar:right" />
-</StyledBox>
+<View
+  auto
+  wp={8}
+  plugin={[
+    { name: 'fixed-toolbar', value: 100, gap: 20, role: 'header' },
+    { name: 'fixed-toolbar', value: 50, gap: 10, role: 'footer' }
+  ]}>
+        <View className="is-header" bg="#007aff">
+    Header
+  </View>
+
+  <View className="is-footer" bg="#4cd964">
+    FOOTER
+  </View>
+</View>
 ```
 
 ## 代码
@@ -39,36 +50,26 @@ import CodeBlock from '@theme/CodeBlock';
 
 ## 演示
 
-import StyledBox from '@jswork/styled-box';
+import View from '@jswork/styled-box';
 import styled from 'styled-components';
-Object.assign(StyledBox.defaultProps, {
+Object.assign(View.defaultProps, {
   styled,
   plugins: [require('@jswork/styled-plugin-fixed-toolbar').default],
 });
 
 
-<StyledBox w={900} auto debug="@2">
-  <StyledBox plugin={{ name: 'fixed-toolbar', value: 5 }}>
-    <StyledBox bg="#eee" h={100} className="is-item">
-      item1
-    </StyledBox>
-    <StyledBox bg="#f30" h={100} className="is-item">
-      item2
-    </StyledBox>
-    <StyledBox bg="#ddd" h={100} className="is-item">
-      item3
-    </StyledBox>
-    <StyledBox bg="#030" h={100} className="is-item">
-      item2
-    </StyledBox>
-    <StyledBox bg="#ddd" h={100} className="is-item">
-      item3
-    </StyledBox>
-    <StyledBox bg="#ccc" h={100} className="is-item">
-      item3
-    </StyledBox>
-    <StyledBox bg="#999" h={100} className="is-item">
-      item3
-    </StyledBox>
-  </StyledBox>
-</StyledBox>
+<View
+  auto
+  wp={8}
+  plugin={[
+    { name: 'fixed-toolbar', value: 100, gap: 20, role: 'header' },
+    { name: 'fixed-toolbar', value: 50, gap: 10, role: 'footer' }
+  ]}>
+  <View className="is-header" bg="#007aff">
+    Header
+  </View>
+
+  <View className="is-footer" bg="#4cd964">
+    FOOTER
+  </View>
+</View>

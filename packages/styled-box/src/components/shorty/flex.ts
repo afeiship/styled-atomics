@@ -1,5 +1,17 @@
 import css from '@jswork/styled-css';
 
+const ATTRS_SHORTY = {
+  s: 'flex-start',
+  e: 'flex-end',
+  sa: 'space-around',
+  sb: 'space-between',
+
+  start: 'flex-start',
+  end: 'flex-end',
+  around: 'space-around',
+  between: 'space-between'
+};
+
 export default (options) => {
   const { props, data } = options;
   const { wrap, align, justify, row, column } = props;
@@ -12,9 +24,9 @@ export default (options) => {
     ${column && 'flex-direction: column; '}
 
     /* align */
-    ${align && 'align-items:' + align + ';'}
+    ${align && 'align-items:' + (ATTRS_SHORTY[align] || align) + ';'}
     /* justify */
-    ${justify && 'justify-content:' + justify + ';'}
+    ${justify && 'justify-content:' + (ATTRS_SHORTY[justify] || justify) + ';'}
   `;
 
   options.data = data.concat(values);
