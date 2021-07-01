@@ -1,6 +1,6 @@
 {
   "name": "@jswork/styled-plugin-scaleable-image",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Scaleble image.",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
