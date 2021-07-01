@@ -1,0 +1,62 @@
+---
+id: scaleable-image
+title: scaleable-image
+sidebar_label: scaleable-image
+slug: /plugins/scaleable-image
+---
+
+### 插件名
+
+```config
+scaleable-image
+```
+
+### 参数
+
+<!-- duration: '0.3s', value: 1.05 -->
+
+| 名称     | 类型   | description                      |
+| -------- | ------ | -------------------------------- |
+| duration | string | 动画间隙,默认 0.3s               |
+| value    | number | 鼠标移入，scale 的倍数,默认 1.05 |
+
+### 原理
+
+1. 鼠标移入，transorm 改变 scale 的值
+2. 如果有多个 transform，需要自己注意冲突问题
+
+### 用法
+
+```jsx
+<View plugin="scaleable-image" sub="img" wh={200} auto debug>
+  <View
+    as="img"
+    className="is-scaleable"
+    src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gexw87htqhj305k05k74o.jpg"
+  />
+</View>
+```
+
+## 代码
+
+import Raw from '!!raw-loader!./snippets/scaleable-image.raw';
+import CodeBlock from '@theme/CodeBlock';
+
+<CodeBlock className="language-jsx">{Raw}</CodeBlock>
+
+## 演示
+
+import View from '@jswork/styled-box';
+import styled from 'styled-components';
+Object.assign(View.defaultProps, {
+  styled,
+  plugins: [require('@jswork/styled-plugin-scaleable-image').default],
+});
+
+<View plugin="scaleable-image" sub="img" wh={200} auto debug>
+  <View
+    as="img"
+    className="is-scaleable"
+    src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gexw87htqhj305k05k74o.jpg"
+  />
+</View>
