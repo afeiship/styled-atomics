@@ -34,6 +34,7 @@ type BasicProps = {
   plugins?: any[];
   sub?: string | string[];
   strip?: boolean;
+  unitless?: boolean;
   value?: boolean | Numeric;
   val?: (val: any) => string;
   x?: boolean | Numeric;

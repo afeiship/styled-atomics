@@ -29,6 +29,10 @@ export default class StyledBox extends Component<Props> {
      */
     unit: PropTypes.string,
     /**
+     * If remove the default unit.
+     */
+    unitless: PropTypes.string,
+    /**
      * Deault node name.
      */
     as: PropTypes.any,
@@ -61,6 +65,7 @@ export default class StyledBox extends Component<Props> {
   static defaultProps = {
     sub: '*',
     unit: 'px',
+    unitless: false,
     as: 'div',
     val: nx.stubValue,
     plugins: [],
