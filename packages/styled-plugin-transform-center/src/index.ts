@@ -16,9 +16,9 @@ export default class extends StyledAbstractPlugin {
 
   public pipe() {
     if (!this.current) return;
-    const { name, value } = this.current;
+    const { value } = this.current;
     this.values = css`
-      ${name === this.name && 'position: absolute;'}
+      position: absolute;
       ${value === 'x' && 'left: 50%; transform: translateX(-50%);'}
       ${value === 'y' && 'top: 50%; transform: translateY(-50%);'}
       ${value === 'xy' && 'left: 50%; top: 50%; transform: translate(-50%, -50%);'}

@@ -7,7 +7,7 @@ export default (options) => {
 
   const values = css`
     ${radius && 'border-radius:' + val(radius) + _unit + ';'}
-    ${radius_ && '> ' + sub + ' { margin: ' + val(radius_) + _unit + '; }'}
+    ${radius_ && '> ' + sub + ' { border-radius: ' + val(radius_) + _unit + '; }'}
   `;
 
   options.data = data.concat(values);

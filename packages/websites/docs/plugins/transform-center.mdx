@@ -1,0 +1,74 @@
+---
+id: transform-center
+title: transform-center
+sidebar_label: transform-center
+slug: /plugins/transform-center
+---
+
+### 插件名
+
+```config
+- name: transform-center
+- aliases: center
+```
+
+### 参数
+
+| 名称  | 类型   | description                   |
+| ----- | ------ | ----------------------------- |
+| value | string | 居中方式; x/y/xy; 默认为 'xy' |
+
+> 绝对居中的一种实现方式。
+
+### 原理
+
+1. 父级 position: relative;
+2. 当前元素 top:50%; transform:translateY(-50%); 
+
+### 用法
+
+```jsx
+<View debug wh={200} auto relative>
+  <View
+    bg="#f60"
+    c="#fff"
+    f="38"
+    wh={100}
+    lh={100}
+    circle
+    plugin="center:xy"
+    tc>
+    道
+  </View>
+</View>
+```
+
+## 代码
+
+import Raw from '!!raw-loader!./snippets/transform-center.raw';
+import CodeBlock from '@theme/CodeBlock';
+
+<CodeBlock className="language-jsx">{Raw}</CodeBlock>
+
+## 演示
+
+import View from '@jswork/styled-box';
+import styled from 'styled-components';
+Object.assign(View.defaultProps, {
+  styled,
+  plugins: [require('@jswork/styled-plugin-transform-center').default],
+});
+
+<View debug wh={200} auto relative>
+  <View
+    bg="#f60"
+    c="#fff"
+    f="38"
+    wh={100}
+    lh={100}
+    circle
+    plugin="center:xy"
+    tc>
+    道
+  </View>
+</View>

@@ -31,7 +31,7 @@ export default class StyledBox extends Component<Props> {
     /**
      * If remove the default unit.
      */
-    unitless: PropTypes.string,
+    unitless: PropTypes.bool,
     /**
      * Deault node name.
      */
