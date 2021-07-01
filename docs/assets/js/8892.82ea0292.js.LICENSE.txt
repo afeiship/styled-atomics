@@ -1,0 +1,41 @@
+/*!
+  Copyright (c) 2018 Jed Watson.
+  Licensed under the MIT License (MIT), see
+  http://jedwatson.github.io/classnames
+*/
+
+/*!
+ * name: @jswork/filter-react-props
+ * description: Get filterd react props.
+ * homepage:
+ * version: 1.0.2
+ * date: 2021-05-28 18:22:27
+ * license: MIT
+ */
+
+/*!
+ * name: @jswork/next-compose
+ * description: Compose for next.
+ * homepage: https://github.com/afeiship/next-compose
+ * version: 1.0.0
+ * date: 2020-11-20 21:36:49
+ * license: MIT
+ */
+
+/*!
+ * name: @jswork/next-sample
+ * description: Get an/some element from array like target.
+ * homepage: https://github.com/afeiship/next-sample
+ * version: 1.0.0
+ * date: 2020-11-19 08:41:08
+ * license: MIT
+ */
+
+/*!
+ * name: @jswork/position-value
+ * description: Get position value by shorty.
+ * homepage:
+ * version: 1.0.4
+ * date: 2021-05-28 13:40:50
+ * license: MIT
+ */
