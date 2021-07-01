@@ -1,0 +1,4 @@
+<View space={10} y>
+  <View wh={100} bg="#333" radius="10" plugin="radius-strip:r0" />
+  <View wh={100} bg="red" radius="10" plugin="radius-strip:r0b0" />
+</View>
