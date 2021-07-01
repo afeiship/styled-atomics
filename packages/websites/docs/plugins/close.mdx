@@ -1,0 +1,54 @@
+---
+id: close
+title: close
+sidebar_label: close
+slug: /plugins/close
+---
+
+### 插件名
+
+```config
+close
+```
+
+### 参数
+
+<!-- value: 'right', thick: 1, size: 3, color: 'gray' -->
+
+| 名称  | 类型   | description              |
+| ----- | ------ | ------------------------ |
+| value | number | 占 size 大小的比例, 1-10 |
+| thick | number | 默认 1，线条的厚度       |
+
+> 绝对居中的一种实现方式。
+
+### 原理
+
+1. before/after 利用角度变化实现 close 的效果
+2. em 实现大小的控制
+
+### 用法
+
+```jsx
+<View plugin="close" c="darkgreen" />
+<View plugin="close:6" circle bg="#eee" c="#000" />
+```
+
+### 代码
+
+import Raw from '!!raw-loader!./snippets/close.raw';
+import CodeBlock from '@theme/CodeBlock';
+
+<CodeBlock className="language-jsx">{Raw}</CodeBlock>
+
+### 演示
+
+import View from '@jswork/styled-box';
+import styled from 'styled-components';
+Object.assign(View.defaultProps, {
+  styled,
+  plugins: [require('@jswork/styled-plugin-close').default],
+});
+
+<View plugin="close" c="darkgreen" />
+<View plugin="close:6" circle bg="#eee" c="#000" />
