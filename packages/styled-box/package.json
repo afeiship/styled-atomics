@@ -1,6 +1,6 @@
 {
   "name": "@jswork/styled-box",
-  "version": "1.0.48",
+  "version": "1.0.49",
   "description": "Styled box for react.",
   "license": "MIT",
   "main": "dist/index.js",
