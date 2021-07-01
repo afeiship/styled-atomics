@@ -2,7 +2,8 @@ import css from '@jswork/styled-css';
 
 export default (options) => {
   const { props, data } = options;
-  const { val, blank, unit } = props;
+  const { val, blank, unit, unitless } = props;
+  const _unit = unitless ? '' : unit;
 
   if (blank) {
     const values = css`
@@ -10,7 +11,7 @@ export default (options) => {
       font-size: 0;
       overflow: hidden;
       clear: both;
-      height: ${val(blank) + unit};
+      height: ${val(blank) + _unit};
     `;
     options.data = data.concat(values);
   }

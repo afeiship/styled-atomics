@@ -11,14 +11,15 @@ const getValue = (val)=>{
 
 export default (options) => {
   const { props, data } = options;
-  const { val, t, r, b, l, trbl, unit } = props;
+  const { val, t, r, b, l, trbl, unit, unitless} = props;
+  const _unit = unitless ? '' : unit;
 
   const values = css`
-    ${t && 'top:' + val(t) + unit + ';'}
-    ${r && 'right:' + val(r) + unit + ';'}
-    ${b && 'bottom:' + val(b) + unit + ';'}
-    ${l && 'left:' + val(l) + unit + ';'}
-    ${trbl && getValue(val!(trbl) + unit)}
+    ${t && 'top:' + val(t) + _unit + ';'}
+    ${r && 'right:' + val(r) + _unit + ';'}
+    ${b && 'bottom:' + val(b) + _unit + ';'}
+    ${l && 'left:' + val(l) + _unit + ';'}
+    ${trbl && getValue(val!(trbl) + _unit)}
   `;
 
   options.data = data.concat(values);
