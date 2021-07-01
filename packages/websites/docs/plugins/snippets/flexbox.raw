@@ -1,0 +1,20 @@
+<View plugin="flexbox:la">
+  <View p={10} bg="#f80" debug className="is-left">
+    Left
+  </View>
+  <View p={10} bg="#eee" debug className="is-right">
+    Auto
+  </View>
+</View>
+
+<View mt={10} plugin={{ name: 'flexbox', value: 'lr', align: 'center' }} debug h={120}>
+  <View p={10} bg="#f80" debug className="is-left">
+    Left
+  </View>
+  <View p={10} bg="#060" debug className="is-left">
+    Middle
+  </View>
+  <View p={10} bg="#eee" debug className="is-right">
+    Auto
+  </View>
+</View>
