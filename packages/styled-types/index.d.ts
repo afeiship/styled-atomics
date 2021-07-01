@@ -48,6 +48,7 @@ type GeneratorsProps = {
   bg_?: string;
   blank?: Numeric;
   radius?: Numeric;
+  radius_?: Numeric;
   bdw?: Numeric;
   bds?: string;
   bdc?: string;

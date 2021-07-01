@@ -34,8 +34,7 @@
     "typescript": "^4.1.3"
   },
   "dependencies": {
-    "@jswork/styled-abstract-plugin": "^1.0.10",
-    "@jswork/styled-css": "^1.0.9"
+    "@jswork/styled-abstract-plugin": "^1.0.10"
   },
   "publishConfig": {
     "access": "public",

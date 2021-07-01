@@ -1,0 +1,63 @@
+---
+id: shadow
+title: shadow
+sidebar_label: shadow
+slug: /plugins/shadow
+---
+
+### 插件名
+
+```config
+shadow
+```
+
+### 参数
+
+| 名称  | 类型   | description |
+| ----- | ------ | ----------- |
+| value | number | 线条的宽度  |
+
+> 绝对居中的一种实现方式。
+
+### 原理
+
+1. 利用 border-bottom 实现各种宽度的线条
+2. todo: 后面会加上 hairshadow 的实现
+
+### 用法
+
+```jsx
+<View plugin="shadow:1" my={10} />
+```
+
+## 代码
+
+import Raw from '!!raw-loader!./snippets/shadow.raw';
+import CodeBlock from '@theme/CodeBlock';
+
+<CodeBlock className="language-jsx">{Raw}</CodeBlock>
+
+## 演示
+
+import View from '@jswork/styled-box';
+import styled from 'styled-components';
+Object.assign(View.defaultProps, {
+  styled,
+  plugins: [require('@jswork/styled-plugin-shadow').default],
+});
+
+<View mb_={30} p_={10} radius_={5}>
+  <View plugin="shadow:2">
+    道可道，非常道；名可名，非常名。
+  </View>
+  <View plugin="shadow:3">
+    道可道，非常道；名可名，非常名。
+  </View>
+  <View plugin="shadow:4">
+    道可道，非常道；名可名，非常名。
+  </View>
+
+  <View plugin={[{ name: 'shadow', inset: true, value: 1 }]}>
+    道可道，非常道；名可名，非常名。
+  </View>
+</View>
