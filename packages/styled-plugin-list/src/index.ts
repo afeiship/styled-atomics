@@ -22,7 +22,7 @@ export default class extends StyledAbstractPlugin {
     this.values = css`
       &:after {
         clear: both;
-        content: '\200B';
+        content: '';
         display: block;
         height: 0;
       }

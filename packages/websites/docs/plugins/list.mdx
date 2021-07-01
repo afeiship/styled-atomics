@@ -1,0 +1,108 @@
+---
+id: list
+title: list
+sidebar_label: list
+slug: /plugins/list
+---
+
+### 插件名
+
+```config
+list
+```
+
+### 参数
+
+<!-- width, gap, value -->
+
+| 名称  | 类型   | description      |
+| ----- | ------ | ---------------- |
+| value | number | 每行展示的个数   |
+| width | number | 每个 item 的宽度 |
+| gap   | number | 向下的空隙值     |
+
+> 绝对居中的一种实现方式。
+
+### 原理
+
+1. 利用 value/width 计算出每行的参数
+2. 每列的最右边 margin-right:0;
+3. 每个 list 的最后一排， margin-bottom:0; 
+
+### 用法
+
+```jsx
+<View wp="9" my={20} auto style={{ outline: '1px solid red' }}>
+  <View plugin={{ name: 'list', value: 6, width: 160, gap: 20 }}>
+    <View bg="#eee" h={100} className="is-item">
+      item1
+    </View>
+    <View bg="#f30" h={100} className="is-item">
+      item2
+    </View>
+    <View bg="#ddd" h={100} className="is-item">
+      item3
+    </View>
+    <View bg="#030" h={100} className="is-item">
+      item4
+    </View>
+    <View bg="#ddd" h={100} className="is-item">
+      item5
+    </View>
+    <View bg="#ccc" h={100} className="is-item">
+      item6
+    </View>
+    <View bg="#999" h={100} className="is-item">
+      item7
+    </View>
+    <View bg="#505" h={100} className="is-item">
+      item8
+    </View>
+  </View>
+</View>
+```
+
+## 代码
+
+import Raw from '!!raw-loader!./snippets/list.raw';
+import CodeBlock from '@theme/CodeBlock';
+
+<CodeBlock className="language-jsx">{Raw}</CodeBlock>
+
+## 演示
+
+import View from '@jswork/styled-box';
+import styled from 'styled-components';
+Object.assign(View.defaultProps, {
+  styled,
+  plugins: [require('@jswork/styled-plugin-list').default],
+});
+
+<View wp="9" my={20} auto style={{ outline: '1px solid red' }}>
+  <View plugin={{ name: 'list', value: 4, width: 160, gap: 20 }}>
+    <View bg="#eee" h={100} className="is-item">
+      item1
+    </View>
+    <View bg="#f30" h={100} className="is-item">
+      item2
+    </View>
+    <View bg="#ddd" h={100} className="is-item">
+      item3
+    </View>
+    <View bg="#030" h={100} className="is-item">
+      item4
+    </View>
+    <View bg="#ddd" h={100} className="is-item">
+      item5
+    </View>
+    <View bg="#ccc" h={100} className="is-item">
+      item6
+    </View>
+    <View bg="#999" h={100} className="is-item">
+      item7
+    </View>
+    <View bg="#505" h={100} className="is-item">
+      item8
+    </View>
+  </View>
+</View>

@@ -1,0 +1,119 @@
+---
+id: position-box
+title: position-box
+sidebar_label: position-box
+slug: /plugins/position-box
+---
+
+### 插件名
+
+```config
+position-box
+```
+
+### 参数
+
+| 名称  | 类型   | description |
+| ----- | ------ | ----------- |
+| value | string | 摆放位置    |
+
+## value
+
+| 名称   | 类型   | description   |
+| ------ | ------ | ------------- |
+| center | string | 水平/垂直居中 |
+| tr     | string | 右上角        |
+| tl     | string | 左上角        |
+| bl     | string | 左下角        |
+| br     | string | 右下角        |
+| top    | string | 上边框，居中  |
+| right  | string | 右边框，居中  |
+| bottom | string | 下边框，居中  |
+| left   | string | 左边框，居中  |
+
+### 原理
+
+1. 父级容器 position: relative;
+2. 当前容器有 9 个不同的位置可以选择
+
+### 用法
+
+```jsx
+<View relative debug wh={300} auto mb={20}>
+  <View debug plugin="position-box:center">
+    Center
+  </View>
+  <View debug plugin="position-box:tr">
+    tr
+  </View>
+  <View debug plugin="position-box:tl">
+    tl
+  </View>
+  <View debug plugin="position-box:bl">
+    bl
+  </View>
+  <View debug plugin="position-box:br">
+    br
+  </View>
+
+  <View debug plugin="position-box:top">
+    top
+  </View>
+  <View debug plugin="position-box:right">
+    right
+  </View>
+  <View debug plugin="position-box:bottom">
+    bottom
+  </View>
+  <View debug plugin="position-box:left">
+    left
+  </View>
+</View>
+```
+
+## 代码
+
+import Raw from '!!raw-loader!./snippets/position-box.raw';
+import CodeBlock from '@theme/CodeBlock';
+
+<CodeBlock className="language-jsx">{Raw}</CodeBlock>
+
+## 演示
+
+import View from '@jswork/styled-box';
+import styled from 'styled-components';
+Object.assign(View.defaultProps, {
+  styled,
+  plugins: [require('@jswork/styled-plugin-position-box').default],
+});
+
+<View relative debug wh={300} auto mb={20}>
+  <View debug plugin="position-box:center">
+    Center
+  </View>
+  <View debug plugin="position-box:tr">
+    tr
+  </View>
+  <View debug plugin="position-box:tl">
+    tl
+  </View>
+  <View debug plugin="position-box:bl">
+    bl
+  </View>
+  <View debug plugin="position-box:br">
+    br
+  </View>
+
+  <View debug plugin="position-box:top">
+    top
+  </View>
+  <View debug plugin="position-box:right">
+    right
+  </View>
+  <View debug plugin="position-box:bottom">
+    bottom
+  </View>
+  <View debug plugin="position-box:left">
+    left
+  </View>
+</View>
