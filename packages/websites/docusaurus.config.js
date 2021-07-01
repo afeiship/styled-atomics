@@ -12,7 +12,7 @@ module.exports = {
   title: 'StyledBox Website',
   tagline: 'The atomics css solution based on styled components.',
   url: 'https://github.com/afeiship/styled-atomics',
-  baseUrl: '/',
+  baseUrl: '/styled-atomics/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
