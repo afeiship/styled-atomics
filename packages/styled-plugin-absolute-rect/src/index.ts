@@ -6,11 +6,15 @@ export default class extends StyledAbstractPlugin {
     return 'absolute-rect';
   }
 
+  get defaults() {
+    return { value: 0, x: false };
+  }
+
   public pipe() {
     if (!this.current) return;
     const { val, unit } = this.entity.props;
-    const { name, value } = this.current;
-    const suffix = val!(value || 0) + unit;
+    const { name, value, x } = this.current;
+    const suffix = val!(value) + unit;
     const values =
       [
         'position: absolute',
@@ -22,6 +26,8 @@ export default class extends StyledAbstractPlugin {
 
     this.values = css`
       ${name === this.name && values}
+      ${x && 'overflow-x: scroll;'}
+      ${!x && 'overflow-y: scroll;'}
     `;
   }
 }

@@ -7,37 +7,15 @@
  * @format
  */
 
+const globby = require('globby');
+const getMenus = (key) =>
+  globby.sync(`docs/${key}/*.mdx`).map((item) => item.slice(5, -4));
+
 module.exports = {
   someSidebar: {
-    开始: ['get-started/about', 'get-started/installation'],
-    // Generators: ['generators/mdx'],
-    生成器: [
-      'generators/background',
-      'generators/blank',
-      'generators/border-radius',
-      'generators/color',
-      'generators/debug',
-      'generators/font-size',
-      'generators/height',
-      'generators/line-clamp',
-      'generators/line-heght',
-      'generators/margin',
-      'generators/opacity',
-      'generators/overflow',
-      'generators/padding',
-      'generators/position',
-      'generators/raw',
-      'generators/space',
-      'generators/wh',
-      'generators/width',
-      'generators/z-index',
-    ],
-    简写: ['mdx'],
-    插件: [
-      'plugins/absolute-center',
-      'plugins/arrow',
-      'plugins/em-justify-list',
-      'plugins/fixed-toolbar',
-    ],
+    开始: getMenus('get-started'),
+    生成器: getMenus('generators'),
+    简写: getMenus('shortys'),
+    插件: getMenus('plugins'),
   },
 };

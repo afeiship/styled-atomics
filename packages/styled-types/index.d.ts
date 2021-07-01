@@ -114,6 +114,7 @@ type GeneratorsProps = {
   r?: Numeric;
   b?: Numeric;
   l?: Numeric;
+  trbl?: Numeric;
   space?: Numeric;
   wh?: Numeric;
   wp?: Numeric;
