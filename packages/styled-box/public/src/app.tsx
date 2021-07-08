@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import View from '../../src/main';
 import styled from 'styled-components';
 
@@ -65,6 +65,7 @@ const Container = styled(View)`
 `;
 
 export default (props: any) => {
+  const [value, setValue] = useState(0);
   return (
     <View
       auto
@@ -76,7 +77,11 @@ export default (props: any) => {
       <View debug="@3" plugin={{ name: 'list', value: 5, gap: 20, width: 230 }}>
         {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((item) => {
           return (
-            <a key={item}>
+            <a
+              onClick={(e) => {
+                setValue(value + 1);
+              }}
+              key={item}>
               <Container plugin="scaleable-image" sub="img" w={230} radius={10}>
                 <View
                   w100
