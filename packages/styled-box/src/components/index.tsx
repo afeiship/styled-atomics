@@ -72,23 +72,37 @@ export default class StyledBox extends Component<Props> {
     staticStyled: false
   };
 
+  private Styled;
+  private theProps;
+
   shouldComponentUpdate(inProps) {
     const { staticStyled, deps } = inProps;
     if (staticStyled && deepEqual(deps, inProps.deps)) return false;
+    this.updateProps(inProps);
     return true;
   }
 
-  render() {
-    const { className, as, styled, plugins, ...props } = this.props;
+  updateProps = (inProps) => {
+    const { className, as, styled, plugins, ...props } = inProps;
+    this.theProps = filterReactProps(props, FILTERED_PROPS);
+  };
+
+  componentDidMount() {
+    const { as, styled } = this.props;
     const fn = nxCompose.apply(null, [pluginComposeEntity].concat(atomics));
     const defaultEntity: PluginEntity = { props: this.props, data: [] };
     const options = fn(defaultEntity);
     const styles = options.data.filter(Boolean);
-    const theProps = filterReactProps(props, FILTERED_PROPS);
-    const Styled = styled(as)`
+    this.updateProps(this.props);
+    this.Styled = styled(as)`
       ${styles.join('')}
     `;
+    this.forceUpdate();
+  }
 
-    return <Styled className={classNames(CLASS_NAME, className)} {...theProps} />;
+  render() {
+    const { className } = this.props;
+    if (!this.Styled) return null;
+    return <this.Styled className={classNames(CLASS_NAME, className)} {...this.theProps} />;
   }
 }
