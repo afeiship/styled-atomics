@@ -72,18 +72,11 @@ export default class StyledBox extends Component<Props> {
     staticStyled: false
   };
 
-  getComparedProps = (inProps) => {
-    const { val, plugins, children, as, ...compared } = inProps;
-    return compared;
-  };
-
   shouldComponentUpdate(inProps) {
     const { staticStyled, deps } = inProps;
     const isDeepEqual = deepEqual(deps, inProps.deps);
     if (staticStyled && isDeepEqual) return false;
-    const oldProps = this.getComparedProps(this.props);
-    const newProps = this.getComparedProps(inProps);
-    return deepEqual(oldProps, newProps);
+    return true;
   }
 
   render() {
