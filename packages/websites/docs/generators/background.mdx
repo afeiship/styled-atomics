@@ -2,25 +2,23 @@
 id: background
 title: background
 sidebar_label: background
-slug: /background
+slug: /generators/background
 ---
 
 # background
 > 对应 css 的 background 属性相关.
 
 ## usage
-> 当前盒子添加背景
+> 当前盒子/子级添加背景
 
-```jsx
-<View bg="#007aff">Content.</View>
-```
+```tsx live
+<View>
+    <View mb={10} bg="#007aff">Content.</View>
 
-> 当前盒子子级添加背景
-
-```jsx
-<View bg_={'#eee'} className="container">
-    <div>item1</div>
-    <div>item2</div>
-    <div>item3</div>
+    <View bg_={'#eee'}>
+        <div>item1</div>
+        <div>item2</div>
+        <div>item3</div>
+    </View>
 </View>
 ```
