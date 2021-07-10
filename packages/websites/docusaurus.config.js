@@ -23,7 +23,7 @@ module.exports = {
   projectName: 'styled-atomics', // Usually your repo name.
   themes: ['@docusaurus/theme-live-codeblock'],
   themeConfig: {
-    playgroundPosition:'bottom',
+    playgroundPosition: 'bottom',
     navbar: {
       title: 'StyledBox',
       logo: {
@@ -52,6 +52,9 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
+          remarkPlugins: [
+            [require('@docusaurus/remark-plugin-npm2yarn'), {sync: true}],
+          ],
           // Please change this to your repo.
           editUrl:
             'https://github.com/facebook/docusaurus/edit/master/website/',

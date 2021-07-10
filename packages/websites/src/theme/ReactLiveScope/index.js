@@ -8,6 +8,8 @@
 import React from 'react';
 import View from '@jswork/styled-box';
 import styled from 'styled-components';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 Object.assign(View.defaultProps, {
   styled,
@@ -33,6 +35,8 @@ Object.assign(View.defaultProps, {
 const ReactLiveScope = {
   React,
   ...React,
+  Tabs,
+  TabItem,
   View,
   styled,
 };
