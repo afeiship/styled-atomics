@@ -34,21 +34,9 @@ close
 <View plugin="close:6" circle bg="#eee" c="#000" />
 ```
 
-### 代码
-
-import Raw from '!!raw-loader!./snippets/close.raw';
-import CodeBlock from '@theme/CodeBlock';
-
-<CodeBlock className="language-jsx">{Raw}</CodeBlock>
-
 ### 演示
 
-import View from '@jswork/styled-box';
-import styled from 'styled-components';
-Object.assign(View.defaultProps, {
-  styled,
-  plugins: [require('@jswork/styled-plugin-close').default],
-});
-
-<View plugin="close" c="darkgreen" />
-<View plugin="close:6" circle bg="#eee" c="#000" />
+<React.Fragment>
+  <View plugin="close" c="darkgreen" />
+  <View plugin="close:6" circle bg="#eee" c="#000" />
+</React.Fragment>

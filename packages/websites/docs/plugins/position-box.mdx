@@ -71,22 +71,9 @@ position-box
 </View>
 ```
 
-### 代码
-
-import Raw from '!!raw-loader!./snippets/position-box.raw';
-import CodeBlock from '@theme/CodeBlock';
-
-<CodeBlock className="language-jsx">{Raw}</CodeBlock>
-
 ### 演示
 
-import View from '@jswork/styled-box';
-import styled from 'styled-components';
-Object.assign(View.defaultProps, {
-  styled,
-  plugins: [require('@jswork/styled-plugin-position-box').default],
-});
-
+```tsx live
 <View relative debug wh={300} auto mb={20}>
   <View debug plugin="position-box:center">
     Center
@@ -117,3 +104,4 @@ Object.assign(View.defaultProps, {
     left
   </View>
 </View>
+```

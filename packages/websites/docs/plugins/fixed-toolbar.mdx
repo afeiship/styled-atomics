@@ -42,22 +42,9 @@ fixed-toolbar
 </View>
 ```
 
-### 代码
-import Raw from '!!raw-loader!./snippets/fixed-toolbar.raw';
-import CodeBlock from '@theme/CodeBlock';
-
-<CodeBlock className="language-jsx">{Raw}</CodeBlock>
-
 ### 演示
 
-import View from '@jswork/styled-box';
-import styled from 'styled-components';
-Object.assign(View.defaultProps, {
-  styled,
-  plugins: [require('@jswork/styled-plugin-fixed-toolbar').default],
-});
-
-
+```tsx live
 <View
   auto
   wp={8}
@@ -73,3 +60,4 @@ Object.assign(View.defaultProps, {
     FOOTER
   </View>
 </View>
+```

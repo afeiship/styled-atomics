@@ -1,7 +1,0 @@
-<View plugin="scaleable-image" sub="img" wh={200} auto debug>
-  <View
-    as="img"
-    className="is-scaleable"
-    src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gexw87htqhj305k05k74o.jpg"
-  />
-</View>

@@ -8,6 +8,9 @@
  */
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
+
+const path = require('path');
+
 module.exports = {
   title: 'StyledBox Website',
   tagline: 'The atomics css solution based on styled components.',
@@ -18,7 +21,9 @@ module.exports = {
   favicon: 'img/favicon.ico',
   organizationName: 'afeiship', // Usually your GitHub org/user name.
   projectName: 'styled-atomics', // Usually your repo name.
+  themes: ['@docusaurus/theme-live-codeblock'],
   themeConfig: {
+    playgroundPosition:'bottom',
     navbar: {
       title: 'StyledBox',
       logo: {
@@ -53,6 +58,19 @@ module.exports = {
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
+        },
+      },
+    ],
+  ],
+  plugins: [
+    [
+      path.resolve(__dirname, 'plugins/module-alias'),
+      {
+        alias: {
+          '@jswork/styled-box': path.resolve(
+            __dirname,
+            '../styled-box/src/main.ts',
+          ),
         },
       },
     ],

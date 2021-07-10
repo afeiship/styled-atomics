@@ -40,23 +40,11 @@ radius-strip
 </View>
 ```
 
-### 代码
-
-import Raw from '!!raw-loader!./snippets/radius-strip.raw';
-import CodeBlock from '@theme/CodeBlock';
-
-<CodeBlock className="language-jsx">{Raw}</CodeBlock>
-
 ### 演示
 
-import View from '@jswork/styled-box';
-import styled from 'styled-components';
-Object.assign(View.defaultProps, {
-  styled,
-  plugins: [require('@jswork/styled-plugin-radius-strip').default],
-});
-
+```tsx live
 <View space={10} y>
   <View wh={100} bg="#333" radius="10" plugin="radius-strip:r0" />
   <View wh={100} bg="red" radius="10" plugin="radius-strip:r0b0" />
 </View>
+```

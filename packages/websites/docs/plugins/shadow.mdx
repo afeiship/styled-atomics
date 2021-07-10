@@ -30,22 +30,9 @@ shadow
 <View plugin="shadow:1" my={10} />
 ```
 
-### 代码
-
-import Raw from '!!raw-loader!./snippets/shadow.raw';
-import CodeBlock from '@theme/CodeBlock';
-
-<CodeBlock className="language-jsx">{Raw}</CodeBlock>
-
 ### 演示
 
-import View from '@jswork/styled-box';
-import styled from 'styled-components';
-Object.assign(View.defaultProps, {
-  styled,
-  plugins: [require('@jswork/styled-plugin-shadow').default],
-});
-
+```tsx live
 <View mb_={30} p_={10} radius_={5}>
   <View plugin="shadow:2">
     道可道，非常道；名可名，非常名。
@@ -61,3 +48,4 @@ Object.assign(View.defaultProps, {
     道可道，非常道；名可名，非常名。
   </View>
 </View>
+```

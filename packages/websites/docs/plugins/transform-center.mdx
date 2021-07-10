@@ -43,22 +43,10 @@ slug: /plugins/transform-center
 </View>
 ```
 
-### 代码
-
-import Raw from '!!raw-loader!./snippets/transform-center.raw';
-import CodeBlock from '@theme/CodeBlock';
-
-<CodeBlock className="language-jsx">{Raw}</CodeBlock>
 
 ### 演示
 
-import View from '@jswork/styled-box';
-import styled from 'styled-components';
-Object.assign(View.defaultProps, {
-  styled,
-  plugins: [require('@jswork/styled-plugin-transform-center').default],
-});
-
+```tsx live
 <View debug wh={200} auto relative>
   <View
     bg="#f60"
@@ -72,3 +60,4 @@ Object.assign(View.defaultProps, {
     道
   </View>
 </View>
+```

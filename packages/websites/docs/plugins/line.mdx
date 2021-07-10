@@ -30,26 +30,15 @@ line
 <View plugin="line:1" my={10} />
 ```
 
-### 代码
-
-import Raw from '!!raw-loader!./snippets/line.raw';
-import CodeBlock from '@theme/CodeBlock';
-
-<CodeBlock className="language-jsx">{Raw}</CodeBlock>
-
 ### 演示
-
-import View from '@jswork/styled-box';
-import styled from 'styled-components';
-Object.assign(View.defaultProps, {
-  styled,
-  plugins: [require('@jswork/styled-plugin-line').default],
-});
-
-<View plugin="line:1" my={10} />
-<View plugin="line:2" my={10} />
-<View plugin="line:3" my={10} />
-<View plugin="line:5" my={10} />
-<View plugin="line:10" my={10} />
-<View plugin="line:20" my={10} />
-<View plugin="line:100" my={10} />
+```tsx live
+<React.Fragment>
+  <View plugin="line:1" my={10} />
+  <View plugin="line:2" my={10} />
+  <View plugin="line:3" my={10} />
+  <View plugin="line:5" my={10} />
+  <View plugin="line:10" my={10} />
+  <View plugin="line:20" my={10} />
+  <View plugin="line:100" my={10} />
+</React.Fragment>
+```

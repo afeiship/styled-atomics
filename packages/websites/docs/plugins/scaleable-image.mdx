@@ -37,22 +37,9 @@ scaleable-image
 </View>
 ```
 
-### 代码
-
-import Raw from '!!raw-loader!./snippets/scaleable-image.raw';
-import CodeBlock from '@theme/CodeBlock';
-
-<CodeBlock className="language-jsx">{Raw}</CodeBlock>
-
 ### 演示
 
-import View from '@jswork/styled-box';
-import styled from 'styled-components';
-Object.assign(View.defaultProps, {
-  styled,
-  plugins: [require('@jswork/styled-plugin-scaleable-image').default],
-});
-
+```tsx live
 <View plugin="scaleable-image" sub="img" wh={200} auto debug>
   <View
     as="img"
@@ -60,3 +47,4 @@ Object.assign(View.defaultProps, {
     src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gexw87htqhj305k05k74o.jpg"
   />
 </View>
+```

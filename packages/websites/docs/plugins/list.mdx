@@ -62,22 +62,9 @@ list
 </View>
 ```
 
-### 代码
-
-import Raw from '!!raw-loader!./snippets/list.raw';
-import CodeBlock from '@theme/CodeBlock';
-
-<CodeBlock className="language-jsx">{Raw}</CodeBlock>
-
 ### 演示
 
-import View from '@jswork/styled-box';
-import styled from 'styled-components';
-Object.assign(View.defaultProps, {
-  styled,
-  plugins: [require('@jswork/styled-plugin-list').default],
-});
-
+```tsx live
 <View wp="9" my={20} auto style={{ outline: '1px solid red' }}>
   <View plugin={{ name: 'list', value: 4, width: 160, gap: 20 }}>
     <View bg="#eee" h={100} className="is-item">
@@ -106,3 +93,4 @@ Object.assign(View.defaultProps, {
     </View>
   </View>
 </View>
+```

@@ -1,7 +1,0 @@
-<View plugin="line:1" my={10} />
-<View plugin="line:2" my={10} />
-<View plugin="line:3" my={10} />
-<View plugin="line:5" my={10} />
-<View plugin="line:10" my={10} />
-<View plugin="line:20" my={10} />
-<View plugin="line:100" my={10} />

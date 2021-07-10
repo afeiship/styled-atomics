@@ -1,8 +1,0 @@
-<View debug relative w={400} auto h={400}>
-  <View
-    plugin="absolute-center:xy"
-    debug
-    bg="#f60"
-    style={{width: 200, height: 120}}
-  />
-</View>

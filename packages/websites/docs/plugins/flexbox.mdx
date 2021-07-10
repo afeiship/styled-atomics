@@ -51,44 +51,34 @@ flexbox
 </View>
 ```
 
-### 代码
-
-import Raw from '!!raw-loader!./snippets/flexbox.raw';
-import CodeBlock from '@theme/CodeBlock';
-
-<CodeBlock className="language-jsx">{Raw}</CodeBlock>
-
 ### 演示
 
-import View from '@jswork/styled-box';
-import styled from 'styled-components';
-Object.assign(View.defaultProps, {
-  styled,
-  plugins: [require('@jswork/styled-plugin-flexbox').default],
-});
+```tsx live
+<React.Fragment>
+  <View plugin="flexbox:la">
+    <View p={10} bg="#f80" debug className="is-left">
+      Left
+    </View>
+    <View p={10} bg="#eee" debug className="is-right">
+      Auto
+    </View>
+  </View>
 
-<View plugin="flexbox:la">
-  <View p={10} bg="#f80" debug className="is-left">
-    Left
+  <View
+    mt={10}
+    plugin={{name: 'flexbox', value: 'lr'}}
+    align="center"
+    debug
+    h={120}>
+    <View p={10} bg="#f80" debug className="is-left">
+      Left
+    </View>
+    <View p={10} bg="#060" debug className="is-left">
+      Middle
+    </View>
+    <View p={10} bg="#eee" debug className="is-right">
+      Auto
+    </View>
   </View>
-  <View p={10} bg="#eee" debug className="is-right">
-    Auto
-  </View>
-</View>
-
-<View
-  mt={10}
-  plugin={{name: 'flexbox', value: 'lr'}}
-  align="center"
-  debug
-  h={120}>
-  <View p={10} bg="#f80" debug className="is-left">
-    Left
-  </View>
-  <View p={10} bg="#060" debug className="is-left">
-    Middle
-  </View>
-  <View p={10} bg="#eee" debug className="is-right">
-    Auto
-  </View>
-</View>
+</React.Fragment>
+```

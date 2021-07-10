@@ -38,29 +38,20 @@ arrow
 </View>
 ```
 
-### 代码
-import Raw from '!!raw-loader!./snippets/arrow.raw';
-import CodeBlock from '@theme/CodeBlock';
-
-<CodeBlock className="language-jsx">{Raw}</CodeBlock>
-
 ### 演示
 
-import View from '@jswork/styled-box';
-import styled from 'styled-components';
-Object.assign(View.defaultProps, {
-  styled,
-  plugins: [require('@jswork/styled-plugin-arrow').default],
-});
-
-<View db>
-  更多
-  <View plugin="arrow:right" />
-</View>
-
-<View db>
-  <View dib mr={10}>
-    展开查看更多
+```tsx live
+<React.Fragment>
+  <View db>
+    更多
+    <View plugin="arrow:right" />
   </View>
-  <View plugin="arrow:top" />
-</View>
+
+  <View db>
+    <View dib mr={10}>
+      展开查看更多
+    </View>
+    <View plugin="arrow:top" />
+  </View>
+</React.Fragment>
+```

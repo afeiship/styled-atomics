@@ -38,40 +38,30 @@ absolute-rect
 </View>
 ```
 
-### 代码
-
-import Raw from '!!raw-loader!./snippets/absolute-rect.raw';
-import CodeBlock from '@theme/CodeBlock';
-
-<CodeBlock className="language-jsx">{Raw}</CodeBlock>
-
 ### 演示
 
-import View from '@jswork/styled-box';
-import styled from 'styled-components';
-Object.assign(View.defaultProps, {
-  styled,
-  plugins: [require('@jswork/styled-plugin-absolute-rect').default],
-});
-
-<View debug relative w={400} auto h={200} mb={20}>
-  <View px={10} f={18} hlh={'50px'}>
-    Y方向下的ScrollView
-  </View>
-  <View plugin="absolute-rect:0" t={50}>
-    <View bg="#ddd" h={2000}>
-      content
+```tsx live
+<React.Fragment>
+  <View debug relative w={400} auto h={200} mb={20}>
+    <View px={10} f={18} hlh={'50px'}>
+      Y方向下的ScrollView
+    </View>
+    <View plugin="absolute-rect:0" t={50}>
+      <View bg="#ddd" h={2000}>
+        content
+      </View>
     </View>
   </View>
-</View>
 
-<View debug relative w={400} auto h={200}>
-  <View px={10} f={18} hlh={'50px'}>
-    X方向下的ScrollView
-  </View>
-  <View plugin={{name: 'absolute-rect', value: 0, x: true}} t={50}>
-    <View bg="#eee" h100 w={2000}>
-      content
+  <View debug relative w={400} auto h={200}>
+    <View px={10} f={18} hlh={'50px'}>
+      X方向下的ScrollView
+    </View>
+    <View plugin={{name: 'absolute-rect', value: 0, x: true}} t={50}>
+      <View bg="#eee" h100 w={2000}>
+        content
+      </View>
     </View>
   </View>
-</View>
+</React.Fragment>
+```

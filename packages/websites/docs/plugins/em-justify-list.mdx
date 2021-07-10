@@ -38,22 +38,9 @@ aliases: ['emlist']
 </View>
 ```
 
-### 代码
-
-import Raw from '!!raw-loader!./snippets/em-justify-list.raw';
-import CodeBlock from '@theme/CodeBlock';
-
-<CodeBlock className="language-jsx">{Raw}</CodeBlock>
-
 ### 演示
 
-import View from '@jswork/styled-box';
-import styled from 'styled-components';
-Object.assign(View.defaultProps, {
-  styled,
-  plugins: [require('@jswork/styled-plugin-em-justify-list').default],
-});
-
+```tsx live
 <View w={900} auto debug="@2">
   <View plugin="emlist:5">
     <View bg="#eee" h={100} className="is-item">
@@ -79,3 +66,4 @@ Object.assign(View.defaultProps, {
     </View>
   </View>
 </View>
+```
