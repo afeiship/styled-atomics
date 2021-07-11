@@ -1,0 +1,31 @@
+---
+id: box
+title: box
+sidebar_label: box
+slug: /shortys/box
+---
+
+# box
+
+> 对应 css 的 box 属性相关.
+
+## usage
+
+> 当前盒子/子级添加背景
+
+```tsx live
+<View tc mb_={20} strip debug_>
+  <View p={20} wh={150} bg="green">
+    Box without bgdn
+  </View>
+  <View p={20} wh={150} bg="green" bgdn>
+    Box with:bgdn
+  </View>
+
+  <View wh={200} auto>
+    <View wh100 debug>
+      Wh:100
+    </View>
+  </View>
+</View>
+```

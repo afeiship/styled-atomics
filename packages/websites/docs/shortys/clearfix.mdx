@@ -1,0 +1,35 @@
+---
+id: clearfix
+title: clearfix
+sidebar_label: clearfix
+slug: /shortys/clearfix
+---
+
+# clearfix
+
+> 对应 css 的 clearfix 属性相关.
+
+## usage
+
+> 当前盒子/子级添加背景
+
+```tsx live
+<View>
+    <View as="h5">Without clearfix</View>
+    <View clearfix debug debug_ fl_>
+        <div className="is-item">item1</div>
+        <div className="is-item">item1</div>
+        <div className="is-item">item1</div>
+        <div className="is-item">item1</div>
+    </View>
+
+    <View as="h5" mt={20}>Without clearfix</View>
+    <View debug debug_ fl_>
+        <div className="is-item">item1</div>
+        <div className="is-item">item1</div>
+        <div className="is-item">item1</div>
+        <div className="is-item">item1</div>
+    </View>
+    <View blank={0} />
+</View>
+```
