@@ -16,6 +16,7 @@ import padding from './padding';
 import position from './position';
 import raw from './raw';
 import space from './space';
+import text from './text';
 import wh from './wh';
 import width from './width';
 import zIndex from './z-index';
@@ -40,6 +41,7 @@ export default [
   position,
   raw,
   space,
+  text,
   wh,
   width,
   zIndex

@@ -7,8 +7,8 @@ export default (options) => {
   const values = css`
     ${fl && 'float: left;'}
     ${fr && 'float: right;'}
-    ${fl_ && '> ' + sub + ' { float: ' + fl_ + '; }'}
-    ${fr_ && '> ' + sub + ' { float: ' + fr_ + '; }'}
+    ${fl_ && '> ' + sub + ' { float: left; }'}
+    ${fr_ && '> ' + sub + ' { float: right; }'}
   `;
   options.data = data.concat(values);
   return options;

@@ -6,6 +6,7 @@ describe('api.basic', () => {
     const str2 = '@3';
     const str3 = 'red@3';
     const str4 = true;
+    const str5 = null;
 
     console.log(fn(str1));
     console.log(fn(str2));
@@ -13,5 +14,6 @@ describe('api.basic', () => {
     console.log(fn(str4));
 
     expect(fn(str1)).toEqual({ color: '#ccc', width: 3 });
+    expect(fn(str5)).toEqual({});
   });
 });

@@ -8,6 +8,7 @@ import nxSample from '@jswork/next-sample';
 const COLORS = ['#004FC0', '#E01FAD', '#FF7100', '#137A19', '#70AC00', '#0070c0', '#20C281'];
 
 export default (inValue) => {
+  if (!inValue) return {};
   const sampleColor = nxSample(COLORS);
   const ifeTruthy = inValue === true;
   if (ifeTruthy) return { color: sampleColor, width: 1 };

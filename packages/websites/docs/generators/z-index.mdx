@@ -1,0 +1,19 @@
+---
+id: z-index
+title: z-index
+sidebar_label: z-index
+slug: /generators/z-index
+---
+
+# z-index
+> 盒子的z-index.
+
+## usage
+
+```tsx live
+<View p_={10} relative debug_ wh={300}>
+    <View l={10} abs wh={100} z={1} bg={'#eee'}>box1</View>
+    <View t={40} l={60} abs wh={100} z={2} bg={'lightgreen'}>box2</View>
+    <View t={90} l={90} abs wh={100} z={3} bg={'lightblue'}>box3</View>
+</View>
+```

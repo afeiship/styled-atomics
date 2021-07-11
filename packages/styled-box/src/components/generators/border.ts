@@ -4,9 +4,10 @@ export default (options) => {
   const { props, data } = options;
   const { val, bdw, bds, bdc, unit, unitless } = props;
   const _unit = unitless ? '' : unit;
+  const isExist = (v) => v in props;
 
   const values = css`
-    ${bdw && 'border-width: ' + val(bdw) + _unit + ';'}
+    ${isExist('bdw') && 'border-width: ' + val(bdw) + _unit + ';'}
     ${bds && 'border-style: ' + bds + ';'}
     ${bdc && 'border-color: ' + bdc + ';'}
   `;
