@@ -1,0 +1,52 @@
+---
+id: flex
+title: flex
+sidebar_label: flex
+slug: /shortys/flex
+---
+
+# flex
+
+> 对应 css 的 flex 属性相关.
+
+## usage
+
+> 当前盒子/子级添加背景
+
+- wrap(true/false)
+- row
+- column
+- align
+- justify
+
+
+## attr mapping
+
+```js
+// align/justify
+{
+  c: 'center',
+  s: 'flex-start',
+  e: 'flex-end',
+  sa: 'space-around',
+  sb: 'space-between',
+
+  start: 'flex-start',
+  end: 'flex-end',
+  around: 'space-around',
+  between: 'space-between'
+}
+```
+
+```tsx live
+<View mr_={10} debug_ dib_ tc strip>
+  <View dflex row align="c" justify="sb" h={200} debug_>
+    <View className="is-left">left</View>
+    <View className="is-right">right</View>
+  </View>
+  <View dflex row align="c" justify="sa" h={200} debug_>
+    <View className="is-left">left</View>
+    <View className="is-right">right</View>
+  </View>
+</View>
+```

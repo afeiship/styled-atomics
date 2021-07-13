@@ -1,6 +1,7 @@
 import css from '@jswork/styled-css';
 
 const ATTRS_SHORTY = {
+  c: 'center',
   s: 'flex-start',
   e: 'flex-end',
   sa: 'space-around',
