@@ -64,7 +64,10 @@ type GeneratorsProps = {
   hlh?: Numeric;
   flex?: Numeric | boolean;
   flex_?: Numeric;
-  deubg?: boolean | string;
+  flg?: Numeric;
+  fls?: Numeric;
+  flb?: Numeric;
+  debug?: boolean | string;
 
   // raw
   color?: string;
@@ -117,7 +120,8 @@ type GeneratorsProps = {
   b?: Numeric;
   l?: Numeric;
   trbl?: Numeric;
-  space?: Numeric;
+  spx?: Numeric;
+  spy?: Numeric;
   wh?: Numeric;
   wp?: Numeric;
   w1?: Numeric;
@@ -178,9 +182,15 @@ type ShortyProps = {
 
   f0?: boolean;
   v100?: boolean;
+  vh100?: boolean;
   h100?: boolean;
+  w100?: boolean;
   min100?: boolean;
   max100?: boolean;
+  minh100?: boolean;
+  maxh100?: boolean;
+  minw100?: boolean;
+  maxw100?: boolean;
   auto?: boolean;
   maa?: boolean;
   m0a?: boolean;

@@ -9,13 +9,13 @@
 
 const globby = require('globby');
 const getMenus = (key) =>
-  globby.sync(`docs/${key}/*.mdx`).map((item) => item.slice(5, -4));
+  globby.sync(`docs/${key}/*.mdx`).map((item) => item.slice(5, -4))
 
 module.exports = {
   someSidebar: {
-    开始: getMenus('get-started'),
-    生成器: getMenus('generators'),
-    简写: getMenus('shortys'),
-    插件: getMenus('plugins'),
+    '开始': getMenus('get-started'),
+    '生成器': getMenus('generators'),
+    '简写': getMenus('shortys'),
+    '插件': getMenus('plugins'),
   },
-};
+}

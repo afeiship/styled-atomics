@@ -5,28 +5,46 @@ sidebar_label: space
 slug: /generators/space
 ---
 
+
 # space
-> 对应 CSS 的 space.
+> 对应 CSS 的 margin-bottom/right.
+
+## keywords
+- sp
+- spx
+- spy
 
 ## usage
 
 ```tsx live
 <View debug debug_>
-  <View space={10} debug_ y strip>
-    <View className="is-item">Item1</View>
-    <View className="is-item">Item2</View>
-    <View className="is-item">Item3</View>
-    <View className="is-item">Item4</View>
-    <View className="is-item">Item5</View>
-  </View>
-
-
-  <View fl_ ovh debug_ space={10} x>
-    <View className="is-item">Item1</View>
-    <View className="is-item">Item2</View>
-    <View className="is-item">Item3</View>
-    <View className="is-item">Item4</View>
-    <View className="is-item">Item5</View>
-  </View>
+    <View spy={10} debug_>
+        <View className="is-item">Item1</View>
+        <View className="is-item">Item2</View>
+        <View className="is-item">Item3</View>
+        <View className="is-item">Item4</View>
+        <View className="is-item">Item5</View>
+    </View>
+    <View spy={10} debug_>
+        <View className="is-item">Item1</View>
+        <View className="is-item">Item2</View>
+        <View className="is-item">Item3</View>
+        <View className="is-item">Item4</View>
+        <View className="is-item">Item5</View>
+    </View>
+    <View fl_ ovh debug_ spx={10}>
+        <View className="is-item">Item1</View>
+        <View className="is-item">Item2</View>
+        <View className="is-item">Item3</View>
+        <View className="is-item">Item4</View>
+        <View className="is-item">Item5</View>
+    </View>
+    <View fl_ ovh debug_ spx={10}>
+        <View className="is-item">Item1</View>
+        <View className="is-item">Item2</View>
+        <View className="is-item">Item3</View>
+        <View className="is-item">Item4</View>
+        <View className="is-item">Item5</View>
+    </View>
 </View>
 ```

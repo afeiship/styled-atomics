@@ -33,6 +33,7 @@ module.exports = {
     ],
     'import/extensions': OFF,
     'global-require': OFF,
+    'import/newline-after-import': OFF,
     'import/no-extraneous-dependencies':OFF,
     'header/header': [
       OFF,
