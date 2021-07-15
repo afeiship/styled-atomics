@@ -7,14 +7,12 @@
  * @format
  */
 
-/** @type {import('@docusaurus/types').DocusaurusConfig} */
-
 const path = require('path');
 
 module.exports = {
-  title: 'StyledBox Website',
-  tagline: 'The atomics css solution based on styled components.',
-  url: 'https://github.com/afeiship/styled-atomics',
+  title: 'StyledBox',
+  tagline: '原子化的Styled CSS工具',
+  url: 'https://github.com/',
   baseUrl: '/styled-atomics/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',

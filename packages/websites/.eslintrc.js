@@ -32,8 +32,10 @@ module.exports = {
       {ignore: ['^@theme', '^@docusaurus', '^@generated']},
     ],
     'import/extensions': OFF,
+    'global-require': OFF,
+    'import/no-extraneous-dependencies':OFF,
     'header/header': [
-      ERROR,
+      OFF,
       'block',
 
       [

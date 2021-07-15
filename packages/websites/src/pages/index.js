@@ -17,32 +17,29 @@ import styles from './styles.module.css';
 
 const features = [
   {
-    title: 'Easy to Use',
+    title: '短名(Shorty)',
     imageUrl: 'img/undraw_docusaurus_mountain.svg',
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        简单名称，CSS写得更少
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
+    title: '生成器(Generator)',
     imageUrl: 'img/undraw_docusaurus_tree.svg',
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        根据不同的场景快速生成片段CSS
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: '插件(Plugin)',
     imageUrl: 'img/undraw_docusaurus_react.svg',
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        可以通过自定义插件的方式快速实现不同的功能
       </>
     ),
   },
@@ -78,11 +75,11 @@ export default function Home() {
           <div className={styles.buttons}>
             <Link
               className={clsx(
-                'button button--outline button--secondary button--lg',
+                'button button--secondary button--lg',
                 styles.getStarted,
               )}
               to={useBaseUrl('docs/')}>
-              Get Started
+              快速开始
             </Link>
           </div>
         </div>

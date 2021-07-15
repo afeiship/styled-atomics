@@ -17,6 +17,12 @@
   "devDependencies": {
     "lerna": "^3.22.1"
   },
+  "stylelint": {
+    "extends": "stylelint-config-standard",
+    "rules": {
+      "indentation": 4
+    }
+  },
   "scripts": {
     "lerna:clean": "lerna clean",
     "lerna:list": "lerna list",
