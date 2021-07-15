@@ -68,6 +68,8 @@ type GeneratorsProps = {
   fls?: Numeric;
   flb?: Numeric;
   debug?: boolean | string;
+  debug_?: boolean | string;
+  debug__?: boolean | string;
 
   // raw
   color?: string;
