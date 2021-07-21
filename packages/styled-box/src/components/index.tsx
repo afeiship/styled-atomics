@@ -21,6 +21,10 @@ export default class StyledBox extends Component<Props> {
      */
     className: PropTypes.string,
     /**
+     * The main className for component.
+     */
+    mainClassName: PropTypes.string,
+    /**
      * Styled engine(eg: styled-component).
      */
     styled: PropTypes.any.isRequired,
@@ -69,7 +73,8 @@ export default class StyledBox extends Component<Props> {
     as: 'div',
     val: nx.stubValue,
     plugins: [],
-    staticStyled: false
+    staticStyled: false,
+    mainClassName: CLASS_NAME
   };
 
   private Styled;
@@ -101,8 +106,8 @@ export default class StyledBox extends Component<Props> {
   }
 
   render() {
-    const { className } = this.props;
+    const { mainClassName, className } = this.props;
     if (!this.Styled) return null;
-    return <this.Styled className={classNames(CLASS_NAME, className)} {...this.theProps} />;
+    return <this.Styled className={classNames(mainClassName, className)} {...this.theProps} />;
   }
 }
