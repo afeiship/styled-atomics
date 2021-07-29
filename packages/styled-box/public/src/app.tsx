@@ -65,56 +65,21 @@ const Container = styled(View)`
 `;
 
 export default (props: any) => {
-  const [value, setValue] = useState('');
+  const [value, setValue] = useState(false);
   console.log('value::', value);
   return (
     <div>
       <section>other container: {value}</section>
-      <View
-        data-value={value}
-        auto
-        wp={8}
-        plugin={[
-          // { name: 'fixed-toolbar', value: 100, gap: 20, role: 'header' },
-          { name: 'fixed-toolbar', value: 50, gap: 10, role: 'footer' }
-        ]}>
-        <div>value: -{value}</div>
-        <View debug plugin="icon-text:10">
-          <img width="104" src="https://pic.rmb.bdstatic.com/7f7a8d7b247d3aa430010f10a5765239.jpeg" />
-          <label>
-            <input
-              type="text"
-              onChange={(e) => {
-                // console.log('change.', e.target.value);
-                setValue(e.target.value);
-              }}
-            />
-          </label>
-        </View>
-        <View debug="@3" plugin={{ name: 'list', value: 5, gap: 20, width: 230 }}>
-          {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((item) => {
-            return (
-              <a
-                onClick={(e) => {
-                  setValue(value + 1);
-                }}
-                key={item}>
-                <Container plugin="scaleable-image" sub="img" w={230} radius={10}>
-                  <View
-                    w100
-                    cp
-                    h={130}
-                    as="img"
-                    src="https://pic.rmb.bdstatic.com/7f7a8d7b247d3aa430010f10a5765239.jpeg"
-                  />
-                  <View cd f={16} lc={2} m={8} className="is-text">
-                    退隐江湖多年，佛门神尼再出江湖，万千剑气从天而降，谁敢造次！
-                  </View>
-                </Container>
-              </a>
-            );
-          })}
-        </View>
+      <button
+        onClick={(e) => {
+          setValue(true);
+          console.log('change disabled');
+        }}>
+        Set disabled value
+      </button>
+      <View disabled={value} wp={8} auto debug p={20}>
+        道可道，非常道；名可名，非常名。 无名，天地之始，有名，万物之母。
+        故常无欲，以观其妙，常有欲，以观其徼。 此两者，同出而异名，同谓之玄，玄之又玄，众妙之门。
       </View>
     </div>
   );
