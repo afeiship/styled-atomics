@@ -28,7 +28,8 @@ Object.assign(View.defaultProps, {
     require('@jswork/styled-plugin-shadow').default,
     require('@jswork/styled-plugin-position-box').default,
     require('@jswork/styled-plugin-transform-center').default,
-  ],
+    require('@jswork/styled-plugin-responsive-list').default
+  ]
 });
 
 // Add react-live imports you need here
