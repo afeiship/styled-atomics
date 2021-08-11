@@ -31,6 +31,7 @@ type BasicProps = {
   deps?: any;
   unit?: string;
   as?: any;
+  asProps?: any;
   plugins?: any[];
   sub?: string | string[];
   strip?: boolean;

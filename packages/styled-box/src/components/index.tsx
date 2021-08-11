@@ -41,6 +41,10 @@ export default class StyledBox extends Component<Props> {
      */
     as: PropTypes.any,
     /**
+     * Default props for the `as` component.
+     */
+    asProps: PropTypes.any,
+    /**
      * The rem value transformer.
      */
     val: PropTypes.func,
@@ -111,8 +115,8 @@ export default class StyledBox extends Component<Props> {
   }
 
   render() {
-    const { mainClassName, className } = this.props;
+    const { mainClassName, asProps, className } = this.props;
     if (!this.Styled) return null;
-    return <this.Styled className={classNames(mainClassName, className)} {...this.theProps} />;
+    return <this.Styled className={classNames(mainClassName, className)} {...this.theProps} {...asProps} />;
   }
 }
