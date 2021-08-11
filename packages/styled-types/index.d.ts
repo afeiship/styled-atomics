@@ -104,6 +104,8 @@ type GeneratorsProps = {
   maxw?: Numeric;
   minh?: Numeric;
   maxh?: Numeric;
+  minmaxw?: Numeric[];
+  minmaxh?: Numeric[];
 
   ov?: string;
   ovx?: string;
