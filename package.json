@@ -27,6 +27,7 @@
     "lerna:clean": "lerna clean",
     "lerna:list": "lerna list",
     "lerna:bootstrap": "lerna bootstrap",
+    "build:docs": "cd ./packages/websites && yarn build",
     "start": "cd ./packages/websites && yarn start",
     "build:all": "lerna run build --no-private",
     "build": "lerna run build --since master  --no-private",
