@@ -10,6 +10,7 @@ import height from './height';
 import lineClamp from './line-clamp';
 import lineHeight from './line-height';
 import margin from './margin';
+import minmax from './minmax';
 import opacity from './opacity';
 import overflow from './overflow';
 import padding from './padding';
@@ -35,6 +36,7 @@ export default [
   lineClamp,
   lineHeight,
   margin,
+  minmax,
   opacity,
   overflow,
   padding,

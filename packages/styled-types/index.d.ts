@@ -100,6 +100,11 @@ type GeneratorsProps = {
   ml_?: Numeric;
   o?: Numeric;
 
+  minw?: Numeric;
+  maxw?: Numeric;
+  minh?: Numeric;
+  maxh?: Numeric;
+
   ov?: string;
   ovx?: string;
   ovy?: string;
