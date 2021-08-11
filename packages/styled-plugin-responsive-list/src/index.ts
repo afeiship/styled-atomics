@@ -1,6 +1,8 @@
 import StyledAbstractPlugin from '@jswork/styled-abstract-plugin';
 import css from '@jswork/styled-css';
 
+// https://css-tricks.com/look-ma-no-media-queries-responsive-layouts-using-css-grid/#top-of-site
+
 export default class extends StyledAbstractPlugin {
   get name(): string {
     return 'responsive-list';
