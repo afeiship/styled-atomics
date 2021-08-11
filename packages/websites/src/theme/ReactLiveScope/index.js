@@ -11,6 +11,8 @@ import styled from 'styled-components';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
+import '@jswork/next-range';
+
 Object.assign(View.defaultProps, {
   styled,
   plugins: [

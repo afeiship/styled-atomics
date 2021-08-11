@@ -46,13 +46,13 @@ npm install @jswork/styled-plugin-responsive-list
 ```tsx live
 <View debug relative wp={9} auto>
   <View
-    plugin="responsive-list:130"
+    plugin="responsive-list:150"
     debug
     bg="#f60"
   >
   {
-    [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36].map(item => {
-      return (<img src={'https://jdc.jd.com/img/400x300'} />)
+    nx.range(1,28).map(item => {
+      return (<img key={item} src={'https://jdc.jd.com/img/400x300'} />)
     })
   }
   </View>

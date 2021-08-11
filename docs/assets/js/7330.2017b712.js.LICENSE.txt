@@ -23,6 +23,15 @@
  */
 
 /*!
+ * name: @jswork/next-range
+ * description: Range array with step for javascript.
+ * homepage: https://github.com/afeiship/next-range
+ * version: 1.0.0
+ * date: 2020-11-20 13:14:22
+ * license: MIT
+ */
+
+/*!
  * name: @jswork/next-sample
  * description: Get an/some element from array like target.
  * homepage: https://github.com/afeiship/next-sample
