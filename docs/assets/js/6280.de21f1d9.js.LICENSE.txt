@@ -23,6 +23,33 @@
  */
 
 /*!
+ * name: @jswork/next-random
+ * description: Create random number.
+ * homepage: https://github.com/afeiship/next-random
+ * version: 1.0.0
+ * date: 2020-11-20 11:04:33
+ * license: MIT
+ */
+
+/*!
+ * name: @jswork/next-random-avatar
+ * description: Random avatar api.
+ * homepage: https://github.com/afeiship/next-random-avatar
+ * version: 1.0.3
+ * date: 2021-08-12 09:21:54
+ * license: MIT
+ */
+
+/*!
+ * name: @jswork/next-random-list
+ * description: Random list(array) for next.
+ * homepage: https://github.com/afeiship/next-random-list
+ * version: 1.0.0
+ * date: 2021-02-17 15:24:09
+ * license: MIT
+ */
+
+/*!
  * name: @jswork/next-range
  * description: Range array with step for javascript.
  * homepage: https://github.com/afeiship/next-range

@@ -44,15 +44,15 @@ npm install @jswork/styled-plugin-responsive-list
 ```
 ### 演示
 ```tsx live
-<View debug relative wp={9} auto>
+<View relative wp={9} auto>
   <View
     plugin="responsive-list:150"
     debug
-    bg="#f60"
+    bg="#eee"
   >
   {
-    nx.range(1,28).map(item => {
-      return (<img key={item} src={'https://jdc.jd.com/img/400x300'} />)
+    nx.RandomAvatar.gets(28).map((img,index) => {
+      return (<View as="img" w100 key={index} src={img} />)
     })
   }
   </View>

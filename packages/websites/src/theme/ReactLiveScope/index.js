@@ -12,6 +12,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 import '@jswork/next-range';
+import '@jswork/next-random-avatar';
 
 Object.assign(View.defaultProps, {
   styled,
@@ -41,7 +42,7 @@ const ReactLiveScope = {
   Tabs,
   TabItem,
   View,
-  styled,
+  styled
 };
 
 export default ReactLiveScope;
