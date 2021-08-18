@@ -66,6 +66,8 @@ const Container = styled(View)`
 
 export default (props: any) => {
   const [value, setValue] = useState(false);
+  const [childValue, setChildValue] = useState(0);
+  const [checked, setChecked] = useState(false);
   console.log('value::', value);
   return (
     <div>
@@ -77,9 +79,23 @@ export default (props: any) => {
         }}>
         Set disabled value
       </button>
+      <button
+        onClick={(e) => {
+          setChildValue(Math.random());
+        }}>
+        SetChildValue
+      </button>
+      <button
+        onClick={(e) => {
+          setChecked(true);
+        }}>
+        setChecked: true
+      </button>
       <View disabled={value} wp={8} auto debug p={20}>
+        <input type="checkbox" checked={checked} />
         道可道，非常道；名可名，非常名。 无名，天地之始，有名，万物之母。
         故常无欲，以观其妙，常有欲，以观其徼。 此两者，同出而异名，同谓之玄，玄之又玄，众妙之门。
+        <span>{childValue}</span>
       </View>
     </div>
   );

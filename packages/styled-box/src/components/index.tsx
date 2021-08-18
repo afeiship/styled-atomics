@@ -11,6 +11,10 @@ import atomics from './composite';
 
 const CLASS_NAME = 'styled-box';
 const FILTERED_PROPS = ['rel', 'x', 'y'];
+const getDynamicProps = (inProps) => {
+  const { plugins, val, styled, children, ...props } = inProps;
+  return props;
+};
 
 export default class StyledBox extends Component<Props> {
   static displayName = CLASS_NAME;
@@ -87,7 +91,7 @@ export default class StyledBox extends Component<Props> {
   shouldComponentUpdate(inProps) {
     const { staticStyled, deps } = inProps;
     if (staticStyled && deepEqual(deps, inProps.deps)) return false;
-    if (!deepEqual(this.props, inProps)) this.updateStyled(inProps);
+    if (!deepEqual(getDynamicProps(this.props), getDynamicProps(inProps))) this.updateStyled(inProps);
     this.updateProps(inProps);
     return true;
   }
