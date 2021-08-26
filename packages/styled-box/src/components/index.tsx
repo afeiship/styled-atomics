@@ -90,7 +90,7 @@ export default class StyledBox extends Component<Props> {
 
   shouldComponentUpdate(inProps) {
     const { staticStyled, deps } = inProps;
-    if (staticStyled && deepEqual(deps, inProps.deps)) return false;
+    if (staticStyled && deepEqual(deps, this.props.deps)) return false;
     if (!deepEqual(getDynamicProps(this.props), getDynamicProps(inProps))) this.updateStyled(inProps);
     this.updateProps(inProps);
     return true;
