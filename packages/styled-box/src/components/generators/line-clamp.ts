@@ -11,6 +11,7 @@ export default (options) => {
       display: flex;
       display: -webkit-box;
       -webkit-box-orient: vertical;
+      white-space: normal;
       ${lc && '-webkit-line-clamp: ' + lc + ';'}
     `;
     options.data = data.concat(values);
