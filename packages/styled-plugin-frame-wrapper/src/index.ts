@@ -1,6 +1,8 @@
 import StyledAbstractPlugin from '@jswork/styled-abstract-plugin';
 import css from '@jswork/styled-css';
 
+// https://github.com/afeiship/wsui-frame-wrapper/blob/master/src/index.scss
+
 export default class extends StyledAbstractPlugin {
   get name(): string {
     return 'frame-wrapper';
@@ -21,7 +23,6 @@ export default class extends StyledAbstractPlugin {
     this.values = css`
       position: relative;
       overflow: hidden;
-      display: inline-block;
       > ${sub} {
         object-fit: ${value};
         width: 100%;
