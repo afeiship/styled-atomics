@@ -52,7 +52,7 @@ export default class {
   public get() {
     this.pipe();
     this.merge();
-    this.current && (this.current.done = true);
+    if (this.current) this.current.done = true;
     return this.entity;
   }
 }
